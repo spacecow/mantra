@@ -1,0 +1,22 @@
+Feature:
+Background:
+Given a manga exists
+And a translation exists with japanese: "明日", english: "tomorrow", manga: that manga
+When I go to that manga's page
+
+Scenario: View of translations on the show manga page
+Then I should see "translations" table
+| 明日 | tomorrow | Edit Del |
+
+Scenario Outline: Links from within the translations at the show manga page
+When I follow "<link>" within that translation
+Then I should be redirected to that <page> page
+And <no> translations should exist
+Examples:
+| link | page                       | no |
+| Edit | manga's translation's edit |  1 |
+| Del  | manga                      |  0 |
+
+Scenario: Links at the bottom of the show manga page
+  When I follow "New translation" at the bottom of the page
+  Then I should be redirected to that manga's new translation page

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  japanese: MyString
+  english: MyString
+  page_id: 1
+
+two:
+  japanese: MyString
+  english: MyString
+  page_id: 1

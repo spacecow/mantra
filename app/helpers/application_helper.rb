@@ -1,0 +1,1 @@
+../../../share/application_helper.rb

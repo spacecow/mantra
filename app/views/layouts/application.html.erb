@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transa - <%= yield(:title).blank? ? "Translate with us!" : yield(:title) %></title>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div id="notices">
+      <%# render @notices %>
+    </div>
+    <section id="container" class="round">
+      <div id="user_nav">
+        <% if user_signed_in? %>
+          <%= t('message.signed_in_as',:id=>current_user.email) %> Not you? <%= link_to t(:sign_out), destroy_user_session_path %>.
+        <% else %>
+          <%= link_to t(:sign_up), new_user_registration_path %> or <%= link_to d(:sign_in), new_user_session_path %>.
+        <% end %>
+      </div>
+      <% flash.each do |key, value| %>
+      <div id="flash" class="<%= key %> round"><%= value %></div>
+      <div class="clear"></div>
+      <% end %>
+
+      <% unless @page.nil? %>
+        <div id="links_top">
+          <%= link_to @manga.title, @manga %>
+        </div>
+        <div class="clear"></div>
+      <% end %>
+      <% unless yield(:title).blank? %>
+        <h1 id="title"><%= yield(:title) %></h1>
+      <% end %>
+      <%= yield %>
+    </section>
+  </body>
+</html>

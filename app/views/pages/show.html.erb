@@ -1,0 +1,13 @@
+<div id="image">
+  <%= image_tag "jack.jpg" %>
+</div>
+
+<% if @translations.any? %>
+<div id="translations">
+  <% @translations.each do |translation| %>
+    <%= render translation, :active => @active,
+        :first => @translations.first == translation,
+        :last => @translations.last == translation %>
+  <% end %>
+</div>
+<% end %>

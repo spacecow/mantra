@@ -1,0 +1,40 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  del: "Del"
+  delete: "Delete"
+  edit: "Edit"
+  show: "Show"
+
+  label:
+    add: "Add %{obj}"
+    create: "Create %{obj}"
+    edit: "Edit %{obj}"
+    list: "List %{obj}"
+    new: "New %{obj}"
+    show: "Show %{obj}"
+    update: "Update %{obj}"
+
+  message:
+    signed_in_as: "Signed in as %{id}."
+    sure?: "Are you sure?"
+    two_choices: "%{choice1} or %{choice2}."
+
+  success:
+    created: "Successfully created %{obj}."
+    updated: "Successfully updated %{obj}."
+
+  english: "English"
+  japanese: "Japanese"
+  manga: "Manga"
+  page: "Page"
+  page_no: "Page no."
+  sign_in: "Sign in"
+  sign_out: "Sign out"
+  sign_up: "Sign up"
+
+  simple_form:
+    labels:
+      title: "Title"
+      no: "hej"

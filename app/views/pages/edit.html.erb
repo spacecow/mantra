@@ -1,0 +1,8 @@
+<h1 id="title"><%= edit(:page) %></h1>
+
+<%= render 'form', :action => :update %>
+
+<div id="links_bottom">
+  <%= link_to t(:show), [@manga,@page] %>
+  <%= link_to t(:delete), [@manga,@page], :confirm => sure?, :method => :delete %>
+</div>

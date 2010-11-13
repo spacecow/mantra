@@ -1,0 +1,8 @@
+<tr id="page_<%= page.slug%>">
+  <td><%= page.no %></td>
+  <td>
+    <%= link_to t(:show), [@manga,page]
+ %> <%= link_to t(:edit), edit_manga_page_path(@manga,page)
+ %> <%= link_to t(:del), [@manga,page], :confirm => sure?, :method => :delete %>
+  </td>
+</tr>

@@ -1,0 +1,23 @@
+<div id="translation_<%= translation.slug %>"
+     class="translation<%= translation.classes(active) %>">
+  <div id="text_container">
+    <span id="japanese"><%= translation.japanese %></span><br />
+    <span id="english"><%= translation.english %></span>
+  </div>
+  <div id="arrow_container">
+    <% unless first %>
+      <span id="up_arrow">
+        <%= link_to((image_tag 'up_arrow.gif', :title => "up_arrow", :alt => "up_arrow" ),
+        move_up_manga_page_translation_path(@manga,@page,translation),
+        :method => :put) %>
+      </span>
+    <% end %>
+    <% unless last %>
+      <span id="down_arrow">
+        <%= link_to((image_tag 'down_arrow.gif', :title => "down_arrow", :alt => "down_arrow"),
+        move_down_manga_page_translation_path(@manga,@page,translation),
+        :method => :put) %>
+      </span>  
+    <% end %>
+  </div>
+</div>

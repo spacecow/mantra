@@ -1,0 +1,36 @@
+// Place your application-specific JavaScript functions and classes here
+// This file is automatically included by javascript_include_tag :defaults
+$(document).ready(function() {
+  var x1,x2,y1,y2;
+  x1 = -10;
+  $(document).mousedown(function(e) {
+    if( x1 < 0 ){
+      $("#current").attr({ id: '' })
+      box = $('<div style="border:1px #FF00FF solid;position:fixed;">').hide();
+      $(document.body).append(box);
+      x1 = e.pageX;
+      y1 = e.pageY;
+      box.attr({id: 'current'}).css({
+        top: e.pageY , //offsets
+        left: e.pageX //offsets
+      }).fadeIn();
+    }
+    else{
+      $("#current").attr({ id: ''})
+      x1 = -10;
+      window.location.reload();
+    }
+  });
+  $(document).mousemove(function(e) {
+    $("#current").css({
+      width:Math.abs(e.pageX - x1), //offsets
+      height:Math.abs(e.pageY - y1),//offsets
+      'border-radius':Math.abs(Math.abs(e.pageX - x1) / 2),
+      '-moz-border-radius':Math.abs(Math.abs(e.pageX - x1) / 2),
+      '-webkit-border-radius':Math.abs(Math.abs(e.pageX - x1) / 2)
+    }).fadeIn();
+  });
+//  $(document).mouseup(function() {
+
+ // });
+});

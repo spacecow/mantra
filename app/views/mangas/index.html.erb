@@ -1,0 +1,9 @@
+<h1 id="title"><%= pl(:manga) %></h1>
+
+<table id="mangas">
+  <%= render @mangas %>
+</table>
+
+<div id="links_bottom">
+  <%= link_to "New manga", new_manga_path %>
+</div>

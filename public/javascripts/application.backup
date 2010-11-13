@@ -1,0 +1,33 @@
+// Place your application-specific JavaScript functions and classes here
+// This file is automatically included by javascript_include_tag :defaults
+ $(document).ready(function() {
+ var draw = false;
+
+ //set it true on mousedown
+ $(document).mousedown(function(){draw=true;});
+
+ //reset it on mouseup
+ $(document).mouseup(function(){draw=false;});
+
+
+ $(document).mousemove(function(e) {
+
+    //if mouse is down
+    if(draw==true){
+
+                //make a pixel (5X5) at mouse position
+                pointer = $('<span>').css({
+                                                'position':'absolute',
+                                                'background-color':'#ff00ff',
+                                                'width':'5px',
+                                                'height':'5px',
+                                                top: e.pageY ,    //offsets
+                                                left: e.pageX   //offsets
+                                           });
+
+                //append it to body
+                $(document.body).append(pointer);
+        }
+    });
+});
+

@@ -1,0 +1,4 @@
+<%= simple_form_for [@manga,@page] do |f| %>
+  <%= f.input :no, :label => t(:page_no), :error_html => { :id => "page_no_error"} %>
+  <%= f.submit %>
+<% end %>

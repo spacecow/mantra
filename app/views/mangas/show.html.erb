@@ -1,0 +1,10 @@
+<%= title @manga.title %>
+
+<table id="pages"><%= render @pages %></table>
+
+<div id="links_bottom">
+  <%= link_to t(:edit), edit_manga_path(@manga) %>
+  <%= link_to t(:delete), @manga, :confirm => sure?, :method => :delete %>
+  <%= link_to list_dp(:manga), mangas_path %>
+  <%= link_to new_d(:page), new_manga_page_path(@manga) %>
+</div>
