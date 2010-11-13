@@ -4,9 +4,15 @@ class AuthenticationsController < ApplicationController
   end
 
   def create
-    auth = request.env["omniauth.auth"]
-    current_user.authentications.create(:provider => auth['provider'], :uid => auth['uid'])
-    redirect_to authentications_url, :notice => "Authentication successful."
+    omniauth = request.env["omniauth.auth"]
+    authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
+    if authentication
+      flash[:notice] = "Signed in successfully."
+      sign_in_and_redirect(:user, authentication.user)
+    else
+#      current_user.authentications.
+ #       redirect_to authentications_url, :notice => "Authentication successful."
+    end
   end
 
   def destroy
