@@ -1,12 +1,16 @@
 class AuthenticationsController < ApplicationController
-  def new
+  def index
+    @authentications = current_user.authentications if current_user
   end
 
   def create
-    render :text => request.env["omniauth.auth"].to_yaml
+    auth = request.env["omniauth.auth"]
+    current_user.authentications.create(:provider => auth[:provider], :uid => auth[:uid])
+    redirect_to authentications_url, :notice => "Authentication successful."
   end
 
   def destroy
+    @authentication = current_user.authentications.find(params[:id])
   end
 
 end

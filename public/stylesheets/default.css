@@ -6,13 +6,14 @@
 }
 .global_a:hover {
   background: #4b7399;
-  color: #eeffee;
+  color: #ffffff;
   padding: 0 1px 0 1px;
 }
 .mixin_rounded_corners {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
+html { background: #4b7399; }
 body { font: normal 14px "Helvetica Neue", Arial, Helvetica, sans-serif; }
 a {
   text-decoration: none;
@@ -22,7 +23,7 @@ a {
 }
 a:hover {
   background: #4b7399;
-  color: #eeffee;
+  color: #ffffff;
   padding: 0 1px 0 1px;
 }
 div.clear {
@@ -51,6 +52,61 @@ div#links_top {
   border-radius: 10px;
 }
 h1 { margin-top: 0px; }
+div#container {
+  background: #ffffff;
+  padding: 20px;
+  width: 900px;
+}
+div#container div#user_nav {
+  display: block;
+  text-align: right;
+}
+div#container div#authentications div#authentication {
+  float: left;
+  background: #eeeeee;
+  border: 1px solid black;
+  padding: 5px 10px;
+  margin-right: 10px;
+  position: relative;
+}
+div#container div#authentications div#authentication a#remove {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: #333333;
+  padding: 3px 6px 2px 4px;
+  font-size: 70%;
+}
+div#container div#authentications div#authentication a#remove:hover {
+  color: #ffffff;
+  background: #777777;
+}
+div#container div#authentications div#authentication div#provider {
+  font-weight: bold;
+  margin-left: 38px;
+  margin-right: 20px;
+}
+div#container div#authentications div#authentication div#uid {
+  color: #666666;
+  font-size: 70%;
+  margin-left: 38px;
+  margin-right: 20px;
+}
+div#container div#authentications div#authentication img { float: left; }
+div#container a.auth_provider {
+  float: left;
+  margin-right: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+div#container a.auth_provider:hover {
+  background: #ffffff;
+  color: #7ba3c9;
+}
+div#container a.auth_provider img {
+  display: block;
+  border: 0;
+}
 div#image {
   float: left;
   padding: 1em;
