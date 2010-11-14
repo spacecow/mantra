@@ -58,6 +58,8 @@ TransaMongoid::Application.configure do
   #   :authentication => :login
   # }
 
+  config.action_mailer.default_url_options = { :host => 'mantra.heroku.com' }
+  
   config.action_mailer.smtp_settings = {
     :address        => "smtp.sendgrid.net",
     :port           => "25",
