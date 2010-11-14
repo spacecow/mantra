@@ -17,6 +17,7 @@ gem 'bson_ext'
 gem 'devise'
 gem 'omniauth'
 gem 'heroku'
+#gem 'gmail_smtp'
 
 group :development do
   gem 'cucumber-rails'
