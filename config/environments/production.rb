@@ -46,4 +46,24 @@ TransaMongoid::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  # # set delivery method to :smtp, :sendmail or :test
+  # config.action_mailer.delivery_method = :smtp
+  
+  # # these options are only needed if you choose smtp delivery
+  # config.action_mailer.smtp_settings = {
+  #   :address        => 'smtp.reserve-gakuwarinet.com',
+  #   :port           => 25,
+  #   :domain         => 'www.reserve-gakuwarinet.com',
+  #   :authentication => :login
+  # }
+
+  config.action_mailer.smtp_settings = {
+    :address        => "smtp.sendgrid.net",
+    :port           => "25",
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => ENV['SENDGRID_DOMAIN']
+  }
 end
