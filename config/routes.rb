@@ -1,7 +1,7 @@
 TransaMongoid::Application.routes.draw do
   match '/auth/:provider/callback' => 'authentications#create'
   resources :authentications
-  devise_for :users
+  devise_for :users, :controller => { :registations => 'registrations' }
 
   resources :mangas do
     resources :pages do
