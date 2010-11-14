@@ -6,6 +6,8 @@ n<h2>Sign up</h2>
   <p><%= f.label :email %><br />
   <%= f.text_field :email %></p>
 
+<%= @user.authentications.empty? %>
+<%= @user.password.blank? %>
 <% if @user.password_required? %>
   <p><%= f.label :password %><br />
   <%= f.password_field :password %></p>
