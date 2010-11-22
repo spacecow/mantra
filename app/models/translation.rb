@@ -8,11 +8,13 @@ class Translation
   slug :pos
   referenced_in :page
 
-  validates :pos, :presence => true, :uniqueness => true
+  validates :english, :presence => true
+  validates :pos, :presence => true, :uniqueness => {:scope => :page_id}
+  validates :page_id, :presence => true
   
   def active; @active || false end
-  def active=(b); p b; @active = b end
-  def classes(active)
+  def active=(b); @active = b end
+  def classes(active,last)
     case active
     when pos
       ""
@@ -20,6 +22,8 @@ class Translation
       " non-active below-active"
     when pos+1
       " non-active above-active"
+    when nil
+      last ? " non-active above-active" : " non-active"
     else
       " non-active"
     end

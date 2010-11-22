@@ -5,7 +5,7 @@ class MangasController < ApplicationController
   end
   
   def index
-    @mangas = Manga.all
+    @mangas = Manga.search(params[:search]).paginate(:per_page => 15, :page => params[:page])
   end
 
   def new

@@ -1,20 +1,26 @@
 class TranslationsController < ApplicationController
   before_filter :load_manga_and_page
 
-  def move_down
-    upper_translation = @page.translations.where(:slug => params[:id]).first
-    lower_translation = @page.translations.where(:slug => params[:id].to_i+1).first
-    swap_positions(upper_translation,lower_translation)
-    redirect_to [@manga,@page]
+  def create
+    pos = @page.translations.count+1
+    @translation = @page.translations.build(params[:translation].merge(:pos=>pos))
+    if @translation.save
+      redirect_to manga_page_path(@manga,@page,:active=>pos)
+    else
+      @translations = @page.translations.sort_by(&:pos)
+      render 'pages/show'
+    end
   end
-
-  def move_up
-    upper_translation = @page.translations.where(:slug => params[:id].to_i-1).first
-    lower_translation = @page.translations.where(:slug => params[:id]).first
+  
+  def move(upper,active=upper)
+    upper_translation = @page.translations.where(:slug => upper).first
+    lower_translation = @page.translations.where(:slug => upper+1).first
     swap_positions(upper_translation,lower_translation)
-    redirect_to [@manga,@page]
+    redirect_to manga_page_path(@manga,@page,:active=>active)
   end
-
+  def move_down; move(params[:id].to_i,params[:id].to_i+1) end
+  def move_up; move(params[:id].to_i-1) end
+  
   private
 
     def load_manga_and_page

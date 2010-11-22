@@ -1,8 +1,23 @@
 @import "mixin.less";
+@translations_width: 320px;
+@translation_width: 280px;
 
 .mixin_rounded_corners{
     -moz-border-radius: 10px;
     border-radius: 10px;
+}
+.mixin_rounded_corners-bottomleft{
+    -moz-border-radius-bottomleft: 25px;
+    border-bottom-left-radius: 25px;
+}
+.mixin_rounded_corners-topleft{
+    -moz-border-radius-topleft: 25px;
+    border-top-left-radius: 25px;
+}
+
+.translation_mixin{
+    padding: 10px;
+    width: @translation_width;
 }
 
 html{ background:@global_bg; }
@@ -15,6 +30,8 @@ div.clear{
 }
 
 .round{ .mixin_rounded_corners; }
+.round-bottomleft{ .mixin_rounded_corners-bottomleft; }
+.round-topleft{ .mixin_rounded_corners-topleft; }
 
 div#flash{
     border: 1px solid black;
@@ -26,7 +43,7 @@ div.alert{ background: @alert_bg; }
 
 div#links_top{
     float: left;
-    background: #dfeedf;
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 1px 5px 3px 5px;
     margin-bottom: 10px;
     border: 1px solid black;
@@ -38,8 +55,8 @@ h1{
 }
 
 div#container{
-    background: #fff;
-    padding: 20px;
+    background: #ddd;
+   padding: 20px;
     width: 900px;
     div#user_nav{
         display: block;
@@ -93,10 +110,18 @@ div#container{
             border: 0;
         }
     }
+    //---------------------------- MANGA
+    form#manga_search{
+        float:left;
+    }
+    div#mangas{
+        width:300px;
+        float:left;
+    }
 }
 
 
-
+//---------------------------- PAGE
 div#image{
     float: left;
     padding: 1em;
@@ -105,8 +130,20 @@ div#image{
 }
 div#translations{
     float:left;
-    width:30em;
+    width:@translations_width;
     background: grey;
+    div#top_empty_translation{
+        width:@translations_width;
+        height:10px;
+        float:left;
+        background:#ddd;
+    }
+    div#bottom_empty_translation{
+        width:@translations_width;
+        height:10px;
+        float:left;
+        background:#ddd;
+    }
     div.non-active{
         background: silver;
     }
@@ -120,7 +157,7 @@ div#translations{
     }
     div.translation{
         float:left;
-        padding: 1em;
+        .translation_mixin;
         div#text_container{
             float:left;
             width:15em;
@@ -128,6 +165,25 @@ div#translations{
         div#arrow_container{
             float:left;
             width:5em;
+        }
+    }
+    div#translation_form{
+        float:left;
+        .translation_mixin;
+        div{
+            label{
+                float:left;
+                width:60px;
+                text-align:right;
+                margin-right:5px;
+            }
+            input{
+                float:left;
+                width:200px;
+            }
+        }
+        input#translation_submit{
+            margin:10px 0 0 85px;
         }
     }
 }

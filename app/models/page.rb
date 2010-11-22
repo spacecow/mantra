@@ -6,5 +6,5 @@ class Page
   referenced_in :manga
   references_many :translations
   
-  validates :no, :presence => true, :uniqueness => true
+  validates :no, :presence => true, :uniqueness => { :scope => :manga_id }
 end

@@ -1,0 +1,5 @@
+<%= simple_form_for [@manga,@page,@translation] do |f| %>
+  <%= f.input :japanese %>
+  <%= f.input :english, :error_html => { :id => "english_error"} %>
+  <%= f.submit %>
+<% end %>

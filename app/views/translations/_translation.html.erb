@@ -1,5 +1,5 @@
 <div id="translation_<%= translation.slug %>"
-     class="translation<%= translation.classes(active) %>">
+     class="translation<%= translation.classes(active,last) %>">
   <div id="text_container">
     <span id="japanese"><%= translation.japanese %></span><br />
     <span id="english"><%= translation.english %></span>
@@ -19,5 +19,9 @@
         :method => :put) %>
       </span>  
     <% end %>
+  </div>
+  <div id="links">
+    <%= link_to t(:edit) %>
+    <%= link_to t(:del) %>
   </div>
 </div>

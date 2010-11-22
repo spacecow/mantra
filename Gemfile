@@ -7,8 +7,7 @@ gem 'rails', '3.0.0'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
-gem 'annotate-models'
-gem 'simple_form'
+gem 'simple_form', :git => "git://github.com/plataformatec/simple_form.git"
 gem 'less'
 gem 'jquery-rails'
 gem 'mongoid', '2.0.0.beta.20'
@@ -16,11 +15,14 @@ gem 'mongoid_slug', :require => 'mongoid/slug'
 gem 'bson_ext'
 gem 'devise'
 gem 'omniauth'
+gem 'twitter'
 gem 'heroku'
+gem 'will_paginate', '3.0.pre2'
 #gem 'gmail_smtp'
 
 group :development do
   gem 'cucumber-rails'
+  gem 'faker'
 end
 
 group :test do

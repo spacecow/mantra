@@ -9,15 +9,17 @@ When I go to that manga's page's page
 
 Scenario: Move a translation down
 And I follow "down_arrow" within translation "1"
-Then a translation should exist with pos: 2, english: "a"
-And a translation should exist with pos: 1, english: "b"
+Then a translation should exist with pos: 1, english: "b"
+And a translation should exist with pos: 2, english: "a"
 And a translation should exist with pos: 3, english: "c"
+And I should see translation "1" as active
 
 Scenario: Move a translation up
 And I follow "up_arrow" within translation "2"
-Then a translation should exist with pos: 2, english: "a"
-And a translation should exist with pos: 1, english: "b"
+Then a translation should exist with pos: 1, english: "b"
+And a translation should exist with pos: 2, english: "a"
 And a translation should exist with pos: 3, english: "c"
+And I should see translation "2" as active
 
 @pending
 Scenario: Change activation when moving

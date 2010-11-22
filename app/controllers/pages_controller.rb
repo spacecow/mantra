@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def show
     @page = @manga.pages.where(:slug => params[:id]).first
     @translations = @page.translations.sort_by(&:pos)
+    @translation = @page.translations.build
     @active = params[:active].nil? ? 1 : params[:active].to_i
   end
 

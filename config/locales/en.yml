@@ -25,16 +25,20 @@ en:
     created: "Successfully created %{obj}."
     updated: "Successfully updated %{obj}."
 
-  english: "English"
-  japanese: "Japanese"
+#  english: "English"
+#  japanese: "Japanese"
   manga: "Manga"
   page: "Page"
   page_no: "Page no."
   sign_in: "Sign in"
   sign_out: "Sign out"
   sign_up: "Sign up"
+  translation: "Translation"
 
   simple_form:
     labels:
       title: "Title"
-      no: "hej"
+  helpers:
+    submit:
+      create: "Create %{model}"
+      search: "Search"

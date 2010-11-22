@@ -1,0 +1,4 @@
+<%= form_tag mangas_path, :method => :get, :id => "manga_search" do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag t('helpers.submit.search'), :title => nil %>
+<% end %>
