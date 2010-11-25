@@ -27,6 +27,8 @@ en:
 
 #  english: "English"
 #  japanese: "Japanese"
+  cancel: "Cancel"
+  create: "Create"
   manga: "Manga"
   page: "Page"
   page_no: "Page no."
@@ -34,11 +36,4 @@ en:
   sign_out: "Sign out"
   sign_up: "Sign up"
   translation: "Translation"
-
-  simple_form:
-    labels:
-      title: "Title"
-  helpers:
-    submit:
-      create: "Create %{model}"
-      search: "Search"
+  update: "Update"

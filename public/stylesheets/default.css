@@ -47,14 +47,6 @@ div.clear {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-.round-bottomleft {
-  -moz-border-radius-bottomleft: 25px;
-  border-bottom-left-radius: 25px;
-}
-.round-topleft {
-  -moz-border-radius-topleft: 25px;
-  border-top-left-radius: 25px;
-}
 div#flash {
   border: 1px solid black;
   float: left;
@@ -143,19 +135,19 @@ div#translations {
   width: 320px;
   background: grey;
 }
-div#translations div#top_empty_translation {
+div#translations div#top_empty_translation_fillout {
   width: 320px;
   height: 10px;
   float: left;
   background: #dddddd;
 }
-div#translations div#bottom_empty_translation {
+div#translations div#bottom_empty_translation_fillout {
   width: 320px;
   height: 10px;
   float: left;
   background: #dddddd;
 }
-div#translations div.non-active { background: silver; }
+div#translations div.inactive { background: silver; }
 div#translations div.below-active {
   -moz-border-radius-topleft: 15px;
   border-top-left-radius: 15px;
@@ -175,7 +167,15 @@ div#translations div.translation div#text_container {
 }
 div#translations div.translation div#arrow_container {
   float: left;
-  width: 5em;
+  width: 4.5em;
+}
+div#translations div.translation div#arrow_container span#up_arrow {
+  float: left;
+  width: 2em;
+}
+div#translations div.translation div#arrow_container span#down_arrow {
+  float: right;
+  width: 2.5em;
 }
 div#translations div#translation_form {
   float: left;
@@ -192,4 +192,5 @@ div#translations div#translation_form div input {
   float: left;
   width: 200px;
 }
-div#translations div#translation_form input#translation_submit { margin: 10px 0 0 85px; }
+div#translations div#translation_form input.change { margin: 10px 0 0 65px; }
+div#translations div#translation_form input.cancel { margin: 0; }

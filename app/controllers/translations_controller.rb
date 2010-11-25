@@ -8,10 +8,36 @@ class TranslationsController < ApplicationController
       redirect_to manga_page_path(@manga,@page,:active=>pos)
     else
       @translations = @page.translations.sort_by(&:pos)
+      @active = 0
       render 'pages/show'
     end
   end
   
+  def edit
+    @translations = @page.translations.sort_by(&:pos)
+    @translation = @page.translations.where(:slug => params[:id]).first
+    @active = params[:id].to_i
+  end
+
+  def update
+    @translation = @page.translations.where(:slug => params[:id]).first
+    if params[:commit] == "Cancel"
+      redirect_to manga_page_path(@manga,@page, :active => @translation.pos) and return
+    end
+    if @translation.update_attributes(params[:translation])
+      redirect_to manga_page_path(@manga,@page, :active => @translation.pos), :notice => updated(:translation)
+    else
+      @translations = @page.translations.sort_by(&:pos)
+      @active = params[:id].to_i
+      render :edit
+    end
+  end
+  
+  def destroy
+    @page.translations.where(:slug => params[:id]).first.destroy
+    redirect_to [@manga,@page]
+  end
+
   def move(upper,active=upper)
     upper_translation = @page.translations.where(:slug => upper).first
     lower_translation = @page.translations.where(:slug => upper+1).first

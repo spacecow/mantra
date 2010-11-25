@@ -27,46 +27,45 @@ Given a translation: "1" exists with page: that page, pos: 1
 And a translation: "2" exists with page: that page, pos: 2
 And a translation: "3" exists with page: that page, pos: 3
 When I go to that manga's page's page
-Then I should see no "up_arrow" sub-section within translation "1"
-And I should see a "down_arrow" sub-section within translation "1"
-And I should see a "up_arrow" sub-section within translation "2"
-And I should see a "down_arrow" sub-section within translation "2"
-And I should see a "up_arrow" sub-section within translation "3"
-And I should see no "down_arrow" sub-section within translation "3"
+Then I should see no up arrow within translation "1"
+And I should see a down arrow within translation "1"
+And I should see a up arrow within translation "2"
+And I should see a down arrow within translation "2"
+And I should see a up arrow within translation "3"
+And I should see no down arrow within translation "3"
 
 Scenario Outline: View of translations according to "active"
 Given a translation: "1" exists with page: that page, pos: 1
 And a translation: "2" exists with page: that page, pos: 2
 And a translation: "3" exists with page: that page, pos: 3
-And a translation: "4" exists with page: that page, pos: 4
 When I go to that manga's page's page with "active=<a>"
-And I should see "<c1>" classes within section translation "1"
-And I should see "<c2>" classes within section translation "2"
-And I should see "<c3>" classes within section translation "3"
-And I should see "<c4>" classes within section translation "4"
+Then I should see the top empty translation fillout as <c1>
+And I should see translation "1" as <c2>
+And I should see translation "2" as <c3>
+And I should see translation "3" as <c4>
+And I should see the translation form as <c5>
+And I should see the bottom empty translation fillout as <c6>
 Examples:
-| a | c1                      | c2                      | c3                      | c4                      |
-| 1 |                         | non-active below-active | non-active              | non-active              |
-| 2 | non-active above-active |                         | non-active below-active | non-active              |
-| 3 | non-active              | non-active above-active |                         | non-active below-active |
-| 4 | non-active              | non-active              | non-active above-active |                         |
-# | a  | 1                       |
-# | c1 |                         |
-# | c2 | non-active below-active |
-# | c3 | non-active              |
-# | c4 | non-active              |
+| a | c1           | c2           | c3           | c4           | c5           | c6           |
+| 0 | inactive     | inactive     | inactive     | above-active | active       | below-active |
+| 1 | above-active | active       | below-active | inactive     | inactive     | inactive     |
+| 2 | inactive     | above-active | active       | below-active | inactive     | inactive     |
+| 3 | inactive     | inactive     | above-active | active       | below-active | inactive     |
 
-
-# Scenario Outline: Links from within the translations at the show manga page
-# When I follow "<link>" within that page
-# Then I should be redirected to that <page> page
-# And <no> pages should exist
-# Examples:
-# | link | page                | no |
-# | Edit | manga's page's edit |  1 |
-# | Show | manga's page's      |  1 |
-# | Del  | manga               |  0 |
+Scenario Outline: Links from within the translations at the show manga page
+Given a translation: "1" exists with page: that page, pos: 1
+When I go to that manga's page's page
+When I follow "<link>" within that translation
+Then I should be redirected to that <page> page
+And <no> translations should exist
+Examples:
+| link | page                              | no |
+| Edit | manga's page's translation's edit |  1 |
+| Del  | manga's page's                    |  0 |
 
 # Scenario: Links at the bottom of the show manga page
 #   When I follow "New page" at the bottom of the page
 #   Then I should be redirected to that manga's new page page
+
+@pending
+Scenario: Something is wrong with the slug

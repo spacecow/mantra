@@ -16,16 +16,16 @@ class Translation
   def active=(b); @active = b end
   def classes(active,last)
     case active
+    when 0
+      last ? " inactive above-active" : " inactive"
     when pos
       ""
     when pos-1
-      " non-active below-active"
+      " inactive below-active"
     when pos+1
-      " non-active above-active"
-    when nil
-      last ? " non-active above-active" : " non-active"
+      " inactive above-active"
     else
-      " non-active"
+      " inactive"
     end
   end
 end

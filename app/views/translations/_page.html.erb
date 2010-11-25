@@ -1,0 +1,25 @@
+<div id="image">
+  <%= image_tag "jack.jpg" %>
+</div>
+
+<div id="translations">
+  <div id="top_empty_translation_fillout" class="<%= top_translation_fillout_classes %>"></div>
+  <% @translations.each_with_index do |translation,i| %>
+    <% if @active == i+1 && !@translation.new_record? %>
+      <div id="translation_form" class="<%= translation_form_classes %>">
+        <%= render 'translations/form' %>
+      </div>
+    <% else %>
+      <%= render translation, :active => @active,
+          :first => @translations.first == translation,
+          :last => @translations.last == translation %>
+    <% end %>
+  <% end %>
+  <% if @translation.new_record? %>
+  <div id="translation_form" class="<%= translation_form_classes %>">
+    <%= render 'translations/form' %>
+  </div>
+  <% end %>
+  <div id="bottom_empty_translation_fillout" class="<%= bottom_translation_fillout_classes %>"></div>
+</div>
+<div class="clear"></div>

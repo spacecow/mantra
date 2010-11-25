@@ -5,23 +5,25 @@
     <span id="english"><%= translation.english %></span>
   </div>
   <div id="arrow_container">
-    <% unless first %>
+    <% if @translation.new_record? %>
       <span id="up_arrow">
         <%= link_to((image_tag 'up_arrow.gif', :title => "up_arrow", :alt => "up_arrow" ),
         move_up_manga_page_translation_path(@manga,@page,translation),
-        :method => :put) %>
+        :method => :put) unless first %>
       </span>
     <% end %>
-    <% unless last %>
+    <% if @translation.new_record? %>
       <span id="down_arrow">
         <%= link_to((image_tag 'down_arrow.gif', :title => "down_arrow", :alt => "down_arrow"),
         move_down_manga_page_translation_path(@manga,@page,translation),
-        :method => :put) %>
+        :method => :put) unless last %>
       </span>  
     <% end %>
   </div>
+  <% if @translation.new_record? %>
   <div id="links">
-    <%= link_to t(:edit) %>
-    <%= link_to t(:del) %>
+    <%= link_to t(:edit), edit_manga_page_translation_path(@manga,@page,translation) %>
+    <%= link_to t(:del), [@manga,@page,translation], :confirm => sure?, :method => :delete %>
   </div>
+  <% end %>
 </div>

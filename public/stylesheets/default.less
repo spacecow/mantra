@@ -30,8 +30,6 @@ div.clear{
 }
 
 .round{ .mixin_rounded_corners; }
-.round-bottomleft{ .mixin_rounded_corners-bottomleft; }
-.round-topleft{ .mixin_rounded_corners-topleft; }
 
 div#flash{
     border: 1px solid black;
@@ -132,19 +130,19 @@ div#translations{
     float:left;
     width:@translations_width;
     background: grey;
-    div#top_empty_translation{
+    div#top_empty_translation_fillout{
         width:@translations_width;
         height:10px;
         float:left;
         background:#ddd;
     }
-    div#bottom_empty_translation{
+    div#bottom_empty_translation_fillout{
         width:@translations_width;
         height:10px;
         float:left;
         background:#ddd;
     }
-    div.non-active{
+    div.inactive{
         background: silver;
     }
     div.below-active{
@@ -164,7 +162,15 @@ div#translations{
         }
         div#arrow_container{
             float:left;
-            width:5em;
+            width:4.5em;
+            span#up_arrow{
+                float:left;
+                width:2em;
+            }
+            span#down_arrow{
+                float:right;
+                width:2.5em;
+            }
         }
     }
     div#translation_form{
@@ -182,8 +188,11 @@ div#translations{
                 width:200px;
             }
         }
-        input#translation_submit{
-            margin:10px 0 0 85px;
+        input.change{
+            margin:10px 0 0 65px;
+        }
+        input.cancel{
+            margin:0;            
         }
     }
 }

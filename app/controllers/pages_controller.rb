@@ -5,7 +5,12 @@ class PagesController < ApplicationController
     @page = @manga.pages.where(:slug => params[:id]).first
     @translations = @page.translations.sort_by(&:pos)
     @translation = @page.translations.build
-    @active = params[:active].nil? ? 1 : params[:active].to_i
+    @active = case params[:active].nil?
+              when true
+                @translations.empty? ? 0 : 1
+              when false
+                params[:active].to_i
+              end
   end
 
   def new

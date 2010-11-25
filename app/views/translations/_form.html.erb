@@ -1,5 +1,6 @@
 <%= simple_form_for [@manga,@page,@translation] do |f| %>
   <%= f.input :japanese %>
   <%= f.input :english, :error_html => { :id => "english_error"} %>
-  <%= f.submit %>
+  <%= f.submit :class => "change" %>
+  <%= f.submit t(:cancel), :class => "cancel" unless @translation.new_record? %>
 <% end %>

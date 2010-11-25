@@ -11,7 +11,7 @@ And the "Title" field should be empty
 @create
 Scenario: Create a new manga
 When I fill in "Title" with "Ashita no Joe"
-And I press "Create Manga"
+And I press "Create"
 Then I should be redirected to the mangas page
 And I should see flash notice message /Successfully created manga./
 And a manga should exist with title: "Ashita no Joe"

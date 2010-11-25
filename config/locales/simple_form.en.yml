@@ -24,3 +24,9 @@ en:
     labels:
       english: "English"
       japanese: "Japanese"
+  helpers:
+    submit:
+      cancel: "Cancel"
+      create: "Create"
+      search: "Search"
+      update: "Update"

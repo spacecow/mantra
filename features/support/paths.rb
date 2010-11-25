@@ -16,6 +16,9 @@ module NavigationHelpers
     when /^#{capture_model}(?:'s)? page$/                           # eg. the forum's page
       path_to_pickle $1
 
+    when /^#{capture_model}(?:'s)? #{capture_model}(?:'s)? #{capture_model}'s (.+?) page$/   # eg. the forum's post's comment's page
+      path_to_pickle $1, $2, $3, :extra => $4
+      
     when /^#{capture_model}(?:'s)? #{capture_model}(?:'s)? #{capture_model}(?:'s)? page$/   # eg. the forum's post's page
       path_to_pickle $1, $2, $3
 

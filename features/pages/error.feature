@@ -6,7 +6,7 @@ And a page exists with no: "1", manga: that manga
 Scenario Outline: Page no cannot be left blank
 When I go to that manga's <page> page
 And I fill in "Page no." with ""
-And I press "<action> Page"
+And I press "<action>"
 Then I should see page_no error /can't be blank/
 Examples:
 | page        | action |
@@ -19,7 +19,7 @@ And a page: "anj2" exists with no: "2", manga: manga "Ashita no Joe"
 And a page: "vj2" exists with no: "2", manga: manga "Violence Jack"
 When I go to the manga: "<manga>"'s <page> page
 And I fill in "Page no." with "1"
-And I press "<action> Page"
+And I press "<action>"
 Then I <view> see page_no error /is already taken/
 Examples:
 | page                | action | manga         | view       |

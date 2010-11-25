@@ -1,16 +1,1 @@
-<div id="image">
-  <%= image_tag "jack.jpg" %>
-</div>
-
-<div id="translations">
-  <div id="top_empty_translation" class="round-bottomleft"></div>
-  <% @translations.each do |translation| %>
-    <%= render translation, :active => @active,
-        :first => @translations.first == translation,
-        :last => @translations.last == translation %>
-  <% end %>
-<div id="translation_form" class="<%= translation_form_classes(@translations.size) %>"><%= render 'translations/form' %></div>
-<div id="bottom_empty_translation" class="<%= @translations.any? ? '' : 'round-topleft' %>"></div>
-</div>
-
-<div class="clear"></div>
+<%= render "translations/page" %>
