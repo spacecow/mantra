@@ -5,6 +5,10 @@ class Translation
   field :english
   field :page_id, :type => Integer
   field :pos, :type => Integer
+  field :x1, :type => Integer
+  field :y1, :type => Integer
+  field :x2, :type => Integer
+  field :y2, :type => Integer
   slug :pos
   referenced_in :page
 

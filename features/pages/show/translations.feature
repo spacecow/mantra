@@ -69,3 +69,6 @@ Examples:
 
 @pending
 Scenario: Something is wrong with the slug
+
+@pending
+Scenario: Make sure the right translation gets active after deletion

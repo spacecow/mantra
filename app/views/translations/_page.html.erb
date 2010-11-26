@@ -1,5 +1,29 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag "jquery.Jcrop" %>
+  <%= javascript_include_tag "jquery.Jcrop.min" %>
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+      var x1 = $("#translation_x1").val();
+      var y1 = $("#translation_y1").val();
+      var x2 = parseInt($("#translation_x2").val())+parseInt(x1);
+      var y2 = parseInt($("#translation_y2").val())+parseInt(y1);
+      $('#rectangle').Jcrop({
+        onChange: update_rect,
+        onSelect: update_rect,
+        setSelect: [x1||100, y1||100, x2||200, y2||200],
+      });
+    });
+    function update_rect(coords){
+        $("#translation_x1").val(coords.x);
+        $("#translation_y1").val(coords.y);
+        $("#translation_x2").val(coords.w);
+        $("#translation_y2").val(coords.h);
+    }
+  </script>
+<% end %>
+
 <div id="image">
-  <%= image_tag "jack.jpg" %>
+  <%= image_tag @page.image.url, :id => "rectangle" %>
 </div>
 
 <div id="translations">

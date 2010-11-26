@@ -4,6 +4,7 @@ end
 
 Factory.define :page do |f|
   f.no 1
+  f.image_filename "jack.jpg"
 end
 
 Factory.define :translation do |f|

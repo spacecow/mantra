@@ -15,8 +15,8 @@ And <no> pages should exist
 Examples:
 | link | page                | no |
 | Edit | manga's page's edit |  1 |
-| Show | manga's page's      |  1 |
 | Del  | manga               |  0 |
+| Show | manga's page's      |  1 |
 
 Scenario: Links at the bottom of the show manga page
   When I follow "New page" at the bottom of the page

@@ -16,3 +16,6 @@ Then I should be redirected to the mangas page
 And I should see flash notice message /Successfully created manga./
 And a manga should exist with title: "Ashita no Joe"
 And 1 mangas should exist
+
+@pendig
+Scenario: Title cannot be written in Japanese

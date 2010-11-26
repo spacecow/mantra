@@ -18,6 +18,7 @@ gem 'omniauth'
 gem 'twitter'
 gem 'heroku'
 gem 'will_paginate', '3.0.pre2'
+gem 'carrierwave'
 #gem 'gmail_smtp'
 
 group :development do
