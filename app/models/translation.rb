@@ -5,14 +5,13 @@ class Translation
   field :english
   field :page_id, :type => Integer
   field :pos, :type => Integer
-  field :x1, :type => Integer
-  field :y1, :type => Integer
-  field :x2, :type => Integer
-  field :y2, :type => Integer
+  field :x1, :type => Integer, :default => 100
+  field :y1, :type => Integer, :default => 100
+  field :x2, :type => Integer, :default => 100
+  field :y2, :type => Integer, :default => 100
   slug :pos
   referenced_in :page
 
-  validates :english, :presence => true
   validates :pos, :presence => true, :uniqueness => {:scope => :page_id}
   validates :page_id, :presence => true
   

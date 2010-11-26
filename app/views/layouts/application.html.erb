@@ -28,6 +28,9 @@
         <div id="links_top">
           <%= link_to @manga.title, @manga %>
         </div>
+        <div id="top">
+          <%= yield(:top) %>
+        </div>
         <div class="clear"></div>
       <% end %>
       <% unless yield(:title).blank? %>

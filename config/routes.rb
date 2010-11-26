@@ -5,6 +5,10 @@ TransaMongoid::Application.routes.draw do
 
   resources :mangas do
     resources :pages do
+      member do
+        get :previous
+        get :next
+      end
       resources :translations do
         member do
           put :move_up

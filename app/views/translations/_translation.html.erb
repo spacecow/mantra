@@ -1,5 +1,5 @@
 <div id="translation_<%= translation.slug %>"
-     class="translation<%= translation.classes(active,last) %>">
+     class="translation<%= translation.classes(@active.pos,last) %>">
   <div id="text_container">
     <span id="japanese"><%= translation.japanese %></span><br />
     <span id="english"><%= translation.english %></span>
@@ -22,6 +22,7 @@
   </div>
   <% if @translation.new_record? %>
   <div id="links">
+    <%= link_to t(:show), manga_page_path(@manga,@page,:active=>translation.pos) %>
     <%= link_to t(:edit), edit_manga_page_translation_path(@manga,@page,translation) %>
     <%= link_to t(:del), [@manga,@page,translation], :confirm => sure?, :method => :delete %>
   </div>

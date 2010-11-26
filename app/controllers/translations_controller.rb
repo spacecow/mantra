@@ -8,7 +8,11 @@ class TranslationsController < ApplicationController
       redirect_to manga_page_path(@manga,@page,:active=>pos)
     else
       @translations = @page.translations.sort_by(&:pos)
-      @active = 0
+      @active = Translation.new(:pos=>0,
+                                :x1=>params[:translation][:x1],
+                                :y1=>params[:translation][:y1],
+                                :x2=>params[:translation][:x2],
+                                :y2=>params[:translation][:y2])
       render 'pages/show'
     end
   end
@@ -16,7 +20,7 @@ class TranslationsController < ApplicationController
   def edit
     @translations = @page.translations.sort_by(&:pos)
     @translation = @page.translations.where(:slug => params[:id]).first
-    @active = params[:id].to_i
+    @active = @translation
   end
 
   def update
@@ -28,7 +32,7 @@ class TranslationsController < ApplicationController
       redirect_to manga_page_path(@manga,@page, :active => @translation.pos), :notice => updated(:translation)
     else
       @translations = @page.translations.sort_by(&:pos)
-      @active = params[:id].to_i
+      @active = @translation
       render :edit
     end
   end
