@@ -46,25 +46,33 @@ class PagesController < ApplicationController
   end
   
   def destroy
-    @page.destroy
-    @page = @manga.pages.where(:slug => params[:id]).first
+    @manga.pages.where(:slug => params[:id]).first.destroy
     redirect_to @manga
   end
 
   # Could be optimized. Do not need to read in all contents of the pages,
   #just the page nos
   def previous
-    @page = @manga.pages.where(:slug => params[:id]).first
-    page_nos = @manga.pages.asc(:no).map(&:no)
-    prev_page_index = page_nos.index(params[:id].to_i)-1
-    prev_page_no = page_nos[prev_page_index]
-    prev_page = @manga.pages.where(:no => prev_page_no).first
-    redirect_to [@manga,prev_page]
+    redirect_to [@manga,page(params[:id])] and return if page_index(params[:id]) == 0
+    redirect_to [@manga,prev_page(params[:id])]
+  end
+  def next
+    redirect_to [@manga,page(params[:id])] and return if page_index(params[:id]) == page_no-1
+    redirect_to [@manga,next_page(params[:id])]
   end
   
   private
 
-    def load_manga
-      @manga = Manga.where(:slug => params[:manga_id]).first      
+    def load_manga; @manga = Manga.where(:slug => params[:manga_id]).first end
+    def new_page(page_id,diff)
+      new_page_index = page_index(page_id)+diff
+      new_page_no = page_nos[new_page_index]
+      @manga.pages.where(:no => new_page_no).first      
     end
+    def next_page(page_id); new_page(page_id,+1) end
+    def page(page_id); @manga.pages.where(:slug => page_id).first end
+    def page_index(page_id); page_nos.index(page_id.to_i) end
+    def page_no; @manga.pages.count end
+    def page_nos; @manga.pages.asc(:no).map(&:no) end
+    def prev_page(page_id); new_page(page_id,-1) end
 end

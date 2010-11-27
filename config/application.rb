@@ -37,7 +37,7 @@ module TransaMongoid
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
+    config.filter_parameters += [:password, :password_confirmation]
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|

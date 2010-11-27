@@ -32,7 +32,7 @@
 <%= content_for(:top) do %>
 <div id="page_nav">
   <%= link_to "Previous", previous_manga_page_path(@manga,@page,:active => @active.pos) %>
-  <%= link_to "Next" %>
+  <%= link_to "Next", next_manga_page_path(@manga,@page,:active => @active.pos) %>
 </div>
 <% end %>
 <div id="image">

@@ -6,7 +6,7 @@ class User
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  #  attr_accessible :email, :password, :password_confirmation
+  attr_accessible :email, :password, :password_confirmation
 
   def apply_omniauth(omniauth)
     authentications.build(:provider=>omniauth['provider'], :uid=>omniauth['uid'])

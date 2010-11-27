@@ -6,6 +6,7 @@ class Page
   slug :no
   referenced_in :manga
   references_many :translations
-  
+
+  validates :manga, :presence => true
   validates :no, :presence => true, :uniqueness => { :scope => :manga_id }
 end

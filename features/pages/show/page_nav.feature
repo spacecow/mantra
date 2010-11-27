@@ -10,11 +10,29 @@ Scenario: View of the page nav
 When I go to that manga's page's page
 Then I should see /Previous\s*Next/ within the page nav section
 
-Scenario: Follow links in the page nav
+Scenario Outline: Follow links in the page nav
 When I go to that manga's page "3"'s page
-And I follow "Previous" within the page nav section
-Then I should be redirected to that manga's page "1"'s page
+And I follow "<link>" within the page nav section
+Then I should be redirected to that manga's page "<no>"'s page
+Examples:
+| link     | no |
+| Previous |  1 |
+| Next     |  4 |
 
+Scenario Outline: The links in the page nav should not be activated if they do not lead somewhere
+When I go to that manga's page "<no>"'s page
+Then I should see no link "<link1>" within the page nav section
+And I should see a link "<link2>" within the page nav section
+Examples:
+| no | link1    | link2    |
+|  1 | Previous | Next     |
+|  4 | Next     | Previous |
 
-@pending
-Scenario: The links in the page nav should not be activated if they do not lead somewhere
+Scenario Outline:
+When I go to that manga's page "<no>"'s page
+And I follow "<link>" within the page nav section
+Then I should be redirected to that manga's page "<no>"'s page
+Examples:
+| link     | no |
+| Previous |  1 |
+| Next     |  4 |
