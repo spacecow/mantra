@@ -3,17 +3,17 @@ class Translation
   include Mongoid::Slug  
   field :japanese
   field :english
-  field :page_id, :type => Integer
+#  field :page_id, :type => Integer
   field :pos, :type => Integer
   field :x1, :type => Integer, :default => 100
   field :y1, :type => Integer, :default => 100
   field :x2, :type => Integer, :default => 100
   field :y2, :type => Integer, :default => 100
   slug :pos
-  referenced_in :page
+  embedded_in :page, :inverse_of => :translations
+#  referenced_in :page
 
-  validates :pos, :presence => true, :uniqueness => {:scope => :page_id}
-  validates :page_id, :presence => true
+#  validates :pos, :presence => true, :uniqueness => {:scope => :page_id}
   
   def active; @active || false end
   def active=(b); @active = b end

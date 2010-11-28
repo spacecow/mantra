@@ -18,6 +18,9 @@ TransaMongoid::Application.routes.draw do
     end
   end
 
+#  match "mangas/:id(/:sequence_id)" => "courses#show", :as => :course
+#  match "mangas/:manga_id/pages/:page_id/translations/:id/edit" => "translations#edit" 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

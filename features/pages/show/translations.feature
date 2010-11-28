@@ -58,7 +58,7 @@ Given a translation: "1" exists with page: that page, pos: 1
 When I go to that manga's page's page
 When I follow "<link>" within that translation
 Then I should be redirected to that <page> page
-And <no> translations should exist
+And the page should have <no> translations
 Examples:
 | link | page                              | no |
 | Edit | manga's page's translation's edit |  1 |

@@ -4,6 +4,12 @@ Given a manga exists
 And a page: "1" exists with manga: that manga, no: 1
 And a page: "2" exists with manga: that manga, no: 2
 
+@pending
+Scenario: Both Japanese and English cannot be blank
+
+@pending
+Scenario: The rectangle must be changed
+
 # Scenario Outline: English has to be filled in
 # Given a translation exists with page: page "1", pos: 1
 # When I go to the manga's <path> page

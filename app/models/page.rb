@@ -5,7 +5,8 @@ class Page
   mount_uploader :image, ImageUploader #field is avatar_filename
   slug :no
   referenced_in :manga
-  references_many :translations
+  embeds_many :translations
+#  references_many :translations
 
   validates :manga, :presence => true
   validates :no, :presence => true, :uniqueness => { :scope => :manga_id }

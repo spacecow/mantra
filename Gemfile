@@ -32,7 +32,8 @@ group :test do
   gem 'cucumber'
   gem 'rspec-rails'
   gem 'spork'
-  gem 'pickle'
+  #  gem 'pickle'
+  gem "pickle", :path => "~/ruby/rails/pickle"
   gem 'launchy'
   gem 'factory_girl_rails'
 end

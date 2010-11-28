@@ -28,11 +28,5 @@ Examples:
 |  1 | Previous | Next     |
 |  4 | Next     | Previous |
 
-Scenario Outline:
-When I go to that manga's page "<no>"'s page
-And I follow "<link>" within the page nav section
-Then I should be redirected to that manga's page "<no>"'s page
-Examples:
-| link     | no |
-| Previous |  1 |
-| Next     |  4 |
+@pending
+Scenario: Use Factory in controller
