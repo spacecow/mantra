@@ -33,7 +33,7 @@ group :test do
   gem 'rspec-rails'
   gem 'spork'
   #  gem 'pickle'
-  gem "pickle", :git => "git://git@github.com:spacecow/pickle.git"
+  gem "pickle", :git => "git://github.com/spacecow/pickle.git"
   gem 'launchy'
   gem 'factory_girl_rails'
 end

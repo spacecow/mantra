@@ -1,5 +1,6 @@
-PATH
-  remote: ~/ruby/rails/pickle
+GIT
+  remote: git://github.com/spacecow/pickle.git
+  revision: 6e027bdb18ee730fc819b1f806412c1cadbbfe63
   specs:
     pickle (0.4.3)
       cucumber (>= 0.8)
@@ -259,3 +260,6 @@ DEPENDENCIES
   sqlite3-ruby
   twitter
   will_paginate (= 3.0.pre2)
+
+METADATA
+  version: 1.0.6
