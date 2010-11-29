@@ -5,10 +5,10 @@ class AuthenticationsController < ApplicationController
 
   def create
     omniauth = request.env["omniauth.auth"]
-    @oauth = Twitter::OAuth.new(ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET'])
+  #  @oauth = Twitter::OAuth.new(ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET'])
     authentication = Authentication.where(:provider=>omniauth['provider']).and(:uid=>omniauth['uid']).first
     if authentication
-      session[:profile] = Twitter.Base.new(@oauth).verify_credentials
+#      session[:profile] = Twitter.Base.new(@oauth).verify_credentials
       #      flash[:notice] = "Signed in successfully."
       flash[:notice] = session[:profile]
       sign_in_and_redirect(:user, authentication.user)
