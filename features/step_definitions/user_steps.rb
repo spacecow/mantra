@@ -4,3 +4,6 @@ Given /^I am logged in as "([^"]*)"$/ do |user|
   And %(I fill in "Password" with "foobar")
   And %(I press "Sign in")
 end
+
+When /^I do nothing$/ do
+end

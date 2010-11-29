@@ -3,7 +3,6 @@ class Translation
   include Mongoid::Slug  
   field :japanese
   field :english
-#  field :page_id, :type => Integer
   field :pos, :type => Integer
   field :x1, :type => Integer, :default => 100
   field :y1, :type => Integer, :default => 100
@@ -11,9 +10,8 @@ class Translation
   field :y2, :type => Integer, :default => 100
   slug :pos
   embedded_in :page, :inverse_of => :translations
-#  referenced_in :page
 
-#  validates :pos, :presence => true, :uniqueness => {:scope => :page_id}
+  validate :both_english_and_japanese_cannot_be_blank
   
   def active; @active || false end
   def active=(b); @active = b end
@@ -31,4 +29,9 @@ class Translation
       " inactive"
     end
   end
+
+  private
+    def both_english_and_japanese_cannot_be_blank
+      errors.add(:english,I18n.t('error.message.both_blank')) if english.blank? && japanese.blank?
+    end
 end

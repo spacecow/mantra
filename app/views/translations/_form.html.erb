@@ -1,7 +1,7 @@
 <%= simple_form_for [@manga,@page,@translation] do |f| %>
-  <%= f.input :japanese %>
+  <%= f.input :japanese, :error_html => { :id => "japanese_error"} %>
   <%= f.input :english, :error_html => { :id => "english_error"} %>
-  <%= f.input :x1, :as => :hidden %>
+  <%= f.input :x1, :as => :string %>
   <%= f.input :y1, :as => :hidden %>
   <%= f.input :x2, :as => :hidden %>
   <%= f.input :y2, :as => :hidden %>

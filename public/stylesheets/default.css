@@ -161,7 +161,7 @@ div#translations div.translation {
   padding: 10px;
   width: 280px;
 }
-div#translations div.translation div#text_container {
+div#translations div.translation div.text_container {
   float: left;
   width: 15em;
 }
@@ -177,6 +177,7 @@ div#translations div.translation div#arrow_container span#down_arrow {
   float: right;
   width: 2.5em;
 }
+div#translations div.translation div#links { float: right; }
 div#translations div#translation_form {
   float: left;
   padding: 10px;

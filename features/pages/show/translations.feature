@@ -14,13 +14,17 @@ Examples:
 |    2 |
 
 @view
-Scenario: View of a translation
+Scenario Outline: View of a translation
 Given a translation exists with page: page "1", pos: 1, japanese: "明日", english: "tomorrow"
 When I go to that manga's page "1"'s page
-Then I should see "明日" within that translation
-And I should see /明日/ within that translation's japanese subsection
+And I <extra>
+Then I should see /明日/ within that translation's japanese subsection
 And I should see /tomorrow/ within that translation's english subsection
 And I should see /Show\s*Edit\s*Del/ within that translation's links section
+Examples:
+| extra            |
+| do nothing       |
+| press "Create"   |
 
 @arrows
 Scenario: View of translation arrows

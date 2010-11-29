@@ -12,12 +12,14 @@ Then I should see /Previous\s*Next/ within the page nav section
 
 Scenario Outline: Follow links in the page nav
 When I go to that manga's page "3"'s page
+And I <extra>
 And I follow "<link>" within the page nav section
 Then I should be redirected to that manga's page "<no>"'s page
 Examples:
-| link     | no |
-| Previous |  1 |
-| Next     |  4 |
+| link     | no | extra          |
+| Previous |  1 | do nothing     |
+| Next     |  4 | do nothing     |
+| Previous |  1 | press "Create" |
 
 Scenario Outline: The links in the page nav should not be activated if they do not lead somewhere
 When I go to that manga's page "<no>"'s page
@@ -27,6 +29,3 @@ Examples:
 | no | link1    | link2    |
 |  1 | Previous | Next     |
 |  4 | Next     | Previous |
-
-@pending
-Scenario: Use Factory in controller

@@ -2,10 +2,9 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  del: "Del"
-  delete: "Delete"
-  edit: "Edit"
-  show: "Show"
+  error:
+    message:
+      both_blank: "both can't be blank"
 
   label:
     add: "Add %{obj}"
@@ -25,13 +24,17 @@ en:
     created: "Successfully created %{obj}."
     updated: "Successfully updated %{obj}."
 
-#  english: "English"
-#  japanese: "Japanese"
   cancel: "Cancel"
   create: "Create"
+  del: "Del"
+  delete: "Delete"
+  edit: "Edit"
   manga: "Manga"
+  next: "Next"
   page: "Page"
   page_no: "Page no."
+  previous: "Previous"
+  show: "Show"
   sign_in: "Sign in"
   sign_out: "Sign out"
   sign_up: "Sign up"

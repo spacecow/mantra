@@ -1,7 +1,7 @@
 Given /^#{capture_model} has #{capture_model}(?: with #{capture_fields})?$/ do |parent,child,fields|
   factory, label = *parse_model(child)
   fields = parse_fields(fields)
-  record = model(parent).translations.create!(fields)
+  record = model(parent).translations << Factory.build(:translation,fields)
   store_model(factory, label, record)
 end
 

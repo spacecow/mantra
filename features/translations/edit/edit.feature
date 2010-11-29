@@ -2,8 +2,8 @@ Feature:
 Background:
 Given a manga exists
 And a page exists with manga: that manga
-And that page has a translation: "1" with pos: 1
-And that page has a translation: "2" with pos: 2, japanese: "明日", english: "tomorrow"
+And a translation: "1" exists with page: that page, pos: 1
+And a translation: "2" exists with pos: 2, japanese: "明日", english: "tomorrow", page: that page
 
 Scenario: Edit a translation
 When I go to that manga's page's translation's edit page

@@ -1,3 +1,6 @@
+require 'factory_girl'
+require File.dirname(__FILE__) + '/../../spec/factories'
+
 class PagesController < ApplicationController
   before_filter :load_manga
   before_filter :load_page, :only => [:show,:next,:previous,:edit,:update,:destroy]
@@ -6,16 +9,22 @@ class PagesController < ApplicationController
     @first_page = first_page?
     @last_page = last_page?
     @translations = @page.translations.sort_by(&:pos)
-    @translation = @page.translations.build
+    @translation = Factory.build(:translation, :x1=>(params[:x1]||100),
+                                 :y1=>(params[:y1]||100),
+                                 :x2=>(params[:x2]||100),
+                                 :y2=>(params[:y2]||100),
+                                 :english=>(params[:eng]||""),
+                                 :japanese=>(params[:jap]||""))
+    
     @active = case params[:active].nil?
               when true
                 case @translations.empty?
-                  when true; Factory.build(:translation,:pos=>0)
+                  when true; Factory.build(:translation,:pos=>0,:x1=>(params[:x1]||100))
                   when false; @translations.first
                 end
               when false
                 case params[:active] == "0"
-                  when true; Factory.build(:translation,:pos=>0)
+                  when true; Factory.build(:translation,:pos=>0,:x1=>(params[:x1]||100))
                   when false; @page.translations.where(:pos => params[:active].to_i).first
                 end
               end
@@ -61,9 +70,6 @@ class PagesController < ApplicationController
   
   private
 
-    def first_page?; page_index == 0 end
-    def last_page?; page_index == page_no-1 end
-  
     def load_manga; @manga = Manga.where(:slug => params[:manga_id]).first end
     def load_page; @page = @manga.pages.where(:slug => params[:id]).first end
     
@@ -73,8 +79,5 @@ class PagesController < ApplicationController
       @manga.pages.where(:no => new_page_no).first      
     end
     def next_page; new_page(+1) end
-    def page_index; page_nos.index(@page.no) end
-    def page_no; @manga.pages.count end
-    def page_nos; @manga.pages.only(:no).asc(:no).map(&:no) end
     def prev_page; new_page(-1) end
 end

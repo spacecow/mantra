@@ -7,7 +7,10 @@ class TranslationsController < ApplicationController
     if @translation.save
       redirect_to manga_page_path(@manga,@page,:active=>pos)
     else
-      @translations = @page.translations.sort_by(&:pos)
+      @first_page = first_page?
+      @last_page = last_page?
+      @translations = []
+      @translations = @page.translations.reject{|e|e==@translation}.sort_by(&:pos)
       @active = Translation.new(:pos=>0,
                                 :x1=>params[:translation][:x1],
                                 :y1=>params[:translation][:y1],
@@ -43,13 +46,13 @@ class TranslationsController < ApplicationController
   end
 
   def move(upper,active=upper)
-    upper_translation = @page.translations.where(:slug => upper).first
-    lower_translation = @page.translations.where(:slug => upper+1).first
+    upper_translation = @page.translations.where(:pos => upper).first
+    lower_translation = @page.translations.where(:pos => upper+1).first
     swap_positions(upper_translation,lower_translation)
     redirect_to manga_page_path(@manga,@page,:active=>active)
   end
-  def move_down; move(params[:id].to_i,params[:id].to_i+1) end
-  def move_up; move(params[:id].to_i-1) end
+  def move_down; move(params[:id].split('-')[0].to_i,params[:id].split('-')[0].to_i+1) end
+  def move_up; move(params[:id].split('-')[0].to_i-1) end
   
   private
 

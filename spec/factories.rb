@@ -9,7 +9,7 @@ end
 
 Factory.define :translation do |f|
   f.english "Default factory english."
-  f.x1 100
+  f.x1 99
   f.y1 100
   f.x2 100
   f.y2 100

@@ -1,6 +1,10 @@
-<div id="translation_<%= translation.slug %>"
-     class="translation<%= translation.classes(@active.pos,last) %>">
-  <div id="text_container">
+<div id="translation_<%= translation.pos %>"
+     class="translation<%= translation.classes(@active.pos,last) %>"
+     data-x1="<%= translation.x1 %>"
+     data-y1="<%= translation.y1 %>"
+     data-x2="<%= translation.x2 %>"
+     data-y2="<%= translation.y2 %>">
+  <div class="text_container">
     <span id="japanese"><%= translation.japanese %></span><br />
     <span id="english"><%= translation.english %></span>
   </div>

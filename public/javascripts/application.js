@@ -3,7 +3,6 @@ $(function(){
   $(":text:visible:enabled:first").focus();
 });
 
-
 $(function(){
   $("div#mangas div.pagination a").live("click", function(){
     $.getScript(this.href);

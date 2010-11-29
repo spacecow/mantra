@@ -7,7 +7,7 @@ And a page: "3" exists with manga: that manga, no: 3
 
 Scenario: Create a new translation
 #Given a translation: "1" exists with page: that page, pos: 1, english: "Jack"
-When I go to that manga's page's page
+When I go to that manga's page's page with "x1=99"
 When I fill in "Japanese" with "明日"
 And I fill in "English" with "tomorrow"
 And I press "Create"
@@ -36,3 +36,9 @@ Examples:
 |  1 | inactive         | inactive          |
 |  2 | active             | below-active        |
 |  3 | below-active       | inactive          |
+
+@pending
+Scenario: Hide translation show with javascript
+
+@pending
+Scenario: Change the rectangle with javascript

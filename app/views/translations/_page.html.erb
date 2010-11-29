@@ -2,50 +2,83 @@
   <%= stylesheet_link_tag "jquery.Jcrop" %>
   <%= javascript_include_tag "jquery.Jcrop.min" %>
   <script type="text/javascript" charset="utf-8">
+    var jcrop_api;
+    var active = <%= @active.pos %>;
     $(function() {
       var x1 = <%= @active.x1 %>
       var y1 = <%= @active.y1 %>
-      var x2 = <%= @active.x1+@active.x2 %>
-      var y2 = <%= @active.y1+@active.y2 %>
-      $('#rectangle').Jcrop({
+      var x2 = <%= @active.x2 %>
+      var y2 = <%= @active.y2 %>
+      jcrop_api = $.Jcrop('#rectangle',{
         onChange: update_rect,
         onSelect: update_rect,
-        setSelect: [x1||100, y1||100, x2||200, y2||200],
+        setSelect: [x1||100, y1||100, x1+x2||200, y1+y2||200],
       });
-      
-/*      $("div.translation").live("mouseenter", function(){
+      if(active==0 || <%= !@translation.new_record? %>){
+        jcrop_api.setOptions({ allowMove: true, allowResize: true });
+      } else {
+        jcrop_api.setOptions({ allowMove: false, allowResize: false });    
+      }      
+
+      $("div.translation").live("mouseenter", function(){
+        active = this.id.split("_")[1];
         var arr = $("form#new_translation").attr("action").split('/');
         arr.pop();
-        $.get(arr.join('/')+"?active="+this.id.split("_")[1], null, null, "script");
+        $.get(arr.join('/')+"?active="+this.id.split("_")[1]+"&x1="+X1()+"&y1="+Y1()+"&x2="+X2()+"&y2="+Y2()+"&jap="+jap()+"&eng="+eng(), null, null, "script");
+        x1 = parseInt($("div#translation_"+active).attr("data-x1"));
+        y1 = parseInt($("div#translation_"+active).attr("data-y1"));
+        x2 = parseInt($("div#translation_"+active).attr("data-x2"));
+        y2 = parseInt($("div#translation_"+active).attr("data-y2"));
+        jcrop_api.animateTo([x1,y1,x1+x2,y1+y2]);
+        jcrop_api.setOptions({ allowMove: false, allowResize: false });
       });
-*/
+
+      $("div#translation_form").live("mouseenter", function(){
+        active = 0;
+        var arr = $("form#new_translation").attr("action").split('/');
+        arr.pop();
+        $.get(arr.join('/')+"?active=0&x1="+X1()+"&y1="+Y1()+"&x2="+X2()+"&y2="+Y2()+"&jap="+jap()+"&eng="+eng(), null, null, "script");
+        jcrop_api.animateTo([X1(),Y1(),X1()+X2(),Y1()+Y2()]);
+        jcrop_api.setOptions({ allowMove: true, allowResize: true });
+    });
+
     });
     function update_rect(coords){
+      if(active==0 || <%= !@translation.new_record? %>){
         $("#translation_x1").val(coords.x);
         $("#translation_y1").val(coords.y);
         $("#translation_x2").val(coords.w);
         $("#translation_y2").val(coords.h);
+      }
     }
+    function X1(){ return parseInt($("input#translation_x1").val()); }
+    function Y1(){ return parseInt($("input#translation_y1").val()); }
+    function X2(){ return parseInt($("input#translation_x2").val()); }
+    function Y2(){ return parseInt($("input#translation_y2").val()); }
+    function eng(){ return $("input#translation_english").val(); }
+    function jap(){ return $("input#translation_japanese").val(); }
+    
+
   </script>
 <% end %>
 
 <%= content_for(:top) do %>
 <div id="page_nav">
   <% if @first_page %>
-    Previous
+    <%= t(:previous) %>
   <% else %>
-    <%= link_to "Previous", previous_manga_page_path(@manga,@page,:active => @active.pos) %>
+    <%= link_to t(:previous), previous_manga_page_path(@manga,@page,:active => @active.pos) %>
   <% end %>
 
   <% if @last_page %>
-    Next
+    <%= t(:next) %>
   <% else %>
-    <%= link_to "Next", next_manga_page_path(@manga,@page,:active => @active.pos) %>
+    <%= link_to t(:next), next_manga_page_path(@manga,@page,:active => @active.pos) %>
   <% end %>
 </div>
 <% end %>
 <div id="image">
-  <%= image_tag @page.image.url, :id => "rectangle" %>
+  <%= render "pages/image" %>
 </div>
 
 <div id="translations"><%= render "translations/translations" %></div>
