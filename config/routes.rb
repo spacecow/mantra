@@ -18,6 +18,8 @@ TransaMongoid::Application.routes.draw do
     end
   end
 
+  resources :articles
+  
 #  match "mangas/:id(/:sequence_id)" => "courses#show", :as => :course
 #  match "mangas/:manga_id/pages/:page_id/translations/:id/edit" => "translations#edit" 
 
