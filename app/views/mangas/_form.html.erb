@@ -1,4 +1,5 @@
 <%= simple_form_for @manga do |f| %>
   <%= f.input :title, :error_html => { :id => "title_error"} %>
   <%= f.submit :class => "submit" %>
+  <%= f.submit t(:cancel), :class => "cancel" %>
 <% end %>

@@ -2,4 +2,10 @@
 e8d6bf: !ruby/object:Dooby::Task 
   todo: start learning haml/sass
 1a6250: !ruby/object:Dooby::Task 
-  todo: "make the #mainpage prettier :doing"
+  todo: "make the #mainpage prettier :done"
+5a42e9: !ruby/object:Dooby::Task 
+  todo: add thumbnails to page and manga
+1bae82: !ruby/object:Dooby::Task 
+  todo: "#amazon s3 for #herokU"
+fcba9a: !ruby/object:Dooby::Task 
+  todo: "#mainpage picture :doing"

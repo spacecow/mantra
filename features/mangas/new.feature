@@ -6,7 +6,9 @@ When I go to the new manga page
 @default
 Scenario: New manga view
 Then I should see /New Manga/ as title
-And the "Title" field should be empty
+And the 'title' field should be empty
+And I should see a 'create' button
+And I should see no 'cancel' button
 
 @create
 Scenario: Create a new manga
