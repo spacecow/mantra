@@ -1,5 +1,5 @@
 <tr id="manga_<%= manga.slug %>">
-  <td><%= link_to manga.title, manga %></td>
+  <td id="title"><%= link_to manga.title, manga %></td>
   <td>
     <%= link_to t(:edit), edit_manga_path(manga)
         %> <%= link_to t(:del), manga, :confirm => sure?, :method => :delete %>

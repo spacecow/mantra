@@ -1,7 +1,7 @@
 class MangasController < ApplicationController
   def show
     @manga = Manga.where(:slug => params[:id]).first
-    @pages = @manga.pages
+    @pages = @manga.pages.asc(:no)
   end
   
   def index

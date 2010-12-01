@@ -13,23 +13,24 @@
     <%= stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection' %>
   </head>
   <body>
-    <div id="notices">
-      <%# render @notices %>
-    </div>
-    <div id="container" class="round">
-      <div id="user_nav">
-        <% if user_signed_in? %>
-          <%= t('message.signed_in_as',:id=>current_user.email) %> Not you? <%= link_to t(:sign_out), destroy_user_session_path %>.
-        <% else %>
-          <%= link_to t(:sign_in), authentications_path %>.
-        <% end %>
+    <div id="root">
+      <div id="notices">
+        <%# render @notices %>
       </div>
-      <% flash.each do |key, value| %>
-      <div id="flash" class="<%= key %> round"><%= value %></div>
-      <div class="clear"></div>
-      <% end %>
+      <div id="container" class="round">
+        <div id="user_nav">
+          <% if user_signed_in? %>
+            <%= t('message.signed_in_as',:id=>current_user.email) %> Not you? <%= link_to t(:sign_out), destroy_user_session_path %>.
+          <% else %>
+            <%= link_to t(:sign_in), authentications_path %>.
+          <% end %>
+        </div>
+        <% flash.each do |key, value| %>
+        <div id="flash" class="<%= key %> round"><%= value %></div>
+        <div class="clear"></div>
+        <% end %>
 
-      <% unless @page.nil? %>
+        <% unless @page.nil? %>
         <div id="links_top">
           <%= link_to @manga.title, @manga %>
         </div>
@@ -37,11 +38,12 @@
           <%= yield(:top) %>
         </div>
         <div class="clear"></div>
-      <% end %>
-      <% unless yield(:title).blank? %>
-        <h1 id="title"><%= yield(:title) %></h1>
-      <% end %>
-      <%= yield %>
+        <% end %>
+        <% unless yield(:title).blank? %>
+          <h1 id="title"><%= yield(:title) %></h1>
+        <% end %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

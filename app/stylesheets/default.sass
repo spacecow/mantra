@@ -29,15 +29,6 @@ $translation_width: 280px
 
 html
   background: $global_bg
-a
-  text-decoration: none
-  color: $link_fg
-  padding: 0 1px 0 1px
-  font-size: 85%
-  :hover
-    background: $link_fg
-    color: $main_bg
-    padding: 0 1px 0 1px
 
 div.clear
   clear: both
@@ -64,15 +55,33 @@ div#links_top
   border: 1px solid black
   -moz-border-radius: 10px
   border-radius: 10px
+div#page_nav
+  float: left
+  margin: 3px 0 0 10px
 
 h1
   margin-top: 0px
 
 div#container
+  border: 10px solid white
+  padding: 5px 5px 5px 15px
+  margin: 100px auto
   font: $global_font
-  background: #ddd
+  background: #bbb
   padding: 20px
   width: 900px
+  a
+    text-decoration: none
+    color: $link_fg
+    padding: 0 1px 0 1px
+    font-size: 85%
+    &:hover
+      background: $link_fg
+      color: $main_bg
+      padding: 0 1px 0 1px
+  h1
+    font-size: 200%
+    margin-bottom: 10px
   div#user_nav
     display: block
     atext-align: right
@@ -92,9 +101,9 @@ div#container
         color: #333
         padding: 3px 6px 2px 4px
         font-size: 70%
-          :hover
-            color: #fff
-            background: #777
+        &:hover
+          color: #fff
+          background: #777
       div#provider
         font-weight: bold
         margin-left: 38px
@@ -111,7 +120,7 @@ div#container
     margin-right: 20px
     text-align: center
     font-weight: bold
-    :hover
+    &:hover
       background: $main_bg
       color: $light_link_fg
     img
@@ -129,6 +138,13 @@ div#container
     background: grey
     img
       width: 400px
+
+table#pages, table#mangas
+  margin-bottom: 10px
+  td#no, td#title
+    font-size: 120%
+    text-align: right
+    padding-right: 5px
 
 div#translations
   float: left
@@ -186,5 +202,13 @@ div#translations
     input.cancel
       margin: 0
 
-
+form.simple_form
+  div
+    label
+      float: left
+      width: 100px
+      text-align: right
+      margin-right: 10px
+  input.submit
+    margin: 10px 0 0 110px
 

@@ -3,48 +3,37 @@ html {
   background: #4b7399;
 }
 
-/* line 32, ../../../app/stylesheets/default.sass */
-a {
-  text-decoration: none;
-  color: #4b7399;
-  padding: 0 1px 0 1px;
-  font-size: 85%;
-  hover-background: #4b7399;
-  hover-color: white;
-  hover-padding: 0 1px 0 1px;
-}
-
-/* line 42, ../../../app/stylesheets/default.sass */
+/* line 33, ../../../app/stylesheets/default.sass */
 div.clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
 
-/* line 47, ../../../app/stylesheets/default.sass */
+/* line 38, ../../../app/stylesheets/default.sass */
 .round {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
 
-/* line 50, ../../../app/stylesheets/default.sass */
+/* line 41, ../../../app/stylesheets/default.sass */
 div#flash {
   border: 1px solid black;
   float: left;
   padding: 2px 5px 2px 5px;
 }
 
-/* line 54, ../../../app/stylesheets/default.sass */
+/* line 45, ../../../app/stylesheets/default.sass */
 div.notice {
   background: #33ff33;
 }
 
-/* line 56, ../../../app/stylesheets/default.sass */
+/* line 47, ../../../app/stylesheets/default.sass */
 div.alert {
   background: #ff3333;
 }
 
-/* line 59, ../../../app/stylesheets/default.sass */
+/* line 50, ../../../app/stylesheets/default.sass */
 div#links_top {
   float: left;
   background-color: rgba(0, 0, 0, 0.1);
@@ -55,25 +44,52 @@ div#links_top {
   border-radius: 10px;
 }
 
-/* line 68, ../../../app/stylesheets/default.sass */
+/* line 58, ../../../app/stylesheets/default.sass */
+div#page_nav {
+  float: left;
+  margin: 3px 0 0 10px;
+}
+
+/* line 62, ../../../app/stylesheets/default.sass */
 h1 {
   margin-top: 0px;
 }
 
-/* line 71, ../../../app/stylesheets/default.sass */
+/* line 65, ../../../app/stylesheets/default.sass */
 div#container {
+  border: 10px solid white;
+  padding: 5px 5px 5px 15px;
+  margin: 100px auto;
   font: normal 14px "Helvetica Neue", Arial, Helvetica, sans-serif;
-  background: #dddddd;
+  background: #bbbbbb;
   padding: 20px;
   width: 900px;
 }
-/* line 76, ../../../app/stylesheets/default.sass */
+/* line 73, ../../../app/stylesheets/default.sass */
+div#container a {
+  text-decoration: none;
+  color: #4b7399;
+  padding: 0 1px 0 1px;
+  font-size: 85%;
+}
+/* line 78, ../../../app/stylesheets/default.sass */
+div#container a:hover {
+  background: #4b7399;
+  color: white;
+  padding: 0 1px 0 1px;
+}
+/* line 82, ../../../app/stylesheets/default.sass */
+div#container h1 {
+  font-size: 200%;
+  margin-bottom: 10px;
+}
+/* line 85, ../../../app/stylesheets/default.sass */
 div#container div#user_nav {
   display: block;
   atext-align: right;
   float: right;
 }
-/* line 81, ../../../app/stylesheets/default.sass */
+/* line 90, ../../../app/stylesheets/default.sass */
 div#container div#authentications div#authentication {
   float: left;
   background: #eeeeee;
@@ -82,7 +98,7 @@ div#container div#authentications div#authentication {
   margin-right: 10px;
   position: relative;
 }
-/* line 88, ../../../app/stylesheets/default.sass */
+/* line 97, ../../../app/stylesheets/default.sass */
 div#container div#authentications div#authentication a#remove {
   position: absolute;
   top: 3px;
@@ -90,147 +106,176 @@ div#container div#authentications div#authentication a#remove {
   color: #333333;
   padding: 3px 6px 2px 4px;
   font-size: 70%;
-  font-size-hover-color: white;
-  font-size-hover-background: #777777;
 }
-/* line 98, ../../../app/stylesheets/default.sass */
+/* line 104, ../../../app/stylesheets/default.sass */
+div#container div#authentications div#authentication a#remove:hover {
+  color: white;
+  background: #777777;
+}
+/* line 107, ../../../app/stylesheets/default.sass */
 div#container div#authentications div#authentication div#provider {
   font-weight: bold;
   margin-left: 38px;
   margin-right: 20px;
 }
-/* line 102, ../../../app/stylesheets/default.sass */
+/* line 111, ../../../app/stylesheets/default.sass */
 div#container div#authentications div#authentication div#uid {
   color: #666666;
   font-size: 70%;
   margin-left: 38px;
   margin-right: 20px;
 }
-/* line 107, ../../../app/stylesheets/default.sass */
+/* line 116, ../../../app/stylesheets/default.sass */
 div#container div#authentications div#authentication img {
   float: left;
 }
-/* line 109, ../../../app/stylesheets/default.sass */
+/* line 118, ../../../app/stylesheets/default.sass */
 div#container a.auth_provider {
   float: left;
   margin-right: 20px;
   text-align: center;
   font-weight: bold;
-  hover-background: white;
-  hover-color: #7ba3c9;
 }
-/* line 117, ../../../app/stylesheets/default.sass */
+/* line 123, ../../../app/stylesheets/default.sass */
+div#container a.auth_provider:hover {
+  background: white;
+  color: #7ba3c9;
+}
+/* line 126, ../../../app/stylesheets/default.sass */
 div#container a.auth_provider img {
   display: block;
   border: 0;
 }
-/* line 121, ../../../app/stylesheets/default.sass */
+/* line 130, ../../../app/stylesheets/default.sass */
 div#container form#manga_search {
   float: left;
 }
-/* line 123, ../../../app/stylesheets/default.sass */
+/* line 132, ../../../app/stylesheets/default.sass */
 div#container div#mangas {
   width: 300px;
   float: left;
 }
-/* line 126, ../../../app/stylesheets/default.sass */
+/* line 135, ../../../app/stylesheets/default.sass */
 div#container div#image {
   float: left;
   padding: 1em;
   background: grey;
 }
-/* line 130, ../../../app/stylesheets/default.sass */
+/* line 139, ../../../app/stylesheets/default.sass */
 div#container div#image img {
   width: 400px;
 }
 
-/* line 133, ../../../app/stylesheets/default.sass */
+/* line 142, ../../../app/stylesheets/default.sass */
+table#pages, table#mangas {
+  margin-bottom: 10px;
+}
+/* line 144, ../../../app/stylesheets/default.sass */
+table#pages td#no, table#pages td#title, table#mangas td#no, table#mangas td#title {
+  font-size: 120%;
+  text-align: right;
+  padding-right: 5px;
+}
+
+/* line 149, ../../../app/stylesheets/default.sass */
 div#translations {
   float: left;
   width: 320px;
   background: grey;
 }
-/* line 137, ../../../app/stylesheets/default.sass */
+/* line 153, ../../../app/stylesheets/default.sass */
 div#translations div#top_empty_translation_fillout {
   width: 320px;
   height: 10px;
   float: left;
   background: #dddddd;
 }
-/* line 142, ../../../app/stylesheets/default.sass */
+/* line 158, ../../../app/stylesheets/default.sass */
 div#translations div#bottom_empty_translation_fillout {
   width: 320px;
   height: 10px;
   float: left;
   background: #dddddd;
 }
-/* line 147, ../../../app/stylesheets/default.sass */
+/* line 163, ../../../app/stylesheets/default.sass */
 div#translations div.inactive {
   background: silver;
 }
-/* line 149, ../../../app/stylesheets/default.sass */
+/* line 165, ../../../app/stylesheets/default.sass */
 div#translations div.below-active {
   -moz-border-radius-topleft: 15px;
   border-top-left-radius: 15px;
 }
-/* line 152, ../../../app/stylesheets/default.sass */
+/* line 168, ../../../app/stylesheets/default.sass */
 div#translations div.above-active {
   -moz-border-radius-bottomleft: 15px;
   border-bottom-left-radius: 15px;
 }
-/* line 155, ../../../app/stylesheets/default.sass */
+/* line 171, ../../../app/stylesheets/default.sass */
 div#translations div.translation {
   float: left;
   padding: 10px;
   width: 280px;
 }
-/* line 158, ../../../app/stylesheets/default.sass */
+/* line 174, ../../../app/stylesheets/default.sass */
 div#translations div.translation div.text_container {
   float: left;
   width: 15em;
 }
-/* line 161, ../../../app/stylesheets/default.sass */
+/* line 177, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container {
   float: left;
   width: 4.5em;
 }
-/* line 164, ../../../app/stylesheets/default.sass */
+/* line 180, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#up_arrow {
   float: left;
   width: 2em;
 }
-/* line 167, ../../../app/stylesheets/default.sass */
+/* line 183, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#down_arrow {
   float: right;
   width: 2.5em;
 }
-/* line 170, ../../../app/stylesheets/default.sass */
+/* line 186, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#links {
   float: right;
 }
-/* line 172, ../../../app/stylesheets/default.sass */
+/* line 188, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form {
   float: left;
   padding: 10px;
   width: 280px;
 }
-/* line 176, ../../../app/stylesheets/default.sass */
+/* line 192, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form div label {
   float: left;
   width: 60px;
   text-align: right;
   margin-right: 5px;
 }
-/* line 181, ../../../app/stylesheets/default.sass */
+/* line 197, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form div input {
   float: left;
   width: 200px;
 }
-/* line 184, ../../../app/stylesheets/default.sass */
+/* line 200, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form input.change {
   margin: 10px 0 0 65px;
 }
-/* line 186, ../../../app/stylesheets/default.sass */
+/* line 202, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form input.cancel {
   margin: 0;
+}
+
+/* line 207, ../../../app/stylesheets/default.sass */
+form.simple_form div label {
+  float: left;
+  width: 100px;
+  text-align: right;
+  margin-right: 10px;
+}
+/* line 212, ../../../app/stylesheets/default.sass */
+form.simple_form input.submit {
+  margin: 10px 0 0 110px;
 }
