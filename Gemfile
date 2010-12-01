@@ -9,7 +9,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'simple_form' #, :git => "git://github.com/plataformatec/simple_form.git"
 #gem 'less'
-gem 'compass'
+gem "compass", ">= 0.10.6"
+gem 'rb-inotify', ' >= 0.5.1'
 gem 'jquery-rails'
 gem 'mongoid', '2.0.0.beta.20'
 gem 'mongoid_slug', :require => 'mongoid/slug'
@@ -25,10 +26,6 @@ gem 'dooby', :path => "~/ruby/rails/dooby"
 
 group :development do
   gem 'cucumber-rails'
-
-
-
-
   gem 'faker'
 end
 
