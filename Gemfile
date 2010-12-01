@@ -8,7 +8,8 @@ gem 'rails', '3.0.0'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'simple_form' #, :git => "git://github.com/plataformatec/simple_form.git"
-gem 'less'
+#gem 'less'
+gem 'compass'
 gem 'jquery-rails'
 gem 'mongoid', '2.0.0.beta.20'
 gem 'mongoid_slug', :require => 'mongoid/slug'
@@ -19,7 +20,7 @@ gem 'twitter'
 gem 'heroku'
 gem 'will_paginate', '3.0.pre2'
 gem 'carrierwave'
-gem 'dooby'
+gem 'dooby', :path => "~/ruby/rails/dooby"
 #gem 'gmail_smtp'
 
 group :development do
