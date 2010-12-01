@@ -25,7 +25,6 @@ gem 'dooby', :path => "~/ruby/rails/dooby"
 
 group :development do
   gem 'cucumber-rails'
-
   gem 'faker'
 end
 
