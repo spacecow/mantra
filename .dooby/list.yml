@@ -1,5 +1,5 @@
 --- 
-f4fbd2: !ruby/object:Dooby::Task 
-  todo: starting with article-comments :doing
 83bb89: !ruby/object:Dooby::Task 
   todo: "master #dooby :done"
+8d365a: !ruby/object:Dooby::Task 
+  todo: exploring dooby :doing
