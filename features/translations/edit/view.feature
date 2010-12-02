@@ -4,6 +4,8 @@ Given a manga exists
 And a page exists with manga: that manga
 And a translation: "1" exists with page: that page, pos: 1, japanese: "明日", english: "tomorrow"
 And a translation: "2" exists with page: that page, pos: 2
+And a user exists with email: "test@example.com"
+And I am logged in as "test@example.com"
 
 Scenario: Edit translation view
 When I go to that manga's page's translation "1"'s edit page

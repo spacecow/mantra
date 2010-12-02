@@ -1,4 +1,5 @@
 class TranslationsController < ApplicationController
+  before_filter :authenticate_user!
   before_filter :load_manga_and_page
 
   def create

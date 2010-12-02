@@ -2,6 +2,7 @@ require 'factory_girl'
 require File.dirname(__FILE__) + '/../../spec/factories'
 
 class PagesController < ApplicationController
+  before_filter :authenticate_user!
   before_filter :load_manga
   before_filter :load_page, :only => [:show,:next,:previous,:edit,:update,:destroy]
 

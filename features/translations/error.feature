@@ -3,6 +3,8 @@ Background:
 Given a manga exists
 And a page: "1" exists with manga: that manga, no: 1
 And a page: "2" exists with manga: that manga, no: 2
+And a user exists with email: "test@example.com"
+And I am logged in as "test@example.com"
 
 Scenario Outline: Both Japanese and English cannot be blank
 Given a translation exists with page: that page, pos: 1

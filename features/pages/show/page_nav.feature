@@ -4,7 +4,8 @@ Given a manga exists
 And a page: "1" exists with manga: that manga, no: 1
 And a page: "3" exists with manga: that manga, no: 3
 And a page: "4" exists with manga: that manga, no: 4
-
+And a user exists with email: "test@example.com"
+And I am logged in as "test@example.com"
 
 Scenario: View of the page nav
 When I go to that manga's page's page

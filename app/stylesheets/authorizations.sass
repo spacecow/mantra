@@ -7,7 +7,7 @@ $authheight: 35px
 div#authorizations
   float: right
   width: $authwidth
-  a
+  a.auth_provider
     width: $authwidth
     height: $authheight
     display: block
@@ -26,18 +26,18 @@ div#authorizations
     &:nth-child(2) div
       background: #355495 url(../../images/facebook_32.png) no-repeat
       padding-left: 40px
-  h5
-    height: $authheight
-    text-align: center
-    line-height: $authheight
-    +transition(margin-top 0.2s linear)
-  div
-    color: white
-    text-align: left
-    line-height: $authheight
-    font-size: 150%
-    height: $authheight
-    opacity: 0
-    +transition(all 0.5s linear)
-    +rotate(6deg)
+    h5
+      height: $authheight
+      text-align: center
+      line-height: $authheight
+      +transition(margin-top 0.2s linear)
+    div
+      color: white
+      text-align: left
+      line-height: $authheight
+      font-size: 150%
+      height: $authheight
+      opacity: 0
+      +transition(all 0.5s linear)
+      +rotate(6deg)
     

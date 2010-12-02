@@ -4,7 +4,7 @@ div#authorizations {
   width: 150px;
 }
 /* line 10, ../../../app/stylesheets/authorizations.sass */
-div#authorizations a {
+div#authorizations a.auth_provider {
   width: 150px;
   height: 35px;
   display: block;
@@ -14,11 +14,11 @@ div#authorizations a {
   overflow: hidden;
 }
 /* line 18, ../../../app/stylesheets/authorizations.sass */
-div#authorizations a:hover h5 {
+div#authorizations a.auth_provider:hover h5 {
   margin-top: -35px;
 }
 /* line 20, ../../../app/stylesheets/authorizations.sass */
-div#authorizations a:hover div {
+div#authorizations a.auth_provider:hover div {
   opacity: 1;
   -moz-transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
@@ -26,17 +26,17 @@ div#authorizations a:hover div {
   transform: rotate(0deg);
 }
 /* line 23, ../../../app/stylesheets/authorizations.sass */
-div#authorizations a:nth-child(1) div {
+div#authorizations a.auth_provider:nth-child(1) div {
   background: #6db3b8 url(../../images/twitter_32.png) no-repeat;
   padding-left: 40px;
 }
 /* line 26, ../../../app/stylesheets/authorizations.sass */
-div#authorizations a:nth-child(2) div {
+div#authorizations a.auth_provider:nth-child(2) div {
   background: #355495 url(../../images/facebook_32.png) no-repeat;
   padding-left: 40px;
 }
 /* line 29, ../../../app/stylesheets/authorizations.sass */
-div#authorizations h5 {
+div#authorizations a.auth_provider h5 {
   height: 35px;
   text-align: center;
   line-height: 35px;
@@ -50,7 +50,7 @@ div#authorizations h5 {
   transition-duration: 1s;
 }
 /* line 34, ../../../app/stylesheets/authorizations.sass */
-div#authorizations div {
+div#authorizations a.auth_provider div {
   color: white;
   text-align: left;
   line-height: 35px;

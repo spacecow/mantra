@@ -4,6 +4,8 @@ Background:
 Given a manga exists with title: "Ashita no Joe"
 And a page exists with no: "1", manga: that manga
 When I go to the manga's page's edit page
+And a user exists with email: "test@example.com"
+And I am logged in as "test@example.com"
   
 @default
 Scenario: Edit page view

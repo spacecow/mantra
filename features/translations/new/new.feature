@@ -4,6 +4,8 @@ Given a manga exists
 And a page: "1" exists with manga: that manga, no: 1
 And a page: "2" exists with manga: that manga, no: 2
 And a page: "3" exists with manga: that manga, no: 3
+And a user exists with email: "test@example.com"
+And I am logged in as "test@example.com"
 
 Scenario: Create a new translation
 Given a translation: "1" exists with page: that page, pos: 1, english: "Jack"

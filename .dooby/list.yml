@@ -16,4 +16,10 @@ f61c5d: !ruby/object:Dooby::Task
 cf847b: !ruby/object:Dooby::Task 
   todo: "check if #delegate can replace #mouseenter + #live"
 40151d: !ruby/object:Dooby::Task 
-  todo: "engage with #transitions. maybe apply that to #authorization :doing"
+  todo: "engage with #transitions. maybe apply that to #authorization :done"
+c956a8: !ruby/object:Dooby::Task 
+  todo: require login to see any pages :doing
+fba0de: !ruby/object:Dooby::Task 
+  todo: "write #redirect tests in #rspec"
+fba254: !ruby/object:Dooby::Task 
+  todo: "check out #thor on #railscasts"
