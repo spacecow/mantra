@@ -10,7 +10,7 @@ class AuthenticationsController < ApplicationController
     if authentication
 #      session[:profile] = Twitter.Base.new(@oauth).verify_credentials
       #      flash[:notice] = "Signed in successfully."
-      flash[:notice] = session[:profile]
+      flash[:notice] = "Signed in successfully."
       sign_in_and_redirect(:user, authentication.user)
     elsif current_user
       current_user.authentications.create!(:provider=>omniauth['provider'], :uid=>omniauth['uid'])
