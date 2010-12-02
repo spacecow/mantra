@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/spacecow/dooby.git
+  revision: 805b123caa1bd39c143a11bdb36b13633207ca38
+  specs:
+    dooby (0.3.1)
+      chronic (= 0.3.0)
+      colored (= 1.2)
+      fattr (= 2.2.0)
+      highline (= 1.6.1)
+      main (= 4.2.0)
+
+GIT
   remote: git://github.com/spacecow/pickle.git
   revision: 6e027bdb18ee730fc819b1f806412c1cadbbfe63
   specs:
@@ -7,16 +18,6 @@ GIT
       rake
       rspec (>= 1.3)
       yard
-
-PATH
-  remote: ~/ruby/rails/dooby
-  specs:
-    dooby (0.3.1)
-      chronic (= 0.3.0)
-      colored (= 1.2)
-      fattr (= 2.2.0)
-      highline (= 1.6.1)
-      main (= 4.2.0)
 
 GEM
   remote: http://rubygems.org/
@@ -281,3 +282,6 @@ DEPENDENCIES
   sqlite3-ruby
   twitter
   will_paginate (= 3.0.pre2)
+
+METADATA
+  version: 1.0.6
