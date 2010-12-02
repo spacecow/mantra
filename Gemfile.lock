@@ -66,8 +66,6 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.27)
       xpath (~> 0.1.2)
-    carrierwave (0.5.0)
-      activesupport (~> 3.0.0)
     celerity (0.8.4)
     childprocess (0.1.4)
       ffi (~> 0.6.3)
@@ -85,6 +83,7 @@ GEM
     cucumber-rails (0.3.2)
       cucumber (>= 0.8.0)
     culerity (0.2.12)
+    daemons (1.0.10)
     database_cleaner (0.6.0)
     devise (1.1.4)
       bcrypt-ruby (~> 2.1.2)
@@ -106,6 +105,7 @@ GEM
     fattr (2.2.0)
     ffi (0.6.3)
       rake (>= 0.8.7)
+    gem_plugin (0.2.3)
     gherkin (2.2.9)
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
@@ -143,6 +143,9 @@ GEM
       will_paginate (~> 3.0.pre)
     mongoid_slug (0.4.7)
       mongoid (~> 2.0.0.beta.19)
+    mongrel (1.2.0.pre2)
+      daemons (~> 1.0.10)
+      gem_plugin (~> 0.2.3)
     multi_json (0.0.5)
     multi_xml (0.2.0)
     multipart-post (1.0.1)
@@ -258,7 +261,6 @@ PLATFORMS
 DEPENDENCIES
   bson_ext
   capybara
-  carrierwave
   compass (>= 0.10.6)
   cucumber
   cucumber-rails
@@ -272,6 +274,7 @@ DEPENDENCIES
   launchy
   mongoid (= 2.0.0.beta.20)
   mongoid_slug
+  mongrel (= 1.2.0.pre2)
   omniauth
   pickle!
   rails (= 3.0.0)
