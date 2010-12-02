@@ -8,7 +8,6 @@ gem 'rails', '3.0.0'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'simple_form' #, :git => "git://github.com/plataformatec/simple_form.git"
-#gem 'less'
 gem "compass", ">= 0.10.6"
 gem 'rb-inotify', ' >= 0.5.1'
 gem 'jquery-rails'
@@ -20,9 +19,7 @@ gem 'omniauth'
 gem 'twitter'
 gem 'heroku'
 gem 'will_paginate', '3.0.pre2'
-gem 'carrierwave'
 gem 'dooby', :git => "git://github.com/spacecow/dooby.git" #:path => "~/ruby/rails/dooby"
-#gem 'gmail_smtp'
 
 group :development do
   gem 'cucumber-rails'
@@ -35,7 +32,6 @@ group :test do
   gem 'cucumber'
   gem 'rspec-rails'
   gem 'spork'
-  #  gem 'pickle'
   gem "pickle", :git => "git://github.com/spacecow/pickle.git"
   gem 'launchy'
   gem 'factory_girl_rails'
