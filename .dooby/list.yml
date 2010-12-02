@@ -1,8 +1,6 @@
 --- 
 1a6250: !ruby/object:Dooby::Task 
   todo: "make the #mainpage prettier :done"
-1bae82: !ruby/object:Dooby::Task 
-  todo: "#amazon s3 for #herokU"
 fcba9a: !ruby/object:Dooby::Task 
   todo: "#mainpage picture :done"
 d0dcd3: !ruby/object:Dooby::Task 
@@ -11,8 +9,6 @@ d0dcd3: !ruby/object:Dooby::Task
   todo: "add #thumbnails to page and manga"
 f61c5d: !ruby/object:Dooby::Task 
   todo: "find a #markup tool for articles"
-767b97: !ruby/object:Dooby::Task 
-  todo: "engage with #fancy #buttons"
 cf847b: !ruby/object:Dooby::Task 
   todo: "check if #delegate can replace #mouseenter + #live"
 40151d: !ruby/object:Dooby::Task 
@@ -24,4 +20,6 @@ fba0de: !ruby/object:Dooby::Task
 fba254: !ruby/object:Dooby::Task 
   todo: "check out #thor on #railscasts"
 fc0f1a: !ruby/object:Dooby::Task 
-  todo: change the image upload to an url :doing
+  todo: change the image upload to an url :done
+edb814: !ruby/object:Dooby::Task 
+  todo: applied gradient to fields and buttons :doing

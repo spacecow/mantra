@@ -1,10 +1,16 @@
+@import "compass/css3/gradient"
+@import "compass/css3/border-radius"
+
 $main_bg: #efe
 $main_bg: #fff
 $global_bg: #4B7399
 $link_fg: $global_bg
 $light_link_fg: #7Ba3c9
-$alert_bg: #933
-$notice_bg: #696
+$alert_light: #f33
+$alert_dark: #933
+$notice_dark: #396
+$notice_light: #4CC417
+
 
 $global_font: normal 14px "Helvetica Neue", Arial, Helvetica, sans-serif
 
@@ -27,6 +33,13 @@ $translation_width: 280px
   padding: 10px
   width: $translation_width
 
+@mixin gradient($light, $dark)
+  color: white
+  font-weight: bold
+  padding: 5px
+  +border-radius(10px)
+  +linear-gradient(color-stops($light, $dark))
+
 html
   background: $global_bg
 
@@ -39,23 +52,19 @@ div.clear
   @include mixin_rounded_corners
 
 div#flash
-  border: 3px solid white
   float: left
-  padding: 2px 5px 2px 5px
-  margin-bottom: 2px
+  margin-bottom: 5px
+  padding: 3px 10px
+  border: 1px solid white
 div.notice
-  background: $notice_bg
+  +gradient($notice_light,$notice_dark)
 div.alert
-  background: $alert_bg
+  +gradient($alert_light,$alert_dark)
 
 div#links_top
   float: left
-  background-color: rgba(0, 0, 0, 0.1)
-  padding: 1px 5px 3px 5px
   margin-bottom: 10px
-  border: 1px solid black
-  -moz-border-radius: 10px
-  border-radius: 10px
+  +gradient(gray,black)
 div#page_nav
   float: left
   margin: 3px 0 0 10px
