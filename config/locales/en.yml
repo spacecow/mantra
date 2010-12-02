@@ -22,8 +22,10 @@ en:
 
   success:
     created: "Successfully created %{obj}."
+    deleted: "Successfully deleted %{obj}."
     updated: "Successfully updated %{obj}."
 
+  article: "Article"
   cancel: "Cancel"
   create: "Create"
   del: "Del"

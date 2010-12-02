@@ -1,7 +1,9 @@
 <tr id="manga_<%= manga.slug %>">
-  <td id="title"><%= link_to manga.title, manga %></td>
+  <td id="title"><%= user_signed_in? ? link_to( manga.title, manga ) : manga.title %></td>
+  <% if user_signed_in? %>
   <td>
     <%= link_to t(:edit), edit_manga_path(manga)
-        %> <%= link_to t(:del), manga, :confirm => sure?, :method => :delete %>
+ %> <%= link_to t(:del), manga, :confirm => sure?, :method => :delete %>
   </td>
+  <% end %>
 </tr>

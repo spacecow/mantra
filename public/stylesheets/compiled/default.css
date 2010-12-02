@@ -55,20 +55,20 @@ h1 {
   margin-top: 0px;
 }
 
-/* line 65, ../../../app/stylesheets/default.sass */
+/* line 67, ../../../app/stylesheets/default.sass */
 div#logo {
   float: left;
 }
 
-/* line 67, ../../../app/stylesheets/default.sass */
+/* line 69, ../../../app/stylesheets/default.sass */
 div#catch_phrase {
   float: left;
-  margin: 95px 0 0 10px;
+  margin: 5px 0 0 10px;
   font-size: 180%;
   font-style: italic;
 }
 
-/* line 73, ../../../app/stylesheets/default.sass */
+/* line 75, ../../../app/stylesheets/default.sass */
 div#container {
   border: 10px solid white;
   padding: 5px 5px 5px 15px;
@@ -78,31 +78,31 @@ div#container {
   padding: 20px;
   width: 900px;
 }
-/* line 81, ../../../app/stylesheets/default.sass */
+/* line 83, ../../../app/stylesheets/default.sass */
 div#container a {
   text-decoration: none;
   color: #4b7399;
   padding: 0 1px 0 1px;
   font-size: 85%;
 }
-/* line 86, ../../../app/stylesheets/default.sass */
+/* line 88, ../../../app/stylesheets/default.sass */
 div#container a:hover {
   background: #4b7399;
   color: white;
   padding: 0 1px 0 1px;
 }
-/* line 90, ../../../app/stylesheets/default.sass */
+/* line 92, ../../../app/stylesheets/default.sass */
 div#container h1 {
   font-size: 200%;
   margin-bottom: 10px;
 }
-/* line 93, ../../../app/stylesheets/default.sass */
+/* line 95, ../../../app/stylesheets/default.sass */
 div#container div#user_nav {
   display: block;
   atext-align: right;
   float: right;
 }
-/* line 98, ../../../app/stylesheets/default.sass */
+/* line 100, ../../../app/stylesheets/default.sass */
 div#container div#authentications div#authentication {
   float: left;
   background: #eeeeee;
@@ -111,7 +111,7 @@ div#container div#authentications div#authentication {
   margin-right: 10px;
   position: relative;
 }
-/* line 105, ../../../app/stylesheets/default.sass */
+/* line 107, ../../../app/stylesheets/default.sass */
 div#container div#authentications div#authentication a#remove {
   position: absolute;
   top: 3px;
@@ -120,175 +120,175 @@ div#container div#authentications div#authentication a#remove {
   padding: 3px 6px 2px 4px;
   font-size: 70%;
 }
-/* line 112, ../../../app/stylesheets/default.sass */
+/* line 114, ../../../app/stylesheets/default.sass */
 div#container div#authentications div#authentication a#remove:hover {
   color: white;
   background: #777777;
 }
-/* line 115, ../../../app/stylesheets/default.sass */
+/* line 117, ../../../app/stylesheets/default.sass */
 div#container div#authentications div#authentication div#provider {
   font-weight: bold;
   margin-left: 38px;
   margin-right: 20px;
 }
-/* line 119, ../../../app/stylesheets/default.sass */
+/* line 121, ../../../app/stylesheets/default.sass */
 div#container div#authentications div#authentication div#uid {
   color: #666666;
   font-size: 70%;
   margin-left: 38px;
   margin-right: 20px;
 }
-/* line 124, ../../../app/stylesheets/default.sass */
+/* line 126, ../../../app/stylesheets/default.sass */
 div#container div#authentications div#authentication img {
   float: left;
 }
-/* line 126, ../../../app/stylesheets/default.sass */
+/* line 128, ../../../app/stylesheets/default.sass */
 div#container a.auth_provider {
   float: left;
   margin-right: 20px;
   text-align: center;
   font-weight: bold;
 }
-/* line 131, ../../../app/stylesheets/default.sass */
+/* line 133, ../../../app/stylesheets/default.sass */
 div#container a.auth_provider:hover {
   background: white;
   color: #7ba3c9;
 }
-/* line 134, ../../../app/stylesheets/default.sass */
+/* line 136, ../../../app/stylesheets/default.sass */
 div#container a.auth_provider img {
   display: block;
   border: 0;
 }
-/* line 138, ../../../app/stylesheets/default.sass */
+/* line 140, ../../../app/stylesheets/default.sass */
 div#container form#manga_search {
   float: left;
 }
-/* line 140, ../../../app/stylesheets/default.sass */
+/* line 142, ../../../app/stylesheets/default.sass */
 div#container div#mangas {
   width: 300px;
   float: left;
 }
-/* line 143, ../../../app/stylesheets/default.sass */
+/* line 145, ../../../app/stylesheets/default.sass */
 div#container div#image {
   float: left;
   padding: 1em;
   background: grey;
 }
-/* line 147, ../../../app/stylesheets/default.sass */
+/* line 149, ../../../app/stylesheets/default.sass */
 div#container div#image img {
   width: 400px;
 }
 
-/* line 150, ../../../app/stylesheets/default.sass */
+/* line 152, ../../../app/stylesheets/default.sass */
 table#pages, table#mangas {
   margin-bottom: 10px;
 }
-/* line 152, ../../../app/stylesheets/default.sass */
+/* line 154, ../../../app/stylesheets/default.sass */
 table#pages td#no, table#pages td#title, table#mangas td#no, table#mangas td#title {
   font-size: 120%;
   text-align: right;
   padding-right: 5px;
 }
 
-/* line 157, ../../../app/stylesheets/default.sass */
+/* line 159, ../../../app/stylesheets/default.sass */
 div#translations {
   float: left;
   width: 320px;
   background: grey;
 }
-/* line 161, ../../../app/stylesheets/default.sass */
+/* line 163, ../../../app/stylesheets/default.sass */
 div#translations div#top_empty_translation_fillout {
   width: 320px;
   height: 10px;
   float: left;
   background: #dddddd;
 }
-/* line 166, ../../../app/stylesheets/default.sass */
+/* line 168, ../../../app/stylesheets/default.sass */
 div#translations div#bottom_empty_translation_fillout {
   width: 320px;
   height: 10px;
   float: left;
   background: #dddddd;
 }
-/* line 171, ../../../app/stylesheets/default.sass */
+/* line 173, ../../../app/stylesheets/default.sass */
 div#translations div.inactive {
   background: silver;
 }
-/* line 173, ../../../app/stylesheets/default.sass */
+/* line 175, ../../../app/stylesheets/default.sass */
 div#translations div.below-active {
   -moz-border-radius-topleft: 15px;
   border-top-left-radius: 15px;
 }
-/* line 176, ../../../app/stylesheets/default.sass */
+/* line 178, ../../../app/stylesheets/default.sass */
 div#translations div.above-active {
   -moz-border-radius-bottomleft: 15px;
   border-bottom-left-radius: 15px;
 }
-/* line 179, ../../../app/stylesheets/default.sass */
+/* line 181, ../../../app/stylesheets/default.sass */
 div#translations div.translation {
   float: left;
   padding: 10px;
   width: 280px;
 }
-/* line 182, ../../../app/stylesheets/default.sass */
+/* line 184, ../../../app/stylesheets/default.sass */
 div#translations div.translation div.text_container {
   float: left;
   width: 15em;
 }
-/* line 185, ../../../app/stylesheets/default.sass */
+/* line 187, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container {
   float: left;
   width: 4.5em;
 }
-/* line 188, ../../../app/stylesheets/default.sass */
+/* line 190, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#up_arrow {
   float: left;
   width: 2em;
 }
-/* line 191, ../../../app/stylesheets/default.sass */
+/* line 193, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#down_arrow {
   float: right;
   width: 2.5em;
 }
-/* line 194, ../../../app/stylesheets/default.sass */
+/* line 196, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#links {
   float: right;
 }
-/* line 196, ../../../app/stylesheets/default.sass */
+/* line 198, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form {
   float: left;
   padding: 10px;
   width: 280px;
 }
-/* line 200, ../../../app/stylesheets/default.sass */
+/* line 202, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form div label {
   float: left;
   width: 60px;
   text-align: right;
   margin-right: 5px;
 }
-/* line 205, ../../../app/stylesheets/default.sass */
+/* line 207, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form div input {
   float: left;
   width: 200px;
 }
-/* line 208, ../../../app/stylesheets/default.sass */
+/* line 210, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form input.change {
   margin: 10px 0 0 65px;
 }
-/* line 210, ../../../app/stylesheets/default.sass */
+/* line 212, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form input.cancel {
   margin: 0;
 }
 
-/* line 215, ../../../app/stylesheets/default.sass */
+/* line 217, ../../../app/stylesheets/default.sass */
 form.simple_form div label {
   float: left;
   width: 100px;
   text-align: right;
   margin-right: 10px;
 }
-/* line 220, ../../../app/stylesheets/default.sass */
+/* line 222, ../../../app/stylesheets/default.sass */
 form.simple_form input.submit {
   margin: 10px 0 0 110px;
 }

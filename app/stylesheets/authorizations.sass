@@ -1,0 +1,43 @@
+@import "compass/css3/transition"
+@import "compass/css3/transform"
+
+$authwidth: 150px
+$authheight: 35px
+
+div#authorizations
+  float: right
+  width: $authwidth
+  a
+    width: $authwidth
+    height: $authheight
+    display: block
+    background: #eee
+    border: 1px solid #ddd
+    margin: 0 0 10px 0
+    overflow: hidden
+    &:hover h5
+      margin-top: -$authheight
+    &:hover div
+      opacity: 1
+      +rotate(0deg)
+    &:nth-child(1) div
+      background: #6db3b8 url(../../images/twitter_32.png) no-repeat
+      padding-left: 40px
+    &:nth-child(2) div
+      background: #355495 url(../../images/facebook_32.png) no-repeat
+      padding-left: 40px
+  h5
+    height: $authheight
+    text-align: center
+    line-height: $authheight
+    +transition(margin-top 0.2s linear)
+  div
+    color: white
+    text-align: left
+    line-height: $authheight
+    font-size: 150%
+    height: $authheight
+    opacity: 0
+    +transition(all 0.5s linear)
+    +rotate(6deg)
+    

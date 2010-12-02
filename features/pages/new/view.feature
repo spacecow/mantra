@@ -7,5 +7,6 @@ When I go to the manga's new page page
 @default
 Scenario: New page view
 Then I should see /New Page/ as title
-And the "Page no." field should be empty
-And I should see no links at the bottom of the page
+And the 'page_no' field should be empty
+And I should see a 'create' button
+And I should see a 'cancel' button

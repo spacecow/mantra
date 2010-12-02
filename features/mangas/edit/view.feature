@@ -2,6 +2,8 @@
 Feature:
 Background:
 Given a manga exists with title: "Ashita no Joe"
+And a user exists with email: "test@example.com"
+And I am logged in as "test@example.com"
 When I go to that manga's edit page
 
 @default

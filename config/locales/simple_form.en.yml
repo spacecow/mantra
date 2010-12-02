@@ -22,8 +22,11 @@ en:
     #   username: 'User name to sign in.'
     #   password: 'No special characters, please.'
     labels:
+      body: "Body"
       english: "English"
       japanese: "Japanese"
+      page_no: "Page no."
+      title: "Title"
   helpers:
     submit:
       cancel: "Cancel"

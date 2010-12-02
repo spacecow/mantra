@@ -35,6 +35,7 @@ class PagesController < ApplicationController
   end
 
   def create
+    redirect_to @manga and return if params[:commit] == "Cancel"
     @page = @manga.pages.build(params[:page])
     if @page.save
       redirect_to @manga, :notice => created(:page)

@@ -1,4 +1,6 @@
 class MangasController < ApplicationController
+  before_filter :authenticate_user!, :except => :index
+
   def show
     @manga = Manga.where(:slug => params[:id]).first
     @pages = @manga.pages.asc(:no)
@@ -13,6 +15,7 @@ class MangasController < ApplicationController
   end
 
   def create
+    redirect_to mangas_path and return if params[:commit] == "Cancel"
     @manga = Manga.create(params[:manga])
     if @manga.save
       redirect_to mangas_path, :notice => created(:manga)

@@ -1,4 +1,7 @@
 Feature:
+Background:
+Given a user exists with email: "test@example.com"
+And I am logged in as "test@example.com"
 
 @edit
 Scenario: Edit a manga

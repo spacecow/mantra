@@ -32,7 +32,7 @@ class TranslationsController < ApplicationController
       redirect_to manga_page_path(@manga,@page, :active => @translation.pos) and return
     end
     if @translation.update_attributes(params[:translation])
-      redirect_to manga_page_path(@manga,@page, :active => @translation.pos), :notice => updated(:translation)
+      redirect_to manga_page_path(@manga,@page, :active => @translation.pos)
     else
       @translations = @page.translations.sort_by(&:pos)
       @active = @translation
