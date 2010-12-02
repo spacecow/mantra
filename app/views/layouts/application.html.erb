@@ -25,11 +25,11 @@
           <% else %>
           <div id="authorizations">
             <a href="/auth/twitter" class="auth_provider">
-              <h5>Sign in with Twitter</h5>
+              <h5>Log in with Twitter</h5>
               <div>twitter</div> 
             </a>
-            <a href="/auth/facebook" class="auth_provider">
-              <h5>Sign in with Facebook</h5>
+            <a href="/auth/open_id" class="auth_provider">
+              <h5>Connect with Facebook</h5>
               <div>facebook</div> 
             </a>
             Or <%= link_to d(:sign_in), new_user_session_path %> with password

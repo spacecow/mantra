@@ -5,7 +5,7 @@ When I go to that article's edit page
 
 Scenario: Edit an article
 When I fill in "Title" with "Wow!"
-And I fill in "Body" with "Woswers!"
+And I fill in "Body" with "Wowsers!"
 And I press "Update"
 Then I should be redirected to the articles page
 And I should see flash notice message /Successfully updated article./
