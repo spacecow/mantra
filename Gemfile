@@ -9,6 +9,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'simple_form' #, :git => "git://github.com/plataformatec/simple_form.git"
 gem "compass", ">= 0.10.6"
+gem 'fancy-buttons'
 gem 'rb-inotify', ' >= 0.5.1'
 gem 'jquery-rails'
 gem 'mongoid', '2.0.0.beta.20'
