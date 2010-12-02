@@ -22,4 +22,4 @@ fba254: !ruby/object:Dooby::Task
 fc0f1a: !ruby/object:Dooby::Task 
   todo: change the image upload to an url :done
 edb814: !ruby/object:Dooby::Task 
-  todo: applied gradient to fields and buttons :doing
+  todo: applied gradient to fields and buttons :done
