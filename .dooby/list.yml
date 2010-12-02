@@ -23,5 +23,5 @@ fba0de: !ruby/object:Dooby::Task
   todo: "write #redirect tests in #rspec"
 fba254: !ruby/object:Dooby::Task 
   todo: "check out #thor on #railscasts"
-b76740: !ruby/object:Dooby::Task 
-  todo: change the image upload to an url
+fc0f1a: !ruby/object:Dooby::Task 
+  todo: change the image upload to an url :doing

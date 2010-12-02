@@ -15,6 +15,10 @@
   </head>
   <body>
     <div id="root">
+      <% flash.each do |key, value| %>
+        <div id="flash" class="<%= key %> round"><%= value %></div>
+        <div class="clear"></div>
+      <% end %>
       <div id="notices">
         <%# render @notices %>
       </div>
@@ -29,17 +33,13 @@
               <div>twitter</div> 
             </a>
             <a href="/auth/open_id" class="auth_provider">
-              <h5>Connect with Facebook</h5>
-              <div>facebook</div> 
+              <h5>Connect with OpenID</h5>
+              <div>OpenID</div> 
             </a>
             Or <%= link_to d(:sign_in), new_user_session_path %> with password
           </div>
           <% end %>
         </div>
-        <% flash.each do |key, value| %>
-        <div id="flash" class="<%= key %> round"><%= value %></div>
-        <div class="clear"></div>
-        <% end %>
 
           <% unless @page.nil? %>
           <div id="links_top">

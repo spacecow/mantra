@@ -1,6 +1,6 @@
 <%= simple_form_for [@manga,@page], :html => { :multipart => true } do |f| %>
   <%= f.input :no, :label => t(:page_no), :error_html => { :id => "page_no_error"} %>
-  <%= f.input :image, :as => :file %>
+  <%= f.input :image_url %>
   <%= f.submit :class => "submit" %>
   <%= f.submit t(:cancel), :class => "cancel" %>
 <% end %>

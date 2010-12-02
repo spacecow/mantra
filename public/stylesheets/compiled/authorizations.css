@@ -29,13 +29,15 @@ div#authorizations a.auth_provider:hover div {
 div#authorizations a.auth_provider:nth-child(1) div {
   background: #6db3b8 url(../../images/twitter_32.png) no-repeat;
   padding-left: 40px;
+  color: white;
 }
-/* line 26, ../../../app/stylesheets/authorizations.sass */
+/* line 27, ../../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider:nth-child(2) div {
-  background: #355495 url(../../images/facebook_32.png) no-repeat;
+  background: white url(../../images/openid_32.png) no-repeat;
   padding-left: 40px;
+  color: #0f519a;
 }
-/* line 29, ../../../app/stylesheets/authorizations.sass */
+/* line 31, ../../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider h5 {
   height: 35px;
   text-align: center;
@@ -49,9 +51,8 @@ div#authorizations a.auth_provider h5 {
   -o-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 34, ../../../app/stylesheets/authorizations.sass */
+/* line 36, ../../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider div {
-  color: white;
   text-align: left;
   line-height: 35px;
   font-size: 150%;

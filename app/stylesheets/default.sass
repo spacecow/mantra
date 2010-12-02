@@ -3,8 +3,8 @@ $main_bg: #fff
 $global_bg: #4B7399
 $link_fg: $global_bg
 $light_link_fg: #7Ba3c9
-$alert_bg: #f33
-$notice_bg: #3f3
+$alert_bg: #933
+$notice_bg: #696
 
 $global_font: normal 14px "Helvetica Neue", Arial, Helvetica, sans-serif
 
@@ -39,9 +39,10 @@ div.clear
   @include mixin_rounded_corners
 
 div#flash
-  border: 1px solid black
+  border: 3px solid white
   float: left
   padding: 2px 5px 2px 5px
+  margin-bottom: 2px
 div.notice
   background: $notice_bg
 div.alert
@@ -62,24 +63,20 @@ div#page_nav
 h1
   margin-top: 0px
 
-div#content
-
 div#logo
   float: left
-div#catch_phrase
-  float: left
-  margin: 5px 0 0 10px
-  font-size: 180%
-  font-style: italic
+
+div#root
+  margin: 100px auto
+  width: 900px
 
 div#container
   border: 10px solid white
   padding: 5px 5px 5px 15px
-  margin: 100px auto
+  margin: 0 auto
   font: $global_font
   background: #bbb
   padding: 20px
-  width: 900px
   a
     text-decoration: none
     color: $link_fg
