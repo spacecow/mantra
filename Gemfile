@@ -21,7 +21,7 @@ gem 'twitter'
 gem 'heroku'
 gem 'will_paginate', '3.0.pre2'
 gem 'carrierwave'
-gem 'dooby', :path => "~/ruby/rails/dooby"
+gem 'dooby', :git => "git://github.com/spacecow/dooby.git" #:path => "~/ruby/rails/dooby"
 #gem 'gmail_smtp'
 
 group :development do
