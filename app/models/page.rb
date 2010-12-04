@@ -3,7 +3,7 @@ class Page
   include Mongoid::Slug
   field :no, :type => Integer
   field :image_url
-  mount_uploader :image, ImageUploader
+#  mount_uploader :image, ImageUploader
   slug :no
   referenced_in :manga
   embeds_many :translations
