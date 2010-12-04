@@ -2,6 +2,7 @@
 @import "compass/css3/transform"
 @import "compass/css3/gradient"
 @import "compass/css3/border-radius"
+@import "fancy-buttons"
 
 $authwidth: 150px
 $authheight: 35px
@@ -13,8 +14,10 @@ $authheight: 35px
   +border-radius(10px)
   +linear-gradient(color-stops(gray, black))
 
-input
+input.string, textarea, input.search
   +black-gradient
+input.submit, input.cancel, input.change
+  +fancy-button(#333, 15px)
 
 div#authorizations
   float: right

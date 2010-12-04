@@ -4,7 +4,7 @@ Given a user exists with email: "user@email.com"
 
 Scenario: User nav with no user signed in
 When I go to the home page
-Then I should see /Or sign in with password/ within the user nav section
+Then I should see /Or sign in with email/ within the user nav section
 
 Scenario: User nav with a user signed in
 Given I am logged in as "user@email.com"

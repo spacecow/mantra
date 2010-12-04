@@ -1,0 +1,114 @@
+/* incase an inverted custom gradient isn't specified */
+/* line 176, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class, input#user_submit {
+  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+  background: url('/images/button_bg.png?1291369647') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+}
+/* line 165, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class::-moz-focus-inner, input#user_submit::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 168, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class:focus, input#user_submit:focus {
+  outline: none;
+}
+
+/* line 10, ../../../app/stylesheets/devise.sass */
+input#user_email, input#user_password, input#user_password_confirmation {
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #808080), color-stop(100%, #000000));
+  background-image: -moz-linear-gradient(top, #808080 0%, #000000 100%);
+  background-image: linear-gradient(top, #808080 0%, #000000 100%);
+}
+
+/* line 12, ../../../app/stylesheets/devise.sass */
+input#user_submit {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #444444;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #989898), color-stop(10%, #6a6a6a), color-stop(50%, #3c3c3c), color-stop(50%, #353535), color-stop(100%, #4e4e4e));
+  background-image: -moz-linear-gradient(top, #989898 0%, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e 100%);
+  background-image: linear-gradient(top, #989898 0%, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e 100%);
+  border-color: #1e1e1e;
+  text-shadow: #040404 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-top: 5px;
+}
+/* line 116, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+input#user_submit, input#user_submit:visited {
+  color: white;
+}
+/* line 31, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+input#user_submit:hover, input#user_submit:focus {
+  background-color: #3c3c3c;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #919191), color-stop(10%, #636363), color-stop(50%, #353535), color-stop(50%, #2d2d2d), color-stop(100%, #474747));
+  background-image: -moz-linear-gradient(top, #919191 0%, #636363 10%, #353535 50%, #2d2d2d 50%, #474747 100%);
+  background-image: linear-gradient(top, #919191 0%, #636363 10%, #353535 50%, #2d2d2d 50%, #474747 100%);
+  border-color: #161616;
+  text-shadow: black 0px 1px 1px;
+}
+/* line 116, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+input#user_submit:hover, input#user_submit:hover:visited, input#user_submit:focus, input#user_submit:focus:visited {
+  color: white;
+}
+/* line 36, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+input#user_submit:active {
+  background-color: #353535;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #353535), color-stop(30%, #3a3a3a), color-stop(50%, #303030), color-stop(50%, #282828), color-stop(100%, #494949));
+  background-image: -moz-linear-gradient(top, #353535 0%, #3a3a3a 30%, #303030 50%, #282828 50%, #494949 100%);
+  background-image: linear-gradient(top, #353535 0%, #3a3a3a 30%, #303030 50%, #282828 50%, #494949 100%);
+  border-color: #0e0e0e;
+  text-shadow: black 0px -1px -1px;
+  -moz-box-shadow: #1e1e1e 0 0.08em 0.1em 1px inset;
+  -webkit-box-shadow: #1e1e1e 0 0.08em 0.1em 1px inset;
+  -o-box-shadow: #1e1e1e 0 0.08em 0.1em 1px inset;
+  box-shadow: #1e1e1e 0 0.08em 0.1em 1px inset;
+}
+/* line 116, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+input#user_submit:active, input#user_submit:active:visited {
+  color: white;
+}
+
+/* line 15, ../../../app/stylesheets/devise.sass */
+input#user_remember_me {
+  margin-top: 5px;
+}
+
+/* line 17, ../../../app/stylesheets/devise.sass */
+form#user_new {
+  margin-bottom: 10px;
+}

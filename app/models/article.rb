@@ -3,7 +3,7 @@ class Article
   include Mongoid::Slug
   field :title
   field :body
-  slug :title
-
+  slug :body
+  
   validates :title, :uniqueness => true, :presence => true
 end

@@ -4,7 +4,7 @@ end
 
 Factory.define :page do |f|
   f.no 1
-  f.image_filename "jack.jpg"
+  f.image_url "http://usera.ImageCave.com/nattsuddare/violencejack_vol1_006.jpg"
 end
 
 Factory.define :translation do |f|

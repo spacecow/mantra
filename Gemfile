@@ -22,6 +22,7 @@ gem 'heroku'
 gem 'will_paginate', '3.0.pre2'
 gem 'dooby', :git => "git://github.com/spacecow/dooby.git" #:path => "~/ruby/rails/dooby"
 gem 'mongrel', '1.2.0.pre2'
+gem 'carrierwave'
 
 
 group :development do

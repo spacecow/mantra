@@ -1,0 +1,18 @@
+@import "fancy-buttons"
+
+@mixin black-gradient
+  color: white
+  font-weight: bold
+  padding: 5px
+  +border-radius(10px)
+  +linear-gradient(color-stops(gray, black))
+
+input#user_email, input#user_password, input#user_password_confirmation
+  +black-gradient
+input#user_submit
+  +fancy-button
+  margin-top: 5px
+input#user_remember_me
+  margin-top: 5px
+form#user_new
+  margin-bottom: 10px
