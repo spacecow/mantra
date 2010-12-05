@@ -28,4 +28,4 @@ f06c67: !ruby/object:Dooby::Task
 ad76e9: !ruby/object:Dooby::Task 
   todo: move stylesheets/compiled to just stylesheets
 2758ac: !ruby/object:Dooby::Task 
-  todo: "get rid of image links and start using #amazon #s3 :doing"
+  todo: "get rid of image links and start using #amazon #s3 :done"
