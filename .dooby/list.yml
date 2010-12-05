@@ -23,9 +23,9 @@ fc0f1a: !ruby/object:Dooby::Task
   todo: change the image upload to an url :done
 edb814: !ruby/object:Dooby::Task 
   todo: applied gradient to fields and buttons :done
-900a3f: !ruby/object:Dooby::Task 
-  todo: "get rid of image links and start using #amazon #s3"
 f06c67: !ruby/object:Dooby::Task 
   todo: "use #memcash for #openid or take it away"
 ad76e9: !ruby/object:Dooby::Task 
   todo: move stylesheets/compiled to just stylesheets
+2758ac: !ruby/object:Dooby::Task 
+  todo: "get rid of image links and start using #amazon #s3 :doing"
