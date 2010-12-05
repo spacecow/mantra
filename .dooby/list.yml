@@ -27,3 +27,5 @@ edb814: !ruby/object:Dooby::Task
   todo: "get rid of image links and start using #amazon #s3"
 f06c67: !ruby/object:Dooby::Task 
   todo: "use #memcash for #openid or take it away"
+ad76e9: !ruby/object:Dooby::Task 
+  todo: move stylesheets/compiled to just stylesheets
