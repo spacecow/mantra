@@ -17,8 +17,6 @@ c956a8: !ruby/object:Dooby::Task
   todo: require login to see any pages :done
 fba0de: !ruby/object:Dooby::Task 
   todo: "write #redirect tests in #rspec"
-fba254: !ruby/object:Dooby::Task 
-  todo: "check out #thor on #railscasts"
 fc0f1a: !ruby/object:Dooby::Task 
   todo: change the image upload to an url :done
 edb814: !ruby/object:Dooby::Task 
@@ -29,3 +27,5 @@ ad76e9: !ruby/object:Dooby::Task
   todo: move stylesheets/compiled to just stylesheets
 2758ac: !ruby/object:Dooby::Task 
   todo: "get rid of image links and start using #amazon #s3 :done"
+eb275c: !ruby/object:Dooby::Task 
+  todo: "create a #thor script for populate"

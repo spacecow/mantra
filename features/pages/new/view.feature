@@ -10,6 +10,6 @@ And I am logged in as "test@example.com"
 Scenario: New page view
 Then I should see /New Page/ as title
 And the 'page_no' field should be empty
-And the 'image_url' field should be empty
+And the 'image' field should be empty
 And I should see a 'create' button
 And I should see a 'cancel' button

@@ -1,2 +1,1 @@
-<%= image_tag @page.image_url, :id => "rectangle" %>
-<%# image_tag @page.image_url, :id => "rectangle" %>
+<%= image_tag @page.image_url, :id => "rectangle" unless @page.image_url.nil? %>

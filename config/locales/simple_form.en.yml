@@ -25,7 +25,7 @@ en:
       body: "Body"
       english: "English"
       japanese: "Japanese"
-      image_url: "Image url"
+      image: "Image"
       page_no: "Page no."
       title: "Title"
   helpers:

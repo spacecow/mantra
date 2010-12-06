@@ -3,9 +3,11 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or ImageScience support:
-  # include CarrierWave::RMagick
-  # include CarrierWave::ImageScience
+  include CarrierWave::RMagick
+  #include CarrierWave::ImageScience
 
+  process :resize_to_fit => [400, 645]
+  
   # Choose what kind of storage to use for this uploader:
   storage :s3
   # storage :s3
