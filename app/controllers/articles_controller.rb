@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update_attributes(params[:article])
-      redirect_to articles_path, :notice => updated(:article)
+      redirect_to @article, :notice => updated(:article)
     end
   end
 

@@ -25,6 +25,9 @@ gem 'mongrel', '1.2.0.pre2'
 gem 'carrierwave'
 gem 'fog'
 
+gem 'coderay'
+gem 'RedCloth'
+
 
 group :development do
 

@@ -7,8 +7,6 @@ d0dcd3: !ruby/object:Dooby::Task
   todo: "start learning #haml"
 0d8e98: !ruby/object:Dooby::Task 
   todo: "add #thumbnails to page and manga"
-f61c5d: !ruby/object:Dooby::Task 
-  todo: "find a #markup tool for articles"
 cf847b: !ruby/object:Dooby::Task 
   todo: "check if #delegate can replace #mouseenter + #live"
 40151d: !ruby/object:Dooby::Task 
@@ -29,3 +27,5 @@ ad76e9: !ruby/object:Dooby::Task
   todo: "get rid of image links and start using #amazon #s3 :done"
 eb275c: !ruby/object:Dooby::Task 
   todo: "create a #thor script for populate"
+d27b52: !ruby/object:Dooby::Task 
+  todo: "integrate #coderay as #markup to articles :doing"
