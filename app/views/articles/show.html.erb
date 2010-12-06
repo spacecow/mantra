@@ -1,16 +1,20 @@
 <%= title @article.title %>
-<i>Published: <%= @article.created_at.strftime("%Y-%m-%d") %></i>
+<div id="published">Published: <%= @article.created_at.strftime("%Y-%m-%d") %></div>
 
+<% if user_signed_in? && current_user.email == "jsveholm@gmail.com" %>
 <div id="links_top">
   <%= link_to t(:edit), edit_article_path(@article) %>
   <%= link_to t(:del), @article, :confirm => sure?, :method => :delete %>
   <%= link_to list_dp(:article), articles_path %>
 </div>
+<% end %>
 
 <div id="article"><%= raw textilize(coderay(raw @article.body)) %></div>
 
+<% if user_signed_in? && current_user.email == "jsveholm@gmail.com" %>
 <div id="links_bottom">
   <%= link_to t(:edit), edit_article_path(@article) %>
   <%= link_to t(:del), @article, :confirm => sure?, :method => :delete %>
   <%= link_to list_dp(:article), articles_path %>
 </div>
+<% end %>
