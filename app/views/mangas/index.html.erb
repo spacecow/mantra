@@ -7,7 +7,7 @@
 <div id="manga_search"><%= render "manga_search" %></div>
 
 <div id="sidebar">
-<%= unless @article.nil? %>
+<% unless @article.nil? %>
   <h4 id="title">BLOG</h4>
   <h5 id="subtitle"><%= link_to @article.title, @article %></h5>
   <p id="date"><%= @article.published_date %></p>
