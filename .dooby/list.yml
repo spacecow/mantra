@@ -28,4 +28,4 @@ ad76e9: !ruby/object:Dooby::Task
 eb275c: !ruby/object:Dooby::Task 
   todo: "create a #thor script for populate"
 d27b52: !ruby/object:Dooby::Task 
-  todo: "integrate #coderay as #markup to articles :doing"
+  todo: "integrate #coderay as #markup to articles :done"

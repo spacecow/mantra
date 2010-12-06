@@ -5,6 +5,13 @@
 
 <div id="mangas"><%= render "mangas" %></div>
 <div id="manga_search"><%= render "manga_search" %></div>
+
+<div id="sidebar">
+  <h4 id="title">BLOG</h4>
+  <h5 id="subtitle"><%= link_to @article.title, @article %></h5>
+  <p id="date"><%= @article.published_date %></p>
+  <p id="content"><%= truncate(@article.body, :length=>100) %></p>
+</div>
 <div class="clear"></div>
 
 <% if user_signed_in? %>
