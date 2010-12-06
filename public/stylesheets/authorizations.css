@@ -1,5 +1,5 @@
 /* incase an inverted custom gradient isn't specified */
-/* line 176, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+/* line 176, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
 .fancy-button-reset-base-class, input.submit, input.cancel, input.change {
   font-family: "Lucida Grande", Lucida, Arial, sans-serif;
   background: url('/images/button_bg.png?1291369647') repeat-x bottom left;
@@ -12,17 +12,17 @@
   border-style: solid;
   font-weight: bold;
 }
-/* line 165, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+/* line 165, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
 .fancy-button-reset-base-class::-moz-focus-inner, input.submit::-moz-focus-inner, input.cancel::-moz-focus-inner, input.change::-moz-focus-inner {
   border: none;
   padding: 0;
 }
-/* line 168, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+/* line 168, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
 .fancy-button-reset-base-class:focus, input.submit:focus, input.cancel:focus, input.change:focus {
   outline: none;
 }
 
-/* line 17, ../../../app/stylesheets/authorizations.sass */
+/* line 17, ../../app/stylesheets/authorizations.sass */
 input.string, textarea, input.search {
   color: white;
   font-weight: bold;
@@ -38,7 +38,7 @@ input.string, textarea, input.search {
   background-image: linear-gradient(top, #808080 0%, #000000 100%);
 }
 
-/* line 19, ../../../app/stylesheets/authorizations.sass */
+/* line 19, ../../app/stylesheets/authorizations.sass */
 input.submit, input.cancel, input.change {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -67,11 +67,11 @@ input.submit, input.cancel, input.change {
   -khtml-background-clip: padding-box;
   background-clip: padding-box;
 }
-/* line 116, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
 input.submit, input.submit:visited, input.cancel, input.cancel:visited, input.change, input.change:visited {
   color: white;
 }
-/* line 31, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+/* line 31, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
 input.submit:hover, input.submit:focus, input.cancel:hover, input.cancel:focus, input.change:hover, input.change:focus {
   background-color: #2b2b2b;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #808080), color-stop(10%, #525252), color-stop(50%, #242424), color-stop(50%, #1c1c1c), color-stop(100%, #363636));
@@ -80,11 +80,11 @@ input.submit:hover, input.submit:focus, input.cancel:hover, input.cancel:focus, 
   border-color: #050505;
   text-shadow: black 0px 1px 1px;
 }
-/* line 116, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
 input.submit:hover, input.submit:hover:visited, input.submit:focus, input.submit:focus:visited, input.cancel:hover, input.cancel:hover:visited, input.cancel:focus, input.cancel:focus:visited, input.change:hover, input.change:hover:visited, input.change:focus, input.change:focus:visited {
   color: white;
 }
-/* line 36, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+/* line 36, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
 input.submit:active, input.cancel:active, input.change:active {
   background-color: #242424;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #242424), color-stop(30%, #292929), color-stop(50%, #1f1f1f), color-stop(50%, #171717), color-stop(100%, #383838));
@@ -97,17 +97,17 @@ input.submit:active, input.cancel:active, input.change:active {
   -o-box-shadow: #0d0d0d 0 0.08em 0.1em 1px inset;
   box-shadow: #0d0d0d 0 0.08em 0.1em 1px inset;
 }
-/* line 116, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
 input.submit:active, input.submit:active:visited, input.cancel:active, input.cancel:active:visited, input.change:active, input.change:active:visited {
   color: white;
 }
 
-/* line 22, ../../../app/stylesheets/authorizations.sass */
+/* line 22, ../../app/stylesheets/authorizations.sass */
 div#authorizations {
   float: right;
   width: 150px;
 }
-/* line 25, ../../../app/stylesheets/authorizations.sass */
+/* line 25, ../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider {
   width: 150px;
   height: 35px;
@@ -117,11 +117,11 @@ div#authorizations a.auth_provider {
   margin: 0 0 10px 0;
   overflow: hidden;
 }
-/* line 33, ../../../app/stylesheets/authorizations.sass */
+/* line 33, ../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider:hover h5 {
   margin-top: -35px;
 }
-/* line 35, ../../../app/stylesheets/authorizations.sass */
+/* line 35, ../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider:hover div {
   opacity: 1;
   -moz-transform: rotate(0deg);
@@ -129,19 +129,19 @@ div#authorizations a.auth_provider:hover div {
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-/* line 38, ../../../app/stylesheets/authorizations.sass */
+/* line 38, ../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider:nth-child(1) div {
   background: #6db3b8 url(../../images/twitter_32.png) no-repeat;
   padding-left: 40px;
   color: white;
 }
-/* line 42, ../../../app/stylesheets/authorizations.sass */
+/* line 42, ../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider:nth-child(2) div {
   background: white url(../../images/openid_32.png) no-repeat;
   padding-left: 40px;
   color: #0f519a;
 }
-/* line 46, ../../../app/stylesheets/authorizations.sass */
+/* line 46, ../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider h5 {
   height: 35px;
   text-align: center;
@@ -155,7 +155,7 @@ div#authorizations a.auth_provider h5 {
   -o-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 51, ../../../app/stylesheets/authorizations.sass */
+/* line 51, ../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider div {
   text-align: left;
   line-height: 35px;
