@@ -13,7 +13,7 @@ environment = Compass::AppIntegration::Rails.env
 if ENV['RAILS_ENV'] == "production"
   css_dir = "tmp/stylesheets/compiled"
 else
-  css_dir = "public/stylesheets"
+  css_dir = "tmp/stylesheets/compiled"
 end  
 
 
