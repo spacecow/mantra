@@ -12,7 +12,6 @@ environment = Compass::AppIntegration::Rails.env
 
 if ENV['RAILS_ENV'] == "production"
   css_dir = "tmp/stylesheets/compiled"
-  Rails.configuration.middleware.insert_after 'Sass::Plugin::Rack', 'Rack::Static', :urls => ['/stylesheets/compiled'], :root => "#{project_path}/tmp"
 else
   css_dir = "public/stylesheets"
 end  
