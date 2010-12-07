@@ -1,8 +1,10 @@
 div#sidebar
+  margin-top: 50px
   float: right
   width: 200px
   text-align: right
   h4
+    text-transform: uppercase
     letter-spacing: 4px
     font: 20px Georgia, serif
     border-top: 1px solid #eee
@@ -15,10 +17,25 @@ div#sidebar
       font-style: italic
       font-weight: bold
       color: #4b7399
-  p#date
+  p#date, p#ago
     text-transform: uppercase
     font: 12px Georgia, serif
     margin: 5px 0
     color: white
+  p.translation
+    margin: 5px 0
+    font: 14px Georgia, serif
   p#content
     font: 14px Georgia, serif    
+  p#english
+    margin-bottom: 25px
+
+div#main
+  width: 600px
+  float: left
+  form#manga_search
+    width: 350px    
+    float: left
+  div#mangas
+    width: 250px
+    float: left

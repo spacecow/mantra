@@ -1,36 +1,63 @@
 /* line 1, ../../../app/stylesheets/manga.sass */
 div#sidebar {
+  margin-top: 50px;
   float: right;
   width: 200px;
   text-align: right;
 }
-/* line 5, ../../../app/stylesheets/manga.sass */
+/* line 6, ../../../app/stylesheets/manga.sass */
 div#sidebar h4 {
+  text-transform: uppercase;
   letter-spacing: 4px;
   font: 20px Georgia, serif;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   padding: 5px 0;
 }
-/* line 11, ../../../app/stylesheets/manga.sass */
+/* line 13, ../../../app/stylesheets/manga.sass */
 div#sidebar h5 {
   margin: 5px 0;
 }
-/* line 13, ../../../app/stylesheets/manga.sass */
+/* line 15, ../../../app/stylesheets/manga.sass */
 div#sidebar h5 a {
   font: 15px Georgia, serif;
   font-style: italic;
   font-weight: bold;
   color: #4b7399;
 }
-/* line 18, ../../../app/stylesheets/manga.sass */
-div#sidebar p#date {
+/* line 20, ../../../app/stylesheets/manga.sass */
+div#sidebar p#date, div#sidebar p#ago {
   text-transform: uppercase;
   font: 12px Georgia, serif;
   margin: 5px 0;
   color: white;
 }
-/* line 23, ../../../app/stylesheets/manga.sass */
+/* line 25, ../../../app/stylesheets/manga.sass */
+div#sidebar p.translation {
+  margin: 5px 0;
+  font: 14px Georgia, serif;
+}
+/* line 28, ../../../app/stylesheets/manga.sass */
 div#sidebar p#content {
   font: 14px Georgia, serif;
+}
+/* line 30, ../../../app/stylesheets/manga.sass */
+div#sidebar p#english {
+  margin-bottom: 25px;
+}
+
+/* line 33, ../../../app/stylesheets/manga.sass */
+div#main {
+  width: 600px;
+  float: left;
+}
+/* line 36, ../../../app/stylesheets/manga.sass */
+div#main form#manga_search {
+  width: 350px;
+  float: left;
+}
+/* line 39, ../../../app/stylesheets/manga.sass */
+div#main div#mangas {
+  width: 250px;
+  float: left;
 }

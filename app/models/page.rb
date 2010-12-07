@@ -7,8 +7,11 @@ class Page
   slug :no
   referenced_in :manga
   embeds_many :translations
-#  references_many :translations
+  references_many :notices
+  #  references_many :translations
 
   validates :manga, :presence => true
   validates :no, :presence => true, :uniqueness => { :scope => :manga_id }
+
+  def manga_title; manga.title end
 end

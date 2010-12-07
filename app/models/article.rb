@@ -8,9 +8,7 @@ class Article
   
   validates :title, :uniqueness => true, :presence => true
 
-  def published_date
-    "#{month} #{date}, #{year}"
-  end
+  def published_date; "#{month} #{date}, #{year}" end
 
   private
 

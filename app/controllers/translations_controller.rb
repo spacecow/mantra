@@ -6,6 +6,7 @@ class TranslationsController < ApplicationController
     pos = @page.translations.count+1
     @translation = @page.translations.build(params[:translation].merge(:pos=>pos))
     if @translation.save
+      @page.notices.create!(:translation_id => @translation.id)
       redirect_to manga_page_path(@manga,@page,:active=>pos)
     else
       @first_page = first_page?

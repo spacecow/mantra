@@ -17,6 +17,7 @@ Then the page should have a translation "2" with pos: 2, japanese: "明日", eng
 And the page should have 2 translations
 And I should see translation "2" as active
 And I should see no flash message
+And that page should have 1 notices
 
 Scenario: New translation form
 When I go to that manga's page's page
