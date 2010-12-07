@@ -1,5 +1,8 @@
 module ApplicationHelper
   def add_d(s);  end
+  def admin_signed_in?
+    user_signed_in? && current_user.email == "jsveholm@gmail.com"
+  end
   def chain(s1,s2); "#{s1.to_s}.#{s2.to_s}" end
   def create(s); t2(:create,s) end
   def d(s); t(s).downcase end

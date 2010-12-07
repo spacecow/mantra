@@ -1,7 +1,7 @@
 <%= title @article.title %>
 <div id="published">Published: <%= @article.created_at.strftime("%Y-%m-%d") %></div>
 
-<% if user_signed_in? && current_user.email == "jsveholm@gmail.com" %>
+<% if admin_signed_in? %>
 <div id="links_top">
   <%= link_to t(:edit), edit_article_path(@article) %>
   <%= link_to t(:del), @article, :confirm => sure?, :method => :delete %>
@@ -11,7 +11,7 @@
 
 <div id="article"><%= raw textilize(coderay(raw @article.body)) %></div>
 
-<% if user_signed_in? && current_user.email == "jsveholm@gmail.com" %>
+<% if admin_signed_in? %>
 <div id="links_bottom">
   <%= link_to t(:edit), edit_article_path(@article) %>
   <%= link_to t(:del), @article, :confirm => sure?, :method => :delete %>

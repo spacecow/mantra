@@ -1,16 +1,27 @@
 Feature:
 Background:
 Given an article exists with title: "Yeah!", body: "Oh, yeah!"
-When I go to that article page
+And a user exists with email: "jsveholm@gmail.com"
 
-Scenario: Show article view
+Scenario: Show article view for admin
+Given I am logged in as "jsveholm@gmail.com"
+When I go to that article page
 Then I should see /Yeah!/ as title
 And I should see /Oh, yeah!/ as article
 And I should see links /Edit\s*Del\s*List articles/ at the top of the page
 And I should see links /Edit\s*Del\s*List articles/ at the bottom of the page
 
+Scenario: Show article view for regular users
+When I go to that article page
+Then I should see /Yeah!/ as title
+And I should see /Oh, yeah!/ as article
+And I should see no links at the top of the page
+And I should see no links at the bottom of the page
+
 Scenario Outline: Links from the article view
-When I follow "<link>" at the <location> of the page
+Given I am logged in as "jsveholm@gmail.com"
+When I go to that article page
+And I follow "<link>" at the <location> of the page
 Then I should be redirected to the <page> page
 And <no> articles should exist
 Examples:

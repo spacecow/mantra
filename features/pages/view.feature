@@ -7,7 +7,7 @@ And I am logged in as "test@example.com"
 
 Scenario Outline: A link to the manga title should be visible
 When I go to that manga's <path> page
-Then I should see links "Ashita no Joe" at the top of the page
+Then I should see "Ashita no Joe" within the site nav section
 Examples:
 | path        |
 | page's edit |
@@ -16,7 +16,7 @@ Examples:
 
 Scenario Outline: Follow the manga link
 When I go to that manga's <path> page
-And I follow "Ashita no Joe" at the top of the page
+And I follow "Ashita no Joe" within the site nav section
 Then I should be redirected to that manga page
 Examples:
 | path        |

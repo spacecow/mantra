@@ -14,13 +14,16 @@ And the "Page no." field should contain "1"
 And I should see links "Show Delete" at the bottom of the page
 
 @links
-Scenario Outline: Links on the new page
+Scenario Outline: Links on the bottom of the new page
 When I follow "<link>" at the <location> of the page
 Then I should be redirected to that <page> page
 And <no> pages should exist
 Examples:
 | link          | location | page           | no |
-| Ashita no Joe | top      | manga's        |  1 |
 | Show          | bottom   | manga's page's |  1 |
 | Delete        | bottom   | manga's        |  0 |
 
+@site_nav @links
+Scenario: Links in the site nav section
+When I follow "Ashita no Joe" within the site nav section
+Then I should be redirected to that manga's page

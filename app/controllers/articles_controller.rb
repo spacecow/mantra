@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
     redirect_to articles_path and return if params[:commit] == "Cancel"
     @article = Article.new(params[:article])
     if @article.save
-      redirect_to articles_path, :notice => created(:article)
+      redirect_to @article, :notice => created(:article)
     end
   end
 

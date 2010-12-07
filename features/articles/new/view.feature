@@ -1,5 +1,7 @@
 Feature:
 Background:
+Given a user exists with email: "jsveholm@gmail.com"
+And I am logged in as "jsveholm@gmail.com"
 When I go to the new article page
 
 Scenario: New article view
