@@ -30,6 +30,6 @@
 
 <% if user_signed_in? %>
 <div id="links_bottom">
-  <%= link_to "New manga", new_manga_path %>
+  <%= link_to new(:manga), new_manga_path %>
 </div>
 <% end %>

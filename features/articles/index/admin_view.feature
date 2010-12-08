@@ -8,12 +8,12 @@ Then I should see /Articles/ as title
 And I should see links "New Article" at the bottom of the page
 
 Scenario: List articles on the index page for admin
-Given an article exists with title: "Yeah!", body: "Oh, yeah!"
+Given an article exists with title: "Yeah!", body: "Oh, yeah!", created_at: "2010-12-9"
 And a user exists with email: "jsveholm@gmail.com"
 And I am logged in as "jsveholm@gmail.com"
 When I go to the articles page
 Then I should see "articles" table
-| Yeah! | Edit Del |
+| Yeah! - December 9th, 2010 | Edit Del |
 
 Scenario Outline: Links on the articles index page for admin
 Given an article exists with title: "Yeah!", body: "Oh, yeah!"

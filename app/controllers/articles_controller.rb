@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_filter :load_article, :only => [:show,:edit,:update,:destroy]
 
   def index
-    @articles = Article.asc(:created_at)
+    @articles = Article.desc(:created_at)
   end
 
   def new

@@ -40,6 +40,11 @@ $translation_width: 280px
   +border-radius(10px)
   +linear-gradient(color-stops($light, $dark))
 
+table
+  tr
+    td:nth-child(2)
+      padding: 0 5px
+
 html
   background: $global_bg
 
@@ -61,10 +66,6 @@ div.notice
 div.alert
   +gradient($alert_light,$alert_dark)
 
-div#site_nav
-  float: left
-  margin-bottom: 10px
-  +gradient(gray,black)
 div#page_nav
   float: left
   margin: 3px 0 0 10px
@@ -79,6 +80,9 @@ div#article
 
 div#links_top
   margin-bottom: 10px
+div#links_bottom
+  margin-top: 10px
+
 
 h1
   margin-top: 0px
@@ -105,7 +109,16 @@ div#container
     &:hover
       background: $link_fg
       color: $main_bg
-      padding: 0 1px 0 1px
+      padding: 0 1px 0 1p
+  div#site_nav
+    float: left
+    margin-bottom: 10px
+    +gradient(gray,black)
+    a
+      color: #c4fff3
+      &:hover
+        background: none
+        color: white
   h1
     font-size: 200%
     margin-bottom: 10px
@@ -162,7 +175,6 @@ div#container
       width: 400px
 
 table#pages, table#mangas
-  margin-bottom: 10px
   td#no, td#title
     font-size: 120%
     text-align: right

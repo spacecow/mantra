@@ -1,7 +1,11 @@
-<td><%= link_to article.title, article %></td>
-<% if admin_signed_in? %>
-<td>
-  <%= link_to t(:edit), edit_article_path(article) %> <%= 
-      link_to t(:del), article, :confirm => sure?, :method => :delete %>
-</td>
-<% end %>
+<tr>
+  <td id="article">
+    <span id="title"><%= link_to article.title, article %></span> - <span id="date"><%= article.published_date %></span>
+  </td>
+  <% if admin_signed_in? %>
+  <td>
+    <%= link_to t(:edit), edit_article_path(article) %> <%= 
+        link_to t(:del), article, :confirm => sure?, :method => :delete %>
+  </td>
+  <% end %>
+</tr>

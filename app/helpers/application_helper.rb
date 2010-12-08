@@ -10,6 +10,7 @@ module ApplicationHelper
   def edit(s); t2(:edit,s) end
   def lbl(s); chain(:label,s) end
   def list_dp(s); tdp2(:list,s) end
+  def list_p(s); tp2(:list,s) end
   def new(s); t2(:new,s) end
   def new_d(s); td2(:new,s) end
   def pl(s); t(s).pluralize end
@@ -18,6 +19,7 @@ module ApplicationHelper
   def t2(s1,s2); t(lbl(s1), :obj => t(s2)) end
   def td2(s1,s2); t(lbl(s1), :obj => d(s2)) end
   def tdp2(s1,s2); t(lbl(s1), :obj => dp(s2)) end
+  def tp2(s1,s2); t(lbl(s1), :obj => pl(s2)) end
   def title(page_title)
     content_for(:title){page_title}
   end
