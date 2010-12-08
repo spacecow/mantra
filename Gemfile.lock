@@ -231,16 +231,19 @@ GEM
       ffi (>= 0.5.0)
     rest-client (1.6.1)
       mime-types (>= 1.16)
-    rspec (2.1.0)
-      rspec-core (~> 2.1.0)
-      rspec-expectations (~> 2.1.0)
-      rspec-mocks (~> 2.1.0)
-    rspec-core (2.1.0)
-    rspec-expectations (2.1.0)
+    rspec (2.2.0)
+      rspec-core (~> 2.2)
+      rspec-expectations (~> 2.2)
+      rspec-mocks (~> 2.2)
+    rspec-core (2.2.1)
+    rspec-expectations (2.2.0)
       diff-lcs (~> 1.1.2)
-    rspec-mocks (2.1.0)
-    rspec-rails (2.1.0)
-      rspec (~> 2.1.0)
+    rspec-mocks (2.2.0)
+    rspec-rails (2.2.1)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      railties (~> 3.0)
+      rspec (~> 2.2.0)
     ruby-hmac (0.4.0)
     ruby-openid (2.1.8)
     ruby-openid-apps-discovery (1.2.0)
@@ -309,3 +312,6 @@ DEPENDENCIES
   sqlite3-ruby
   twitter
   will_paginate (= 3.0.pre2)
+
+METADATA
+  version: 1.0.6

@@ -29,9 +29,9 @@ gem 'coderay'
 gem 'RedCloth'
 
 
-group :development do
-
+group :development, :test do
   gem 'cucumber-rails'
+  gem 'rspec-rails'
   #gem 'faker'
 end
 
@@ -39,7 +39,6 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'cucumber'
-  gem 'rspec-rails'
   gem 'spork'
   gem "pickle", :git => "git://github.com/spacecow/pickle.git"
   gem 'launchy'

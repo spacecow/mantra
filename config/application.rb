@@ -45,6 +45,14 @@ module TransaMongoid
 #      g.template_engine :haml
 #      g.test_framework :rspec, :fixtures => false
 #      g.integration_tool :rspec
-    end    
+    end
+
+    ### Part of a Spork hack. See http://bit.ly/arY19y
+#    if Rails.env.test?
+#      initializer :after => :initialize_dependency_mechanism do
+        # Work around initializer in railties/lib/rails/application/bootstrap.rb
+#        ActiveSupport::Dependencies.mechanism = :load
+#      end
+#    end    
   end
 end

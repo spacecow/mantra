@@ -29,3 +29,5 @@ eb275c: !ruby/object:Dooby::Task
   todo: "create a #thor script for populate"
 d27b52: !ruby/object:Dooby::Task 
   todo: "integrate #coderay as #markup to articles :done"
+58af64: !ruby/object:Dooby::Task 
+  todo: "integrate #spork with #rspec :doing"

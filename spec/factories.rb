@@ -16,6 +16,7 @@ Factory.define :translation do |f|
 end
 
 Factory.define :user do |f|
+  f.sequence(:email) { |n| "test#{n}@example.com" }  
   f.password "foobar"
   f.password_confirmation "foobar"
 end
