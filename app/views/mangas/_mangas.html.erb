@@ -1,4 +1,8 @@
 <table id="mangas">
-  <%= render @mangas %>
+  <% if @mangas.empty? %>
+    <tr><td><i><%= t('message.no_match') %></i></td></tr>
+  <% else %>
+    <%= render @mangas %>
+  <% end %>
 </table>
 <%= will_paginate @mangas %>

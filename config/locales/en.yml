@@ -16,6 +16,7 @@ en:
     update: "Update %{obj}"
 
   message:
+    no_match: "There is no match for that search"
     signed_in_as: "Signed in as %{id}."
     sure?: "Are you sure?"
     two_choices: "%{choice1} or %{choice2}."

@@ -55,8 +55,9 @@ div#main {
 div#main form#manga_search {
   width: 350px;
   float: left;
+  margin-top: -5px;
 }
-/* line 39, ../../../app/stylesheets/manga.sass */
+/* line 40, ../../../app/stylesheets/manga.sass */
 div#main div#mangas {
   width: 250px;
   float: left;
