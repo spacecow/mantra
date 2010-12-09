@@ -4,10 +4,10 @@ TransaMongoid::Application.routes.draw do
   devise_for :users, :controllers => {:registrations => 'registrations'}
 
   resources :mangas do
-    resources :pages do
+    resources :pages, :except => :index do
       member do
-        get :previous
-        get :next
+        put :previous
+        put :next
       end
       resources :translations do
         member do

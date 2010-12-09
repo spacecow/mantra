@@ -11,8 +11,6 @@ cf847b: !ruby/object:Dooby::Task
   todo: "engage with #transitions. maybe apply that to #authorization :done"
 c956a8: !ruby/object:Dooby::Task 
   todo: require login to see any pages :done
-fba0de: !ruby/object:Dooby::Task 
-  todo: "write #redirect tests in #rspec"
 fc0f1a: !ruby/object:Dooby::Task 
   todo: change the image upload to an url :done
 edb814: !ruby/object:Dooby::Task 
@@ -23,9 +21,11 @@ eb275c: !ruby/object:Dooby::Task
   todo: "create a #thor script for populate"
 d27b52: !ruby/object:Dooby::Task 
   todo: "integrate #coderay as #markup to articles :done"
-af2ec7: !ruby/object:Dooby::Task 
-  todo: "integrate #spork with #rspec"
-8ea9d3: !ruby/object:Dooby::Task 
-  todo: "fix loading of pictures, maybe another format? #png"
 f56f05: !ruby/object:Dooby::Task 
   todo: fix float layout :done
+"882688": !ruby/object:Dooby::Task 
+  todo: fix loading of pictures, included not only width but also height :done
+0ac88d: !ruby/object:Dooby::Task 
+  todo: "integrate #spork with #rspec :done"
+b532d4: !ruby/object:Dooby::Task 
+  todo: "written #redirect tests in #rspec for pagescontroller :doing"

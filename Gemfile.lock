@@ -1,15 +1,4 @@
 GIT
-  remote: git://github.com/spacecow/dooby.git
-  revision: 805b123caa1bd39c143a11bdb36b13633207ca38
-  specs:
-    dooby (0.3.1)
-      chronic (= 0.3.0)
-      colored (= 1.2)
-      fattr (= 2.2.0)
-      highline (= 1.6.1)
-      main (= 4.2.0)
-
-GIT
   remote: git://github.com/spacecow/pickle.git
   revision: 6e027bdb18ee730fc819b1f806412c1cadbbfe63
   specs:
@@ -53,7 +42,6 @@ GEM
     addressable (2.2.2)
     arel (1.0.1)
       activesupport (~> 3.0.0)
-    arrayfields (4.7.4)
     bcrypt-ruby (2.1.2)
     bson (1.1.2)
     bson_ext (1.1.2)
@@ -72,9 +60,7 @@ GEM
     celerity (0.8.4)
     childprocess (0.1.4)
       ffi (~> 0.6.3)
-    chronic (0.3.0)
     coderay (0.9.6)
-    colored (1.2)
     compass (0.10.6)
       haml (>= 3.0.4)
     configuration (1.2.0)
@@ -108,7 +94,6 @@ GEM
       rack (>= 1.1.0, < 2)
     faraday_middleware (0.3.0)
       faraday (~> 0.5.3)
-    fattr (2.2.0)
     ffi (0.6.3)
       rake (>= 0.8.7)
     fog (0.3.27)
@@ -132,7 +117,6 @@ GEM
       json_pure (>= 1.2.0, < 1.5.0)
       launchy (~> 0.3.2)
       rest-client (>= 1.4.0, < 1.7.0)
-    highline (1.6.1)
     i18n (0.4.2)
     jquery-rails (0.2.5)
       rails (~> 3.0)
@@ -147,9 +131,6 @@ GEM
       i18n (~> 0.4.1)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    main (4.2.0)
-      arrayfields (>= 4.7.4)
-      fattr (>= 2.1.0)
     mime-types (1.16)
     mongo (1.1.2)
       bson (>= 1.1.1)
@@ -292,7 +273,6 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   devise
-  dooby!
   factory_girl_rails
   fancy-buttons
   fog
