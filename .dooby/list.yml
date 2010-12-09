@@ -5,8 +5,6 @@ fcba9a: !ruby/object:Dooby::Task
   todo: "#mainpage picture :done"
 0d8e98: !ruby/object:Dooby::Task 
   todo: "add #thumbnails to page and manga"
-cf847b: !ruby/object:Dooby::Task 
-  todo: "check if #delegate can replace #mouseenter + #live"
 40151d: !ruby/object:Dooby::Task 
   todo: "engage with #transitions. maybe apply that to #authorization :done"
 c956a8: !ruby/object:Dooby::Task 
@@ -28,4 +26,8 @@ f56f05: !ruby/object:Dooby::Task
 0ac88d: !ruby/object:Dooby::Task 
   todo: "integrate #spork with #rspec :done"
 b532d4: !ruby/object:Dooby::Task 
-  todo: "written #redirect tests in #rspec for pagescontroller :doing"
+  todo: "written #redirect tests in #rspec for pagescontroller :done"
+cb57f4: !ruby/object:Dooby::Task 
+  todo: "write #redirect test for all controllers"
+fa7c9c: !ruby/object:Dooby::Task 
+  todo: "replaced #live with #delegate :doing"

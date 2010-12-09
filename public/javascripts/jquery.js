@@ -11,7 +11,7 @@
  * Copyright 2010, The Dojo Foundation
  * Released under the MIT, BSD, and GPL Licenses.
  *
- * Date: Thu Nov 11 19:05:10 2010 -0500
+ * Date: Mon Dec 6 17:24:13 2010 -0500
  */
 (function( window, undefined ) {
 
@@ -234,7 +234,7 @@ jQuery.fn = jQuery.prototype = {
 			this.toArray() :
 
 			// Return just the object
-			( num < 0 ? this.slice(num)[ 0 ] : this[ num ] );
+			( num < 0 ? this[ this.length + num ] : this[ num ] );
 	},
 
 	// Take an array of elements and push it onto the stack
@@ -1244,15 +1244,17 @@ jQuery.fn.extend({
 
 		if ( typeof key === "undefined" ) {
 			if ( this.length ) {
-				var attr = this[0].attributes, name;
 				data = jQuery.data( this[0] );
 
-				for ( var i = 0, l = attr.length; i < l; i++ ) {
-					name = attr[i].name;
-
-					if ( name.indexOf( "data-" ) === 0 ) {
-						name = name.substr( 5 );
-						dataAttr( this[0], name, data[ name ] );
+				if ( this[0].nodeType === 1 ) {
+					var attr = this[0].attributes, name;
+					for ( var i = 0, l = attr.length; i < l; i++ ) {
+						name = attr[i].name;
+	
+						if ( name.indexOf( "data-" ) === 0 ) {
+							name = name.substr( 5 );
+							dataAttr( this[0], name, data[ name ] );
+						}
 					}
 				}
 			}
@@ -1425,7 +1427,7 @@ jQuery.fn.extend({
 
 
 
-var rclass = /[\n\t]/g,
+var rclass = /[\n\t\r]/g,
 	rspaces = /\s+/,
 	rreturn = /\r/g,
 	rspecialurl = /^(?:href|src|style)$/,
@@ -1630,7 +1632,6 @@ jQuery.fn.extend({
 				if ( rradiocheck.test( elem.type ) && !jQuery.support.checkOn ) {
 					return elem.getAttribute("value") === null ? "on" : elem.value;
 				}
-				
 
 				// Everything else, we just grab the value
 				return (elem.value || "").replace(rreturn, "");
@@ -1696,7 +1697,7 @@ jQuery.extend({
 		height: true,
 		offset: true
 	},
-		
+
 	attr: function( elem, name, value, pass ) {
 		// don't set attributes on text and comment nodes
 		if ( !elem || elem.nodeType === 3 || elem.nodeType === 8 ) {
@@ -1714,88 +1715,96 @@ jQuery.extend({
 		// Try to normalize/fix the name
 		name = notxml && jQuery.props[ name ] || name;
 
-		// These attributes require special treatment
-		var special = rspecialurl.test( name );
+		// Only do all the following if this is a node (faster for style)
+		if ( elem.nodeType === 1 ) {
+			// These attributes require special treatment
+			var special = rspecialurl.test( name );
 
-		// Safari mis-reports the default selected property of an option
-		// Accessing the parent's selectedIndex property fixes it
-		if ( name === "selected" && !jQuery.support.optSelected ) {
-			var parent = elem.parentNode;
-			if ( parent ) {
-				parent.selectedIndex;
+			// Safari mis-reports the default selected property of an option
+			// Accessing the parent's selectedIndex property fixes it
+			if ( name === "selected" && !jQuery.support.optSelected ) {
+				var parent = elem.parentNode;
+				if ( parent ) {
+					parent.selectedIndex;
 
-				// Make sure that it also works with optgroups, see #5701
-				if ( parent.parentNode ) {
-					parent.parentNode.selectedIndex;
+					// Make sure that it also works with optgroups, see #5701
+					if ( parent.parentNode ) {
+						parent.parentNode.selectedIndex;
+					}
 				}
 			}
-		}
 
-		// If applicable, access the attribute via the DOM 0 way
-		// 'in' checks fail in Blackberry 4.7 #6931
-		if ( (name in elem || elem[ name ] !== undefined) && notxml && !special ) {
-			if ( set ) {
-				// We can't allow the type property to be changed (since it causes problems in IE)
-				if ( name === "type" && rtype.test( elem.nodeName ) && elem.parentNode ) {
-					jQuery.error( "type property can't be changed" );
-				}
-
-				if ( value === null ) {
-					if ( elem.nodeType === 1 ) {
-						elem.removeAttribute( name );
+			// If applicable, access the attribute via the DOM 0 way
+			// 'in' checks fail in Blackberry 4.7 #6931
+			if ( (name in elem || elem[ name ] !== undefined) && notxml && !special ) {
+				if ( set ) {
+					// We can't allow the type property to be changed (since it causes problems in IE)
+					if ( name === "type" && rtype.test( elem.nodeName ) && elem.parentNode ) {
+						jQuery.error( "type property can't be changed" );
 					}
 
-				} else {
-					elem[ name ] = value;
+					if ( value === null ) {
+						if ( elem.nodeType === 1 ) {
+							elem.removeAttribute( name );
+						}
+
+					} else {
+						elem[ name ] = value;
+					}
 				}
+
+				// browsers index elements by id/name on forms, give priority to attributes.
+				if ( jQuery.nodeName( elem, "form" ) && elem.getAttributeNode(name) ) {
+					return elem.getAttributeNode( name ).nodeValue;
+				}
+
+				// elem.tabIndex doesn't always return the correct value when it hasn't been explicitly set
+				// http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
+				if ( name === "tabIndex" ) {
+					var attributeNode = elem.getAttributeNode( "tabIndex" );
+
+					return attributeNode && attributeNode.specified ?
+						attributeNode.value :
+						rfocusable.test( elem.nodeName ) || rclickable.test( elem.nodeName ) && elem.href ?
+							0 :
+							undefined;
+				}
+
+				return elem[ name ];
 			}
 
-			// browsers index elements by id/name on forms, give priority to attributes.
-			if ( jQuery.nodeName( elem, "form" ) && elem.getAttributeNode(name) ) {
-				return elem.getAttributeNode( name ).nodeValue;
+			if ( !jQuery.support.style && notxml && name === "style" ) {
+				if ( set ) {
+					elem.style.cssText = "" + value;
+				}
+
+				return elem.style.cssText;
 			}
 
-			// elem.tabIndex doesn't always return the correct value when it hasn't been explicitly set
-			// http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
-			if ( name === "tabIndex" ) {
-				var attributeNode = elem.getAttributeNode( "tabIndex" );
-
-				return attributeNode && attributeNode.specified ?
-					attributeNode.value :
-					rfocusable.test( elem.nodeName ) || rclickable.test( elem.nodeName ) && elem.href ?
-						0 :
-						undefined;
-			}
-
-			return elem[ name ];
-		}
-
-		if ( !jQuery.support.style && notxml && name === "style" ) {
 			if ( set ) {
-				elem.style.cssText = "" + value;
+				// convert the value to a string (all browsers do this but IE) see #1070
+				elem.setAttribute( name, "" + value );
 			}
 
-			return elem.style.cssText;
-		}
+			// Ensure that missing attributes return undefined
+			// Blackberry 4.7 returns "" from getAttribute #6938
+			if ( !elem.attributes[ name ] && (elem.hasAttribute && !elem.hasAttribute( name )) ) {
+				return undefined;
+			}
 
+			var attr = !jQuery.support.hrefNormalized && notxml && special ?
+					// Some attributes require a special call on IE
+					elem.getAttribute( name, 2 ) :
+					elem.getAttribute( name );
+
+			// Non-existent attributes return null, we normalize to undefined
+			return attr === null ? undefined : attr;
+		}
+		// Handle everything which isn't a DOM element node
 		if ( set ) {
-			// convert the value to a string (all browsers do this but IE) see #1070
-			elem.setAttribute( name, "" + value );
+			elem[ name ] = value;
 		}
-
-		// Ensure that missing attributes return undefined
-		// Blackberry 4.7 returns "" from getAttribute #6938
-		if ( !elem.attributes[ name ] && (elem.hasAttribute && !elem.hasAttribute( name )) ) {
-			return undefined;
-		}
-
-		var attr = !jQuery.support.hrefNormalized && notxml && special ?
-				// Some attributes require a special call on IE
-				elem.getAttribute( name, 2 ) :
-				elem.getAttribute( name );
-
-		// Non-existent attributes return null, we normalize to undefined
-		return attr === null ? undefined : attr;
+		return elem[ name ];
 	}
 });
 
@@ -2518,7 +2527,7 @@ if ( !jQuery.support.submitBubbles ) {
 
 	jQuery.event.special.submit = {
 		setup: function( data, namespaces ) {
-			if ( this.nodeName.toLowerCase() !== "form" ) {
+			if ( this.nodeName && this.nodeName.toLowerCase() !== "form" ) {
 				jQuery.event.add(this, "click.specialSubmit", function( e ) {
 					var elem = e.target,
 						type = elem.type;
@@ -2886,8 +2895,8 @@ function liveHandler( event ) {
 		events = events.events;
 	}
 
-	// Make sure we avoid non-left-click bubbling in Firefox (#3861)
-	if ( event.liveFired === this || !events || !events.live || event.button && event.type === "click" ) {
+	// Make sure we avoid non-left-click bubbling in Firefox (#3861) and disabled elements in IE (#6911)
+	if ( event.liveFired === this || !events || !events.live || event.target.disabled || event.button && event.type === "click" ) {
 		return;
 	}
 	
@@ -2924,12 +2933,12 @@ function liveHandler( event ) {
 
 				// Those two events require additional checking
 				if ( handleObj.preType === "mouseenter" || handleObj.preType === "mouseleave" ) {
-					//event.type = handleObj.preType;
-					//related = jQuery( event.relatedTarget ).closest( handleObj.selector )[0];
-				  if (isBogus(event.relatedTarget) || elem === event.relatedTarget || $.contains(elem, event.relatedTarget)) {
+				  //event.type = handleObj.preType;
+				  //related = jQuery( event.relatedTarget ).closest( handleObj.selector )[0];
+                                  if (isBogus(event.relatedTarget) || elem === event.relatedTarget || $.contains(elem, event.relatedTarget)) {
                                     related = elem;
                                   }
-                                }
+				}
 
 				if ( !related || related !== elem ) {
 					elems.push({ elem: elem, handleObj: handleObj, level: close.level });
@@ -3342,7 +3351,7 @@ var Expr = Sizzle.selectors = {
 		NAME: /\[name=['"]*((?:[\w\u00c0-\uFFFF\-]|\\.)+)['"]*\]/,
 		ATTR: /\[\s*((?:[\w\u00c0-\uFFFF\-]|\\.)+)\s*(?:(\S?=)\s*(['"]*)(.*?)\3|)\s*\]/,
 		TAG: /^((?:[\w\u00c0-\uFFFF\*\-]|\\.)+)/,
-		CHILD: /:(only|nth|last|first)-child(?:\((even|odd|[\dn+\-]*)\))?/,
+		CHILD: /:(only|nth|last|first)-child(?:\(\s*(even|odd|(?:[+\-]?\d+|(?:[+\-]?\d*)?n\s*(?:[+\-]\s*\d+)?))\s*\))?/,
 		POS: /:(nth|eq|gt|lt|first|last|even|odd)(?:\((\d*)\))?(?=[^\-]|$)/,
 		PSEUDO: /:((?:[\w\u00c0-\uFFFF\-]|\\.)+)(?:\((['"]?)((?:\([^\)]+\)|[^\(\)]*)+)\2\))?/
 	},
@@ -3488,7 +3497,7 @@ var Expr = Sizzle.selectors = {
 
 			for ( var i = 0, elem; (elem = curLoop[i]) != null; i++ ) {
 				if ( elem ) {
-					if ( not ^ (elem.className && (" " + elem.className + " ").replace(/[\t\n]/g, " ").indexOf(match) >= 0) ) {
+					if ( not ^ (elem.className && (" " + elem.className + " ").replace(/[\t\n\r]/g, " ").indexOf(match) >= 0) ) {
 						if ( !inplace ) {
 							result.push( elem );
 						}
@@ -3512,14 +3521,23 @@ var Expr = Sizzle.selectors = {
 
 		CHILD: function( match ) {
 			if ( match[1] === "nth" ) {
+				if ( !match[2] ) {
+					Sizzle.error( match[0] );
+				}
+
+				match[2] = match[2].replace(/^\+|\s*/g, '');
+
 				// parse equations like 'even', 'odd', '5', '2n', '3n+2', '4n-1', '-n+6'
-				var test = /(-?)(\d*)n((?:\+|-)?\d*)/.exec(
+				var test = /(-?)(\d*)(?:n([+\-]?\d*))?/.exec(
 					match[2] === "even" && "2n" || match[2] === "odd" && "2n+1" ||
 					!/\D/.test( match[2] ) && "0n+" + match[2] || match[2]);
 
 				// calculate the numbers (first)n+(last) including if they are negative
 				match[2] = (test[1] + (test[2] || 1)) - 0;
 				match[3] = test[3] - 0;
+			}
+			else if ( match[2] ) {
+				Sizzle.error( match[0] );
 			}
 
 			// TODO: Move to normal caching system
@@ -3703,7 +3721,7 @@ var Expr = Sizzle.selectors = {
 				return true;
 
 			} else {
-				Sizzle.error( "Syntax error, unrecognized expression: " + name );
+				Sizzle.error( name );
 			}
 		},
 
@@ -4110,14 +4128,23 @@ if ( document.querySelectorAll ) {
 				// IE 8 doesn't work on object elements
 				} else if ( context.nodeType === 1 && context.nodeName.toLowerCase() !== "object" ) {
 					var old = context.getAttribute( "id" ),
-						nid = old || id;
+						nid = old || id,
+						hasParent = context.parentNode,
+						relativeHierarchySelector = /^\s*[+~]/.test( query );
 
 					if ( !old ) {
 						context.setAttribute( "id", nid );
+					} else {
+						nid = nid.replace( /'/g, "\\$&" );
+					}
+					if ( relativeHierarchySelector && hasParent ) {
+						context = context.parentNode;
 					}
 
 					try {
-						return makeArray( context.querySelectorAll( "#" + nid + " " + query ), extra );
+						if ( !relativeHierarchySelector || hasParent ) {
+							return makeArray( context.querySelectorAll( "[id='" + nid + "'] " + query ), extra );
+						}
 
 					} catch(pseudoError) {
 					} finally {
@@ -4643,6 +4670,8 @@ var rinlinejQuery = / jQuery\d+="(?:\d+|null)"/g,
 	// checked="checked" or checked (html5)
 	rchecked = /checked\s*(?:[^=]|=\s*.checked.)/i,
 	raction = /\=([^="'>\s]+\/)>/g,
+	rbodystart = /^\s*<body/i,
+	rbodyend = /<\/body>\s*$/i,
 	wrapMap = {
 		option: [ 1, "<select multiple='multiple'>", "</select>" ],
 		legend: [ 1, "<fieldset>", "</fieldset>" ],
@@ -4831,11 +4860,12 @@ jQuery.fn.extend({
 				// the name attribute on an input).
 				var html = this.outerHTML,
 					ownerDocument = this.ownerDocument;
-
 				if ( !html ) {
 					var div = ownerDocument.createElement("div");
 					div.appendChild( this.cloneNode(true) );
 					html = div.innerHTML;
+				} else if ( rbodystart.test(html) && rbodyend.test(html) ) {
+					html = html.replace( rbodystart, "<div>" ).replace( rbodyend, "</div>" );
 				}
 
 				return jQuery.clean([html.replace(rinlinejQuery, "")
@@ -5772,10 +5802,24 @@ jQuery.extend({
 	},
 
 	ajax: function( origSettings ) {
+		// IE8 leaks a lot when we've set abort, and IE6-8 a little
+		// when we have set onreadystatechange. Bug #6242
+		// XXX IE7 still leaks when abort is called, no matter what
+		// we do
+		function cleanup() {
+			// IE6 will throw an error setting xhr.abort
+			try {
+				xhr.abort = xhr.onreadystatechange = jQuery.noop;
+			} catch(e) {}
+		}
+
 		var s = jQuery.extend(true, {}, jQuery.ajaxSettings, origSettings),
 			jsonp, status, data, type = s.type.toUpperCase(), noContent = rnoContent.test(type);
 
-		s.url = s.url.replace( rhash, "" );
+		// toString fixes people passing a window.location or
+		// document.location to $.ajax, which worked in 1.4.2 and
+		// earlier (bug #7531). It should be removed in 1.5.
+		s.url = ("" + s.url).replace( rhash, "" );
 
 		// Use original (not extended) context object if it was provided
 		s.context = origSettings && origSettings.context != null ? origSettings.context : s;
@@ -5838,7 +5882,7 @@ jQuery.extend({
 			};
 		}
 
-		if ( s.dataType === "script" && s.cache === null ) {
+		if ( s.dataType === "script" && s.cache === undefined ) {
 			s.cache = false;
 		}
 
@@ -5980,13 +6024,12 @@ jQuery.extend({
 
 				requestDone = true;
 				if ( xhr ) {
-					xhr.onreadystatechange = jQuery.noop;
+					cleanup();
 				}
 
 			// The transfer is complete and the data is available, or the request timed out
 			} else if ( !requestDone && xhr && (xhr.readyState === 4 || isTimeout === "timeout") ) {
 				requestDone = true;
-				xhr.onreadystatechange = jQuery.noop;
 
 				status = isTimeout === "timeout" ?
 					"timeout" :
@@ -6028,10 +6071,7 @@ jQuery.extend({
 					xhr.abort();
 				}
 
-				// Stop memory leaks
-				if ( s.async ) {
-					xhr = null;
-				}
+				cleanup();
 			}
 		};
 

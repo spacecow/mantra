@@ -20,7 +20,7 @@
         jcrop_api.setOptions({ allowMove: false, allowResize: false });    
       }      
 
-      $("div.translation").live("mouseenter", function(){
+      $("div#translations").delegate("div.translation", "mouseenter", function(){
         active = this.id.split("_")[1];
         var arr = $("form#new_translation").attr("action").split('/');
         arr.pop();
