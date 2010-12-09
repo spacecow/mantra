@@ -1,5 +1,6 @@
 <div id="logo"><%= image_tag "mantra.gif" %></div>
-<div id="sidebar">
+<div class="clear"></div>
+<%= content_for :sidebar do %>
 <% unless @notice.nil? %>
   <div id="latest_translation">
     <h4 id="title">Latest Translation</h4>
@@ -18,7 +19,7 @@
     <p id="content"><%= truncate(@article.body, :length=>100) %></p>
   </div>
 <% end %>
-</div>
+<% end %>
 
 <div id="main">
 <h1 id="title"><%= pl('ongoing_projects') %></h1>

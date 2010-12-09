@@ -47,17 +47,22 @@ div#sidebar p#english {
 }
 
 /* line 33, ../../../app/stylesheets/manga.sass */
+div#home {
+  width: 640px;
+}
+
+/* line 36, ../../../app/stylesheets/manga.sass */
 div#main {
   width: 600px;
   float: left;
 }
-/* line 36, ../../../app/stylesheets/manga.sass */
+/* line 39, ../../../app/stylesheets/manga.sass */
 div#main form#manga_search {
   width: 350px;
   float: left;
   margin-top: -5px;
 }
-/* line 40, ../../../app/stylesheets/manga.sass */
+/* line 43, ../../../app/stylesheets/manga.sass */
 div#main div#mangas {
   width: 250px;
   float: left;

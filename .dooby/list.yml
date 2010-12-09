@@ -28,4 +28,4 @@ af2ec7: !ruby/object:Dooby::Task
 8ea9d3: !ruby/object:Dooby::Task 
   todo: "fix loading of pictures, maybe another format? #png"
 f56f05: !ruby/object:Dooby::Task 
-  todo: fix float layout :doing
+  todo: fix float layout :done
