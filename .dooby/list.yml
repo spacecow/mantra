@@ -32,4 +32,4 @@ cb57f4: !ruby/object:Dooby::Task
 fa7c9c: !ruby/object:Dooby::Task 
   todo: "replaced #live with #delegate :done"
 779ea9: !ruby/object:Dooby::Task 
-  todo: "make a #fancybutton for arrows :doing"
+  todo: "make a #fancybutton for arrows :done"

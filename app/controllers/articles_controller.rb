@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @articles = Article.all
   end
 
   def create
@@ -19,12 +20,16 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @parent = Article.where(:child_id => @article.id).first
+    @child = @article.child
   end
 
   def edit
+    @articles = Article.all.reject{|e| e==@article}    
   end
 
   def update
+    redirect_to articles_path and return if params[:commit] == "Cancel"    
     if @article.update_attributes(params[:article])
       redirect_to @article, :notice => updated(:article)
     end

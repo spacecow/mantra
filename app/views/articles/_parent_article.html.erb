@@ -1,0 +1,19 @@
+<h1>After: <%= article.title %></h1>
+<div id="published">Published: <%= article.created_at.strftime("%Y-%m-%d") %></div>
+
+<% if admin_signed_in? %>
+<div id="links_top">
+  <%= link_to t(:edit), edit_article_path(article) %>
+  <%= link_to t(:del), article, :confirm => sure?, :method => :delete %>
+</div>
+<% end %>
+
+<div id="article"><%= raw textilize(coderay(raw article.body)) %></div>
+
+<% if admin_signed_in? %>
+<div id="links_bottom">
+  <%= link_to t(:edit), edit_article_path(article) %>
+  <%= link_to t(:del), article, :confirm => sure?, :method => :delete %>
+</div>
+<% end %>
+<hr><hr>

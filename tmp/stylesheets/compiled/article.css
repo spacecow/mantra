@@ -10,3 +10,15 @@ table#articles tr td#article span#date {
   font: 13px Georgia, serif;
   font-style: italic;
 }
+
+/* line 13, ../../../app/stylesheets/article.sass */
+div#child_article h1 {
+  font: 25px Georgia, serif;
+  font-style: italic;
+}
+
+/* line 17, ../../../app/stylesheets/article.sass */
+div#parent_article h1 {
+  font: 25px Georgia, serif;
+  font-style: italic;
+}

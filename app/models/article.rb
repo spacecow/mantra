@@ -5,6 +5,7 @@ class Article
   field :title
   field :body
   slug :title
+  referenced_in :child, :class_name => "Article"
   
   validates :title, :uniqueness => true, :presence => true
 

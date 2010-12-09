@@ -1,6 +1,7 @@
 <%= simple_form_for @article do |f| %>
   <%= f.input :title %>
   <%= f.input :body, :as => :text %>
+  <%= f.input :child_id, :as => :select, :collection => @articles %>
   <%= f.submit :class => "submit" %>
   <%= f.submit t(:cancel), :class => "cancel" %>
 <% end %>

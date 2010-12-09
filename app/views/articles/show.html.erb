@@ -1,18 +1,8 @@
-<%= title @article.title %>
-<div id="published">Published: <%= @article.created_at.strftime("%Y-%m-%d") %></div>
-
-<% if admin_signed_in? %>
-<div id="links_top">
-  <%= link_to t(:edit), edit_article_path(@article) %>
-  <%= link_to t(:del), @article, :confirm => sure?, :method => :delete %>
-</div>
+<% unless @parent.nil? %>
+  <div id="parent_article"><%= render "parent_article", :article => @parent %></div>
 <% end %>
-
-<div id="article"><%= raw textilize(coderay(raw @article.body)) %></div>
-
-<% if admin_signed_in? %>
-<div id="links_bottom">
-  <%= link_to t(:edit), edit_article_path(@article) %>
-  <%= link_to t(:del), @article, :confirm => sure?, :method => :delete %>
-</div>
+<a name="main"></a>
+<div id="main_article"><%= render "full_article", :article => @article %></div>
+<% unless @child.nil? %>
+  <div id="child_article"><%= render "child_article", :article => @child %></div>
 <% end %>

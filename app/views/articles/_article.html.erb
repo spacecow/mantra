@@ -1,6 +1,6 @@
 <tr>
   <td id="article">
-    <span id="title"><%= link_to article.title, article %></span> - <span id="date"><%= article.published_date %></span>
+    <span id="title"><%= link_to article.title, article_path(article,:anchor=>"main") %></span> - <span id="date"><%= article.published_date %></span>
   </td>
   <% if admin_signed_in? %>
   <td>
