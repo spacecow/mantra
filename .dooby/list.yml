@@ -3,8 +3,6 @@
   todo: "make the #mainpage prettier :done"
 fcba9a: !ruby/object:Dooby::Task 
   todo: "#mainpage picture :done"
-d0dcd3: !ruby/object:Dooby::Task 
-  todo: "start learning #haml"
 0d8e98: !ruby/object:Dooby::Task 
   todo: "add #thumbnails to page and manga"
 cf847b: !ruby/object:Dooby::Task 
@@ -19,15 +17,15 @@ fc0f1a: !ruby/object:Dooby::Task
   todo: change the image upload to an url :done
 edb814: !ruby/object:Dooby::Task 
   todo: applied gradient to fields and buttons :done
-f06c67: !ruby/object:Dooby::Task 
-  todo: "use #memcash for #openid or take it away"
-ad76e9: !ruby/object:Dooby::Task 
-  todo: move stylesheets/compiled to just stylesheets
 2758ac: !ruby/object:Dooby::Task 
   todo: "get rid of image links and start using #amazon #s3 :done"
 eb275c: !ruby/object:Dooby::Task 
   todo: "create a #thor script for populate"
 d27b52: !ruby/object:Dooby::Task 
   todo: "integrate #coderay as #markup to articles :done"
-58af64: !ruby/object:Dooby::Task 
-  todo: "integrate #spork with #rspec :doing"
+af2ec7: !ruby/object:Dooby::Task 
+  todo: "integrate #spork with #rspec"
+8ea9d3: !ruby/object:Dooby::Task 
+  todo: "fix loading of pictures, maybe another format? #png"
+f56f05: !ruby/object:Dooby::Task 
+  todo: fix float layout :doing

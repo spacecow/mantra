@@ -11,6 +11,9 @@ $alert_dark: #933
 $notice_dark: #396
 $notice_light: #4CC417
 
+$root_width: 900px
+$main_border_size: 10px
+$main_padding_size: 20px
 
 $global_font: normal 14px "Helvetica Neue", Arial, Helvetica, sans-serif
 
@@ -92,15 +95,14 @@ div#logo
 
 div#root
   margin: 100px auto
-  width: 900px
+  width: $root_width
 
 div#container
-  border: 10px solid white
-  padding: 5px 5px 5px 15px
+  border: $main_border_size solid white
   margin: 0 auto
   font: $global_font
   background: #bbb
-  padding: 20px
+  padding: $main_padding_size
   a
     text-decoration: none
     color: $link_fg
@@ -110,22 +112,27 @@ div#container
       background: $link_fg
       color: $main_bg
       padding: 0 1px 0 1p
-  div#site_nav
-    float: left
-    margin-bottom: 10px
-    +gradient(gray,black)
-    a
-      color: #c4fff3
-      &:hover
-        background: none
-        color: white
   h1
     font-size: 200%
     margin-bottom: 10px
-  div#user_nav
-    display: block
-    atext-align: right
-    float: right
+
+div#site_nav
+  float: left
+  margin: 0 10px 10px 0  
+  +gradient(gray,black)
+  a
+    color: #c4fff3
+    &:hover
+      background: none
+      color: white
+
+div#content
+  float: left
+
+div#user_nav
+  display: block
+  atext-align: right
+  float: right
   div#authentications
     div#authentication
       float: left
@@ -166,13 +173,16 @@ div#container
     img
       display: block
       border: 0
+
     //---------------------------- MANGA
+div#yield    
   div#image
     float: left
     padding: 1em
     background: grey
     img
       width: 400px
+      height: 645px
 
 table#pages, table#mangas
   td#no, td#title

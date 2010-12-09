@@ -44,7 +44,7 @@
           </div>
           <% end %>
         </div>
-
+        <div id="content">
           <div id="site_nav">
             <%= link_to list_p(:manga), mangas_path %>
             <%= link_to list_p(:article), articles_path %>
@@ -59,7 +59,9 @@
           <% unless yield(:title).blank? %>
             <h1 id="title"><%= yield(:title) %></h1>
           <% end %>
-          <%= yield %>
+          <div id="yield"><%= yield %></div>
+        </div>
+          <div class="clear"></div>
       </div>
     </div>
   </body>
