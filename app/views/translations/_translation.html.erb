@@ -10,17 +10,23 @@
   </div>
   <div id="arrow_container">
     <% if @translation.new_record? %>
-      <span id="up_arrow">
-        <%= link_to((image_tag 'up_arrow.gif', :title => "up_arrow", :alt => "up_arrow" ),
-        move_up_manga_page_translation_path(@manga,@page,translation),
-        :method => :put) unless first %>
+      <% if first %> 
+      <% else %>
+        <span id="up_arrow">
+          <%= link_to(('▲'),
+          move_up_manga_page_translation_path(@manga,@page,translation),
+        :method => :put) %>
+      <% end %>
       </span>
     <% end %>
     <% if @translation.new_record? %>
+      <% if last %>
+      <% else %>
       <span id="down_arrow">
-        <%= link_to((image_tag 'down_arrow.gif', :title => "down_arrow", :alt => "down_arrow"),
+        <%= link_to(('▼'),
         move_down_manga_page_translation_path(@manga,@page,translation),
-        :method => :put) unless last %>
+        :method => :put) %>
+      <% end %>
       </span>  
     <% end %>
   </div>

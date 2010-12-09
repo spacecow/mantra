@@ -310,57 +310,106 @@ div#translations div.translation div.text_container {
 /* line 228, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container {
   float: left;
-  width: 4.5em;
-}
-/* line 231, ../../../app/stylesheets/default.sass */
-div#translations div.translation div#arrow_container span#up_arrow {
-  float: left;
-  width: 2em;
+  width: 3.5em;
+  font-size: 20px;
+  text-align: center;
+  text-weight: bold;
 }
 /* line 234, ../../../app/stylesheets/default.sass */
-div#translations div.translation div#arrow_container span#down_arrow {
-  float: right;
-  width: 2.5em;
+div#translations div.translation div#arrow_container span#up_arrow {
+  height: 20px;
+  widht: 20px;
+  line-height: 18px;
+  float: left;
+  width: 1em;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #808080), color-stop(100%, #000000));
+  background-image: -moz-linear-gradient(top, #808080 0%, #000000 100%);
+  background-image: linear-gradient(top, #808080 0%, #000000 100%);
 }
-/* line 237, ../../../app/stylesheets/default.sass */
+/* line 241, ../../../app/stylesheets/default.sass */
+div#translations div.translation div#arrow_container span#up_arrow a {
+  color: white;
+}
+/* line 243, ../../../app/stylesheets/default.sass */
+div#translations div.translation div#arrow_container span#up_arrow a:hover {
+  background: none;
+}
+/* line 245, ../../../app/stylesheets/default.sass */
+div#translations div.translation div#arrow_container span#down_arrow {
+  height: 20px;
+  widht: 20px;
+  line-height: 20px;
+  float: right;
+  width: 1em;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #808080), color-stop(100%, #000000));
+  background-image: -moz-linear-gradient(top, #808080 0%, #000000 100%);
+  background-image: linear-gradient(top, #808080 0%, #000000 100%);
+}
+/* line 252, ../../../app/stylesheets/default.sass */
+div#translations div.translation div#arrow_container span#down_arrow a {
+  color: white;
+}
+/* line 254, ../../../app/stylesheets/default.sass */
+div#translations div.translation div#arrow_container span#down_arrow a:hover {
+  background: none;
+}
+/* line 256, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#links {
   float: right;
 }
-/* line 239, ../../../app/stylesheets/default.sass */
+/* line 258, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form {
   float: left;
   padding: 10px;
   width: 280px;
 }
-/* line 243, ../../../app/stylesheets/default.sass */
+/* line 262, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form div label {
   float: left;
   width: 60px;
   text-align: right;
   margin-right: 5px;
 }
-/* line 248, ../../../app/stylesheets/default.sass */
+/* line 267, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form div input {
   float: left;
   width: 200px;
 }
-/* line 251, ../../../app/stylesheets/default.sass */
+/* line 270, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form input.change {
   margin: 10px 0 0 65px;
 }
-/* line 253, ../../../app/stylesheets/default.sass */
+/* line 272, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form input.cancel {
   margin: 0;
 }
 
-/* line 258, ../../../app/stylesheets/default.sass */
+/* line 277, ../../../app/stylesheets/default.sass */
 form.simple_form div label {
   float: left;
   width: 100px;
   text-align: right;
   margin-right: 10px;
 }
-/* line 263, ../../../app/stylesheets/default.sass */
+/* line 282, ../../../app/stylesheets/default.sass */
 form.simple_form input.submit {
   margin: 10px 0 0 110px;
 }

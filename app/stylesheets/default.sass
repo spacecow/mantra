@@ -36,11 +36,11 @@ $translation_width: 280px
   padding: 10px
   width: $translation_width
 
-@mixin gradient($light, $dark)
+@mixin gradient($light, $dark, $corner=10px)
   color: white
   font-weight: bold
   padding: 5px
-  +border-radius(10px)
+  +border-radius($corner)
   +linear-gradient(color-stops($light, $dark))
 
 table
@@ -227,13 +227,32 @@ div#translations
       width: 15em
     div#arrow_container
       float: left
-      width: 4.5em
+      width: 3.5em
+      font-size: 20px
+      text-align: center
+      text-weight: bold
       span#up_arrow
+        height: 20px
+        widht: 20px
+        line-height: 18px
         float: left
-        width: 2em
+        width: 1em
+        +gradient(gray,black,20px)
+        a
+          color: white
+          &:hover
+            background: none
       span#down_arrow
+        height: 20px
+        widht: 20px
+        line-height: 20px
         float: right
-        width: 2.5em
+        width: 1em
+        +gradient(gray,black,20px)
+        a
+          color: white
+          &:hover
+            background: none
     div#links
       float: right
   div#translation_form

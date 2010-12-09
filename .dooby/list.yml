@@ -30,4 +30,6 @@ b532d4: !ruby/object:Dooby::Task
 cb57f4: !ruby/object:Dooby::Task 
   todo: "write #redirect test for all controllers"
 fa7c9c: !ruby/object:Dooby::Task 
-  todo: "replaced #live with #delegate :doing"
+  todo: "replaced #live with #delegate :done"
+779ea9: !ruby/object:Dooby::Task 
+  todo: "make a #fancybutton for arrows :doing"
