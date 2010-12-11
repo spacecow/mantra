@@ -291,6 +291,3 @@ DEPENDENCIES
   sqlite3-ruby
   twitter
   will_paginate (= 3.0.pre2)
-
-METADATA
-  version: 1.0.6
