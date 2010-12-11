@@ -1,27 +1,131 @@
-/* line 44, ../../../app/stylesheets/default.sass */
+/* incase an inverted custom gradient isn't specified */
+/* line 176, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class, input.submit, input.cancel, input.change {
+  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+  background: url('/images/button_bg.png?1291369647') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+}
+/* line 165, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class::-moz-focus-inner, input.submit::-moz-focus-inner, input.cancel::-moz-focus-inner, input.change::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 168, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class:focus, input.submit:focus, input.cancel:focus, input.change:focus {
+  outline: none;
+}
+
+/* line 49, ../../../app/stylesheets/default.sass */
+input.string, textarea, input.search {
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #808080), color-stop(100%, #000000));
+  background-image: -moz-linear-gradient(top, #808080 0%, #000000 100%);
+  background-image: linear-gradient(top, #808080 0%, #000000 100%);
+}
+
+/* line 51, ../../../app/stylesheets/default.sass */
+input.submit, input.cancel, input.change {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 15px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #333333;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #878787), color-stop(10%, #595959), color-stop(50%, #2b2b2b), color-stop(50%, #242424), color-stop(100%, #3d3d3d));
+  background-image: -moz-linear-gradient(top, #878787 0%, #595959 10%, #2b2b2b 50%, #242424 50%, #3d3d3d 100%);
+  background-image: linear-gradient(top, #878787 0%, #595959 10%, #2b2b2b 50%, #242424 50%, #3d3d3d 100%);
+  border-color: #0d0d0d;
+  text-shadow: black 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.2) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.2) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/* line 116, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+input.submit, input.submit:visited, input.cancel, input.cancel:visited, input.change, input.change:visited {
+  color: white;
+}
+/* line 31, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+input.submit:hover, input.submit:focus, input.cancel:hover, input.cancel:focus, input.change:hover, input.change:focus {
+  background-color: #2b2b2b;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #808080), color-stop(10%, #525252), color-stop(50%, #242424), color-stop(50%, #1c1c1c), color-stop(100%, #363636));
+  background-image: -moz-linear-gradient(top, #808080 0%, #525252 10%, #242424 50%, #1c1c1c 50%, #363636 100%);
+  background-image: linear-gradient(top, #808080 0%, #525252 10%, #242424 50%, #1c1c1c 50%, #363636 100%);
+  border-color: #050505;
+  text-shadow: black 0px 1px 1px;
+}
+/* line 116, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+input.submit:hover, input.submit:hover:visited, input.submit:focus, input.submit:focus:visited, input.cancel:hover, input.cancel:hover:visited, input.cancel:focus, input.cancel:focus:visited, input.change:hover, input.change:hover:visited, input.change:focus, input.change:focus:visited {
+  color: white;
+}
+/* line 36, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+input.submit:active, input.cancel:active, input.change:active {
+  background-color: #242424;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #242424), color-stop(30%, #292929), color-stop(50%, #1f1f1f), color-stop(50%, #171717), color-stop(100%, #383838));
+  background-image: -moz-linear-gradient(top, #242424 0%, #292929 30%, #1f1f1f 50%, #171717 50%, #383838 100%);
+  background-image: linear-gradient(top, #242424 0%, #292929 30%, #1f1f1f 50%, #171717 50%, #383838 100%);
+  border-color: black;
+  text-shadow: black 0px -1px -1px;
+  -moz-box-shadow: #0d0d0d 0 0.08em 0.1em 1px inset;
+  -webkit-box-shadow: #0d0d0d 0 0.08em 0.1em 1px inset;
+  -o-box-shadow: #0d0d0d 0 0.08em 0.1em 1px inset;
+  box-shadow: #0d0d0d 0 0.08em 0.1em 1px inset;
+}
+/* line 116, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
+input.submit:active, input.submit:active:visited, input.cancel:active, input.cancel:active:visited, input.change:active, input.change:active:visited {
+  color: white;
+}
+
+/* line 56, ../../../app/stylesheets/default.sass */
 table tr td:nth-child(2) {
   padding: 0 5px;
 }
 
-/* line 47, ../../../app/stylesheets/default.sass */
+/* line 59, ../../../app/stylesheets/default.sass */
 html {
   background: #4b7399;
 }
 
-/* line 50, ../../../app/stylesheets/default.sass */
+/* line 62, ../../../app/stylesheets/default.sass */
 div.clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
 
-/* line 55, ../../../app/stylesheets/default.sass */
+/* line 67, ../../../app/stylesheets/default.sass */
 .round {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
 
-/* line 58, ../../../app/stylesheets/default.sass */
+/* line 70, ../../../app/stylesheets/default.sass */
 div#flash {
   float: left;
   margin-bottom: 5px;
@@ -29,7 +133,7 @@ div#flash {
   border: 1px solid white;
 }
 
-/* line 63, ../../../app/stylesheets/default.sass */
+/* line 75, ../../../app/stylesheets/default.sass */
 div.notice {
   color: white;
   font-weight: bold;
@@ -45,7 +149,7 @@ div.notice {
   background-image: linear-gradient(top, #4cc417 0%, #339966 100%);
 }
 
-/* line 65, ../../../app/stylesheets/default.sass */
+/* line 77, ../../../app/stylesheets/default.sass */
 div.alert {
   color: white;
   font-weight: bold;
@@ -61,51 +165,51 @@ div.alert {
   background-image: linear-gradient(top, #ff3333 0%, #993333 100%);
 }
 
-/* line 68, ../../../app/stylesheets/default.sass */
+/* line 80, ../../../app/stylesheets/default.sass */
 div#page_nav {
   float: left;
   margin: 3px 0 0 10px;
 }
 
-/* line 72, ../../../app/stylesheets/default.sass */
+/* line 84, ../../../app/stylesheets/default.sass */
 div#published {
   margin-bottom: 10px;
   font-style: italic;
 }
 
-/* line 77, ../../../app/stylesheets/default.sass */
+/* line 89, ../../../app/stylesheets/default.sass */
 div#article p {
   margin-bottom: 10px;
 }
 
-/* line 80, ../../../app/stylesheets/default.sass */
+/* line 92, ../../../app/stylesheets/default.sass */
 div#links_top {
   margin-bottom: 10px;
 }
 
-/* line 82, ../../../app/stylesheets/default.sass */
+/* line 94, ../../../app/stylesheets/default.sass */
 div#links_bottom {
   margin-top: 10px;
 }
 
-/* line 86, ../../../app/stylesheets/default.sass */
+/* line 98, ../../../app/stylesheets/default.sass */
 h1 {
   margin-top: 0px;
 }
 
-/* line 89, ../../../app/stylesheets/default.sass */
+/* line 101, ../../../app/stylesheets/default.sass */
 div#logo {
   float: left;
 }
 
-/* line 92, ../../../app/stylesheets/default.sass */
+/* line 104, ../../../app/stylesheets/default.sass */
 div#root {
   margin: 100px auto;
   width: 1024px;
   height: 768px;
 }
 
-/* line 97, ../../../app/stylesheets/default.sass */
+/* line 109, ../../../app/stylesheets/default.sass */
 div#container {
   border: 10px solid white;
   margin: 0 auto;
@@ -113,26 +217,26 @@ div#container {
   background: #bbbbbb;
   padding: 20px;
 }
-/* line 103, ../../../app/stylesheets/default.sass */
+/* line 115, ../../../app/stylesheets/default.sass */
 div#container a {
   text-decoration: none;
   color: #4b7399;
   padding: 0 1px 0 1px;
   font-size: 85%;
 }
-/* line 108, ../../../app/stylesheets/default.sass */
+/* line 120, ../../../app/stylesheets/default.sass */
 div#container a:hover {
   background: #4b7399;
   color: white;
   padding: 0 1px 0 1p;
 }
-/* line 112, ../../../app/stylesheets/default.sass */
+/* line 124, ../../../app/stylesheets/default.sass */
 div#container h1 {
   font-size: 200%;
   margin-bottom: 10px;
 }
 
-/* line 116, ../../../app/stylesheets/default.sass */
+/* line 128, ../../../app/stylesheets/default.sass */
 div#site_nav {
   float: left;
   margin: 0 10px 10px 0;
@@ -149,118 +253,123 @@ div#site_nav {
   background-image: -moz-linear-gradient(top, #808080 0%, #000000 100%);
   background-image: linear-gradient(top, #808080 0%, #000000 100%);
 }
-/* line 120, ../../../app/stylesheets/default.sass */
+/* line 132, ../../../app/stylesheets/default.sass */
 div#site_nav a {
   color: #c4fff3;
 }
-/* line 122, ../../../app/stylesheets/default.sass */
+/* line 134, ../../../app/stylesheets/default.sass */
 div#site_nav a:hover {
   background: none;
   color: white;
 }
 
-/* line 125, ../../../app/stylesheets/default.sass */
+/* line 137, ../../../app/stylesheets/default.sass */
 div#top {
   margin-top: 4px;
 }
 
-/* line 127, ../../../app/stylesheets/default.sass */
+/* line 139, ../../../app/stylesheets/default.sass */
 div#signed_in {
   margin-top: 7px;
   float: right;
 }
 
-/* line 131, ../../../app/stylesheets/default.sass */
+/* line 143, ../../../app/stylesheets/default.sass */
 div#content {
   float: left;
 }
 
-/* line 134, ../../../app/stylesheets/default.sass */
-div#user_nav {
-  display: block;
-  atext-align: right;
-  float: right;
-  width: 190px;
-  background: #999999;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -o-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -khtml-border-radius: 10px;
-  border-radius: 10px;
-  border: 2px solid white;
-  padding: 10px;
+/* line 146, ../../../app/stylesheets/default.sass */
+div#home {
+  width: 640px;
 }
 
-/* line 144, ../../../app/stylesheets/default.sass */
-div#yield {
-  width: 964px;
+/* line 149, ../../../app/stylesheets/default.sass */
+div#main {
+  width: 600px;
+  float: left;
 }
-/* line 146, ../../../app/stylesheets/default.sass */
+/* line 152, ../../../app/stylesheets/default.sass */
+div#main form#manga_search {
+  width: 350px;
+  float: left;
+  margin-top: -5px;
+}
+/* line 156, ../../../app/stylesheets/default.sass */
+div#main div#mangas {
+  width: 250px;
+  float: left;
+}
+
+/* line 160, ../../../app/stylesheets/default.sass */
+div#yield {
+  width: 740px;
+}
+/* line 162, ../../../app/stylesheets/default.sass */
 div#yield div#image {
   float: left;
   padding: 10px;
   background: grey;
 }
-/* line 150, ../../../app/stylesheets/default.sass */
+/* line 166, ../../../app/stylesheets/default.sass */
 div#yield div#image img {
   width: 400px;
   height: 645px;
 }
 
-/* line 155, ../../../app/stylesheets/default.sass */
+/* line 171, ../../../app/stylesheets/default.sass */
 table#pages td#no, table#pages td#title, table#mangas td#no, table#mangas td#title {
   font-size: 120%;
   text-align: right;
   padding-right: 5px;
 }
 
-/* line 160, ../../../app/stylesheets/default.sass */
+/* line 176, ../../../app/stylesheets/default.sass */
 div#translations {
   float: left;
   width: 320px;
   background: grey;
 }
-/* line 164, ../../../app/stylesheets/default.sass */
+/* line 180, ../../../app/stylesheets/default.sass */
 div#translations div#top_empty_translation_fillout {
   width: 320px;
   height: 10px;
   float: left;
   background: #dddddd;
 }
-/* line 169, ../../../app/stylesheets/default.sass */
+/* line 185, ../../../app/stylesheets/default.sass */
 div#translations div#bottom_empty_translation_fillout {
   width: 320px;
   height: 10px;
   float: left;
   background: #dddddd;
 }
-/* line 174, ../../../app/stylesheets/default.sass */
+/* line 190, ../../../app/stylesheets/default.sass */
 div#translations div.inactive {
   background: silver;
 }
-/* line 176, ../../../app/stylesheets/default.sass */
+/* line 192, ../../../app/stylesheets/default.sass */
 div#translations div.below-active {
   -moz-border-radius-topleft: 15px;
   border-top-left-radius: 15px;
 }
-/* line 179, ../../../app/stylesheets/default.sass */
+/* line 195, ../../../app/stylesheets/default.sass */
 div#translations div.above-active {
   -moz-border-radius-bottomleft: 15px;
   border-bottom-left-radius: 15px;
 }
-/* line 182, ../../../app/stylesheets/default.sass */
+/* line 198, ../../../app/stylesheets/default.sass */
 div#translations div.translation {
   float: left;
   padding: 10px;
   width: 280px;
 }
-/* line 185, ../../../app/stylesheets/default.sass */
+/* line 201, ../../../app/stylesheets/default.sass */
 div#translations div.translation div.text_container {
   float: left;
   width: 15em;
 }
-/* line 188, ../../../app/stylesheets/default.sass */
+/* line 204, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container {
   float: left;
   width: 3.5em;
@@ -268,7 +377,7 @@ div#translations div.translation div#arrow_container {
   text-align: center;
   text-weight: bold;
 }
-/* line 194, ../../../app/stylesheets/default.sass */
+/* line 210, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#up_arrow {
   height: 20px;
   widht: 20px;
@@ -288,15 +397,15 @@ div#translations div.translation div#arrow_container span#up_arrow {
   background-image: -moz-linear-gradient(top, #808080 0%, #000000 100%);
   background-image: linear-gradient(top, #808080 0%, #000000 100%);
 }
-/* line 201, ../../../app/stylesheets/default.sass */
+/* line 217, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#up_arrow a {
   color: white;
 }
-/* line 203, ../../../app/stylesheets/default.sass */
+/* line 219, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#up_arrow a:hover {
   background: none;
 }
-/* line 205, ../../../app/stylesheets/default.sass */
+/* line 221, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#down_arrow {
   height: 20px;
   widht: 20px;
@@ -316,53 +425,53 @@ div#translations div.translation div#arrow_container span#down_arrow {
   background-image: -moz-linear-gradient(top, #808080 0%, #000000 100%);
   background-image: linear-gradient(top, #808080 0%, #000000 100%);
 }
-/* line 212, ../../../app/stylesheets/default.sass */
+/* line 228, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#down_arrow a {
   color: white;
 }
-/* line 214, ../../../app/stylesheets/default.sass */
+/* line 230, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#down_arrow a:hover {
   background: none;
 }
-/* line 216, ../../../app/stylesheets/default.sass */
+/* line 232, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#links {
   float: right;
 }
-/* line 218, ../../../app/stylesheets/default.sass */
+/* line 234, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form {
   float: left;
   padding: 10px;
   width: 280px;
 }
-/* line 222, ../../../app/stylesheets/default.sass */
+/* line 238, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form div label {
   float: left;
   width: 60px;
   text-align: right;
   margin-right: 5px;
 }
-/* line 227, ../../../app/stylesheets/default.sass */
+/* line 243, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form div input {
   float: left;
   width: 200px;
 }
-/* line 230, ../../../app/stylesheets/default.sass */
+/* line 246, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form input.change {
   margin: 10px 0 0 65px;
 }
-/* line 232, ../../../app/stylesheets/default.sass */
+/* line 248, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form input.cancel {
   margin: 0;
 }
 
-/* line 237, ../../../app/stylesheets/default.sass */
+/* line 253, ../../../app/stylesheets/default.sass */
 form.simple_form div label {
   float: left;
   width: 100px;
   text-align: right;
   margin-right: 10px;
 }
-/* line 242, ../../../app/stylesheets/default.sass */
+/* line 258, ../../../app/stylesheets/default.sass */
 form.simple_form input.submit {
   margin: 10px 0 0 110px;
 }

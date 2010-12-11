@@ -1,6 +1,7 @@
 @import "compass/css3/gradient"
 @import "compass/css3/border-radius"
 @import "compass/css3/box-shadow"
+@import "fancy-buttons"
 @import "variables"
 
 $main_bg: #efe
@@ -15,6 +16,12 @@ $notice_light: #4CC417
 
 $global_font: normal 14px "Helvetica Neue", Arial, Helvetica, sans-serif
 
+@mixin black-gradient
+  color: white
+  font-weight: bold
+  padding: 5px
+  +border-radius(10px)
+  +linear-gradient(color-stops(gray, black))
 
 @mixin mixin_rounded_corners
   -moz-border-radius: 10px
@@ -38,6 +45,11 @@ $global_font: normal 14px "Helvetica Neue", Arial, Helvetica, sans-serif
   padding: 5px
   +border-radius($corner)
   +linear-gradient(color-stops($light, $dark))
+
+input.string, textarea, input.search
+  +black-gradient
+input.submit, input.cancel, input.change
+  +fancy-button(#333, 15px)
 
 table
   tr
@@ -131,15 +143,19 @@ div#signed_in
 div#content
   float: left
 
-div#user_nav
-  display: block
-  atext-align: right
-  float: right
-  width: 190px
-  background: #999
-  +border-radius(10px)
-  border: 2px solid white
-  padding: 10px
+div#home
+  width: 640px
+
+div#main
+  width: 600px
+  float: left
+  form#manga_search
+    width: 350px    
+    float: left
+    margin-top: -5px
+  div#mangas
+    width: 250px
+    float: left
 
 div#yield
   width: $yield_width

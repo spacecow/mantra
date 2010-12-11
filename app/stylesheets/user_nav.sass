@@ -1,0 +1,95 @@
+@import "compass/css3/transition"
+@import "compass/css3/transform"
+@import "compass/css3/border-radius"
+@import "variables"
+
+div#user_nav
+  display: block
+  atext-align: right
+  float: right
+  width: 190px
+  background: #999
+  +border-radius(10px)
+  border: 2px solid white
+  padding: 10px
+  div#authorizations
+    margin: 5px 0 50px 0
+    float: right
+    width: $authwidth
+    a.auth_provider
+      width: $authwidth
+      height: $authheight
+      display: block
+      background: #eee
+      border: 1px solid #ddd
+      margin: 0 0 10px -5px
+      overflow: hidden
+      &:hover h5
+        margin-top: -$authheight
+      &:hover div
+        opacity: 1
+        +rotate(0deg)
+      &:nth-child(1) div
+        background: #6db3b8 url(../../images/twitter_32.png) no-repeat
+        padding-left: 40px
+        color: white
+      &:nth-child(2) div
+        background: white url(../../images/openid_32.png) no-repeat
+        padding-left: 40px
+        color: #0f519a
+      h5
+        height: $authheight
+        text-align: center
+        line-height: $authheight
+        +transition(margin-top 0.2s linear)
+      div
+        text-align: left
+        line-height: $authheight
+        font-size: 150%
+        height: $authheight
+        opacity: 0
+        +transition(all 0.5s linear)
+        +rotate(6deg)
+  div#sidebar
+    float: right
+    width: 200px
+    text-align: right
+    h4
+      text-transform: uppercase
+      letter-spacing: 4px
+      font: 20px Georgia, serif
+      border-bottom: 1px solid #eee
+      padding: 5px 0
+    h5
+      margin: 5px 0
+      a
+        font: 15px Georgia, serif
+        font-style: italic
+        font-weight: bold
+        color: #4b7399
+    p#date, p#ago
+      text-transform: uppercase
+      font: 12px Georgia, serif
+      margin: 5px 0
+      color: white
+    p.translation
+      margin: 5px 0
+      font: 14px Georgia, serif
+    p#content
+      font: 14px Georgia, serif    
+    p#english
+      margin-bottom: 25px
+  div#notifier
+    div#notice
+      padding: 2px 0
+      a
+        font-size: 100%
+        margin: 0
+        padding: 0
+        color: black
+        &:hover
+          color: white
+        p
+          text-align: right
+          padding-bottom: 2px
+  div#histories

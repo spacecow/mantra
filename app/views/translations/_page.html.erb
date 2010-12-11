@@ -82,5 +82,7 @@
 </div>
 
 <div id="translations"><%= render "translations/translations" %></div>
-<div id="histories"><%= render @histories %></div>
+<% content_for(:histories) do %>
+  <%= render @histories %>
+<% end %>
 <div class="clear"></div>
