@@ -10,7 +10,9 @@ class Translation
   field :y2, :type => Integer, :default => 100
   slug :pos
   embedded_in :page, :inverse_of => :translations
+  embeds_many :histories
 
+  validates :pos, :presence => true
   validate :both_english_and_japanese_cannot_be_blank
   
   def active; @active || false end

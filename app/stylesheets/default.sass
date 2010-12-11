@@ -1,5 +1,7 @@
 @import "compass/css3/gradient"
 @import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "variables"
 
 $main_bg: #efe
 $main_bg: #fff
@@ -11,14 +13,8 @@ $alert_dark: #933
 $notice_dark: #396
 $notice_light: #4CC417
 
-$root_width: 900px
-$main_border_size: 10px
-$main_padding_size: 20px
-
 $global_font: normal 14px "Helvetica Neue", Arial, Helvetica, sans-serif
 
-$translations_width: 320px
-$translation_width: 280px
 
 @mixin mixin_rounded_corners
   -moz-border-radius: 10px
@@ -96,6 +92,7 @@ div#logo
 div#root
   margin: 100px auto
   width: $root_width
+  height: 768px
 
 div#container
   border: $main_border_size solid white
@@ -138,58 +135,21 @@ div#user_nav
   display: block
   atext-align: right
   float: right
-  width: 200px
-  div#authentications
-    div#authentication
-      float: left
-      background: #eee
-      border: 1px solid black
-      padding: 5px 10px
-      margin-right: 10px
-      position: relative
-      a#remove
-        position: absolute
-        top: 3px
-        right: 3px
-        color: #333
-        padding: 3px 6px 2px 4px
-        font-size: 70%
-        &:hover
-          color: #fff
-          background: #777
-      div#provider
-        font-weight: bold
-        margin-left: 38px
-        margin-right: 20px
-      div#uid
-        color: #666
-        font-size: 70%
-        margin-left: 38px
-        margin-right: 20px
-      img
-        float: left
-  a.auth_provider
-    float: left
-    margin-right: 20px
-    text-align: center
-    font-weight: bold
-    &:hover
-      background: $main_bg
-      color: $light_link_fg
-    img
-      display: block
-      border: 0
+  width: 190px
+  background: #999
+  +border-radius(10px)
+  border: 2px solid white
+  padding: 10px
 
-    //---------------------------- MANGA
 div#yield
-  width: 800px
+  width: $yield_width
   div#image
     float: left
-    padding: 1em
+    padding: $image_padding_size
     background: grey
     img
-      width: 400px
-      height: 645px
+      width: $image_width
+      height: $image_height
 
 table#pages, table#mangas
   td#no, td#title

@@ -5,11 +5,13 @@ class PagesController < ApplicationController
   before_filter :authenticate_user!
   before_filter :load_manga
   before_filter :load_page, :only => [:show,:next,:previous,:edit,:update,:destroy]
+  before_filter :load_notices, :except => :show
 
   def show
     @first_page = first_page?
     @last_page = last_page?
     @translations = @page.translations.sort_by(&:pos)
+    @histories = @page.translations.map(&:histories).flatten
     @translation = Factory.build(:translation, :x1=>(params[:x1]||100),
                                  :y1=>(params[:y1]||100),
                                  :x2=>(params[:x2]||100),
@@ -73,6 +75,7 @@ class PagesController < ApplicationController
   private
 
     def load_manga; @manga = Manga.where(:slug => params[:manga_id]).first end
+    def load_notices; @notices = Notice.desc(:created_at) end
     def load_page; @page = @manga.pages.where(:slug => params[:id]).first end
     
     def new_page(diff)

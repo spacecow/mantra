@@ -2,9 +2,11 @@ Factory.define :manga do |f|
   f.sequence(:title) { |n| "Default factory title #{n}" }  
 end
 
+Factory.define :notice do |f|
+end
+
 Factory.define :page do |f|
   f.no 1
-#  f.image_url "http://usera.ImageCave.com/nattsuddare/violencejack_vol1_006.jpg"
 end
 
 Factory.define :translation do |f|

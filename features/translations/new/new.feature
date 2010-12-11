@@ -15,8 +15,10 @@ And I fill in "English" with "tomorrow"
 And I press "Create"
 Then the page should have a translation "2" with pos: 2, japanese: "明日", english: "tomorrow"
 And the page should have 2 translations
+And the page should have a translation "2" should have a history with message: "明日♦tomorrow"
 And I should see translation "2" as active
 And I should see no flash message
+And that page should have a notice with message: "明日♦tomorrow"
 And that page should have 1 notices
 
 Scenario: New translation form

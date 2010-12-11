@@ -1,16 +1,14 @@
-/* line 1, ../../../app/stylesheets/manga.sass */
+/* line 3, ../../../app/stylesheets/manga.sass */
 div#sidebar {
-  margin-top: 50px;
   float: right;
   width: 200px;
   text-align: right;
 }
-/* line 6, ../../../app/stylesheets/manga.sass */
+/* line 7, ../../../app/stylesheets/manga.sass */
 div#sidebar h4 {
   text-transform: uppercase;
   letter-spacing: 4px;
   font: 20px Georgia, serif;
-  border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   padding: 5px 0;
 }

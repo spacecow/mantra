@@ -1,6 +1,5 @@
-GIT
-  remote: git://github.com/spacecow/pickle.git
-  revision: 6e027bdb18ee730fc819b1f806412c1cadbbfe63
+PATH
+  remote: ~/ruby/rails/pickle
   specs:
     pickle (0.4.3)
       cucumber (>= 0.8)

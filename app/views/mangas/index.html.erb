@@ -1,25 +1,5 @@
 <div id="logo"><%= image_tag "mantra.gif" %></div>
 <div class="clear"></div>
-<%= content_for :sidebar do %>
-<% unless @notice.nil? %>
-  <div id="latest_translation">
-    <h4 id="title">Latest Translation</h4>
-    <h5 id="subtitle"><%= link_to @notice.page_info,
-    manga_page_path(@notice.manga,@notice.page, :active => @notice.translation_pos) %></h5>
-    <p id="ago"><%= distance_of_time_in_words_to_now @notice.created_at %> ago</p>
-    <p id="japanese" class="translation"><%= @translation.japanese %></p>
-    <p id="english" class="translation"><%= @translation.english %></p>    
-  </div>
-<% end %>
-<% unless @article.nil? %>
-  <div id="blog">
-    <h4 id="title">Blog</h4>
-    <h5 id="subtitle"><%= link_to @article.title, @article %></h5>
-    <p id="date"><%= @article.published_date %></p>
-    <p id="content"><%= truncate(@article.body, :length=>100) %></p>
-  </div>
-<% end %>
-<% end %>
 
 <div id="main">
 <h1 id="title"><%= pl('ongoing_projects') %></h1>

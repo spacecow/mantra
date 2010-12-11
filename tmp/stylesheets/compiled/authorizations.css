@@ -104,24 +104,25 @@ input.submit:active, input.submit:active:visited, input.cancel:active, input.can
 
 /* line 22, ../../../app/stylesheets/authorizations.sass */
 div#authorizations {
+  margin: 5px 0 50px 0;
   float: right;
   width: 150px;
 }
-/* line 25, ../../../app/stylesheets/authorizations.sass */
+/* line 26, ../../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider {
   width: 150px;
   height: 35px;
   display: block;
   background: #eeeeee;
   border: 1px solid #dddddd;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px -5px;
   overflow: hidden;
 }
-/* line 33, ../../../app/stylesheets/authorizations.sass */
+/* line 34, ../../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider:hover h5 {
   margin-top: -35px;
 }
-/* line 35, ../../../app/stylesheets/authorizations.sass */
+/* line 36, ../../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider:hover div {
   opacity: 1;
   -moz-transform: rotate(0deg);
@@ -129,19 +130,19 @@ div#authorizations a.auth_provider:hover div {
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-/* line 38, ../../../app/stylesheets/authorizations.sass */
+/* line 39, ../../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider:nth-child(1) div {
   background: #6db3b8 url(../../images/twitter_32.png) no-repeat;
   padding-left: 40px;
   color: white;
 }
-/* line 42, ../../../app/stylesheets/authorizations.sass */
+/* line 43, ../../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider:nth-child(2) div {
   background: white url(../../images/openid_32.png) no-repeat;
   padding-left: 40px;
   color: #0f519a;
 }
-/* line 46, ../../../app/stylesheets/authorizations.sass */
+/* line 47, ../../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider h5 {
   height: 35px;
   text-align: center;
@@ -155,7 +156,7 @@ div#authorizations a.auth_provider h5 {
   -o-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 51, ../../../app/stylesheets/authorizations.sass */
+/* line 52, ../../../app/stylesheets/authorizations.sass */
 div#authorizations a.auth_provider div {
   text-align: left;
   line-height: 35px;

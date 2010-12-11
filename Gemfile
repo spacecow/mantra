@@ -40,7 +40,7 @@ group :test do
   gem 'database_cleaner'
   gem 'cucumber'
   gem 'spork'
-  gem "pickle", :git => "git://github.com/spacecow/pickle.git"
+  gem "pickle", :path => "~/ruby/rails/pickle" #:git => "git://github.com/spacecow/pickle.git"
   gem 'launchy'
   gem 'factory_girl_rails'
 end

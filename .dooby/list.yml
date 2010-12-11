@@ -33,3 +33,11 @@ fa7c9c: !ruby/object:Dooby::Task
   todo: "replaced #live with #delegate :done"
 779ea9: !ruby/object:Dooby::Task 
   todo: "make a #fancybutton for arrows :done"
+"738679": !ruby/object:Dooby::Task 
+  todo: "add #tags to #article"
+90e6e1: !ruby/object:Dooby::Task 
+  todo: "add #comments to #article"
+"495386": !ruby/object:Dooby::Task 
+  todo: "#notices for comments with #live update"
+33a038: !ruby/object:Dooby::Task 
+  todo: "add an extra #history to #translations that #notice relies on :doing"

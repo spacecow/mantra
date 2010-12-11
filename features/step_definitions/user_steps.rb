@@ -5,5 +5,10 @@ Given /^I am logged in as "([^"]*)"$/ do |user|
   And %(I press "Sign in")
 end
 
+Given /^I am logged in as #{capture_model}$/ do |user|
+  user = model(user)
+  Given %(I am logged in as "#{user.email}")
+end
+
 When /^I do nothing$/ do
 end

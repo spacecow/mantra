@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_filter :authenticate_admin, :except => [:show,:index]
   before_filter :load_article, :only => [:show,:edit,:update,:destroy]
+  before_filter :load_sidebar
 
   def index
     @articles = Article.desc(:created_at)
@@ -31,7 +32,7 @@ class ArticlesController < ApplicationController
   def update
     redirect_to articles_path and return if params[:commit] == "Cancel"    
     if @article.update_attributes(params[:article])
-      redirect_to @article, :notice => updated(:article)
+      redirect_to article_path(@article,:anchor=>"main"), :notice => updated(:article)
     end
   end
 
@@ -42,8 +43,11 @@ class ArticlesController < ApplicationController
 
   private
 
-    def load_article
-      @article = Article.where(:slug => params[:id]).first
+    def load_article; @article = Article.where(:slug => params[:id]).first end
+    def load_sidebar
+      @sidebar = true
+      @latest_article = Article.last
+      @latest_notice = Notice.last
     end
 
     def authenticate_admin

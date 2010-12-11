@@ -1,5 +1,6 @@
 class MangasController < ApplicationController
   before_filter :authenticate_user!, :except => :index
+  before_filter :load_notices, :except => :index
 
   def show
     @manga = Manga.where(:slug => params[:id]).first
@@ -8,10 +9,10 @@ class MangasController < ApplicationController
   
   def index
     @home = true
+    @sidebar = true
     @mangas = Manga.search(params[:search]).paginate(:per_page => 15, :page => params[:page])
-    @article = Article.last
-    @notice = Notice.last
-    @translation = @notice.translation unless @notice.nil?
+    @latest_article = Article.last
+    @latest_notice = Notice.last
   end
 
   def new
@@ -47,4 +48,8 @@ class MangasController < ApplicationController
     
     redirect_to mangas_path
   end
+
+  private
+
+    def load_notices; @notices = Notice.desc(:created_at) end
 end

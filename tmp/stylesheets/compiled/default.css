@@ -1,27 +1,27 @@
-/* line 48, ../../../app/stylesheets/default.sass */
+/* line 44, ../../../app/stylesheets/default.sass */
 table tr td:nth-child(2) {
   padding: 0 5px;
 }
 
-/* line 51, ../../../app/stylesheets/default.sass */
+/* line 47, ../../../app/stylesheets/default.sass */
 html {
   background: #4b7399;
 }
 
-/* line 54, ../../../app/stylesheets/default.sass */
+/* line 50, ../../../app/stylesheets/default.sass */
 div.clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
 
-/* line 59, ../../../app/stylesheets/default.sass */
+/* line 55, ../../../app/stylesheets/default.sass */
 .round {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
 
-/* line 62, ../../../app/stylesheets/default.sass */
+/* line 58, ../../../app/stylesheets/default.sass */
 div#flash {
   float: left;
   margin-bottom: 5px;
@@ -29,7 +29,7 @@ div#flash {
   border: 1px solid white;
 }
 
-/* line 67, ../../../app/stylesheets/default.sass */
+/* line 63, ../../../app/stylesheets/default.sass */
 div.notice {
   color: white;
   font-weight: bold;
@@ -45,7 +45,7 @@ div.notice {
   background-image: linear-gradient(top, #4cc417 0%, #339966 100%);
 }
 
-/* line 69, ../../../app/stylesheets/default.sass */
+/* line 65, ../../../app/stylesheets/default.sass */
 div.alert {
   color: white;
   font-weight: bold;
@@ -61,50 +61,51 @@ div.alert {
   background-image: linear-gradient(top, #ff3333 0%, #993333 100%);
 }
 
-/* line 72, ../../../app/stylesheets/default.sass */
+/* line 68, ../../../app/stylesheets/default.sass */
 div#page_nav {
   float: left;
   margin: 3px 0 0 10px;
 }
 
-/* line 76, ../../../app/stylesheets/default.sass */
+/* line 72, ../../../app/stylesheets/default.sass */
 div#published {
   margin-bottom: 10px;
   font-style: italic;
 }
 
-/* line 81, ../../../app/stylesheets/default.sass */
+/* line 77, ../../../app/stylesheets/default.sass */
 div#article p {
   margin-bottom: 10px;
 }
 
-/* line 84, ../../../app/stylesheets/default.sass */
+/* line 80, ../../../app/stylesheets/default.sass */
 div#links_top {
   margin-bottom: 10px;
 }
 
-/* line 86, ../../../app/stylesheets/default.sass */
+/* line 82, ../../../app/stylesheets/default.sass */
 div#links_bottom {
   margin-top: 10px;
 }
 
-/* line 90, ../../../app/stylesheets/default.sass */
+/* line 86, ../../../app/stylesheets/default.sass */
 h1 {
   margin-top: 0px;
 }
 
-/* line 93, ../../../app/stylesheets/default.sass */
+/* line 89, ../../../app/stylesheets/default.sass */
 div#logo {
   float: left;
 }
 
-/* line 96, ../../../app/stylesheets/default.sass */
+/* line 92, ../../../app/stylesheets/default.sass */
 div#root {
   margin: 100px auto;
-  width: 900px;
+  width: 1024px;
+  height: 768px;
 }
 
-/* line 100, ../../../app/stylesheets/default.sass */
+/* line 97, ../../../app/stylesheets/default.sass */
 div#container {
   border: 10px solid white;
   margin: 0 auto;
@@ -112,26 +113,26 @@ div#container {
   background: #bbbbbb;
   padding: 20px;
 }
-/* line 106, ../../../app/stylesheets/default.sass */
+/* line 103, ../../../app/stylesheets/default.sass */
 div#container a {
   text-decoration: none;
   color: #4b7399;
   padding: 0 1px 0 1px;
   font-size: 85%;
 }
-/* line 111, ../../../app/stylesheets/default.sass */
+/* line 108, ../../../app/stylesheets/default.sass */
 div#container a:hover {
   background: #4b7399;
   color: white;
   padding: 0 1px 0 1p;
 }
-/* line 115, ../../../app/stylesheets/default.sass */
+/* line 112, ../../../app/stylesheets/default.sass */
 div#container h1 {
   font-size: 200%;
   margin-bottom: 10px;
 }
 
-/* line 119, ../../../app/stylesheets/default.sass */
+/* line 116, ../../../app/stylesheets/default.sass */
 div#site_nav {
   float: left;
   margin: 0 10px 10px 0;
@@ -148,166 +149,118 @@ div#site_nav {
   background-image: -moz-linear-gradient(top, #808080 0%, #000000 100%);
   background-image: linear-gradient(top, #808080 0%, #000000 100%);
 }
-/* line 123, ../../../app/stylesheets/default.sass */
+/* line 120, ../../../app/stylesheets/default.sass */
 div#site_nav a {
   color: #c4fff3;
 }
-/* line 125, ../../../app/stylesheets/default.sass */
+/* line 122, ../../../app/stylesheets/default.sass */
 div#site_nav a:hover {
   background: none;
   color: white;
 }
 
-/* line 128, ../../../app/stylesheets/default.sass */
+/* line 125, ../../../app/stylesheets/default.sass */
 div#top {
   margin-top: 4px;
 }
 
-/* line 130, ../../../app/stylesheets/default.sass */
+/* line 127, ../../../app/stylesheets/default.sass */
 div#signed_in {
   margin-top: 7px;
   float: right;
 }
 
-/* line 134, ../../../app/stylesheets/default.sass */
+/* line 131, ../../../app/stylesheets/default.sass */
 div#content {
   float: left;
 }
 
-/* line 137, ../../../app/stylesheets/default.sass */
+/* line 134, ../../../app/stylesheets/default.sass */
 div#user_nav {
   display: block;
   atext-align: right;
   float: right;
-  width: 200px;
-}
-/* line 143, ../../../app/stylesheets/default.sass */
-div#user_nav div#authentications div#authentication {
-  float: left;
-  background: #eeeeee;
-  border: 1px solid black;
-  padding: 5px 10px;
-  margin-right: 10px;
-  position: relative;
-}
-/* line 150, ../../../app/stylesheets/default.sass */
-div#user_nav div#authentications div#authentication a#remove {
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  color: #333333;
-  padding: 3px 6px 2px 4px;
-  font-size: 70%;
-}
-/* line 157, ../../../app/stylesheets/default.sass */
-div#user_nav div#authentications div#authentication a#remove:hover {
-  color: white;
-  background: #777777;
-}
-/* line 160, ../../../app/stylesheets/default.sass */
-div#user_nav div#authentications div#authentication div#provider {
-  font-weight: bold;
-  margin-left: 38px;
-  margin-right: 20px;
-}
-/* line 164, ../../../app/stylesheets/default.sass */
-div#user_nav div#authentications div#authentication div#uid {
-  color: #666666;
-  font-size: 70%;
-  margin-left: 38px;
-  margin-right: 20px;
-}
-/* line 169, ../../../app/stylesheets/default.sass */
-div#user_nav div#authentications div#authentication img {
-  float: left;
-}
-/* line 171, ../../../app/stylesheets/default.sass */
-div#user_nav a.auth_provider {
-  float: left;
-  margin-right: 20px;
-  text-align: center;
-  font-weight: bold;
-}
-/* line 176, ../../../app/stylesheets/default.sass */
-div#user_nav a.auth_provider:hover {
-  background: white;
-  color: #7ba3c9;
-}
-/* line 179, ../../../app/stylesheets/default.sass */
-div#user_nav a.auth_provider img {
-  display: block;
-  border: 0;
+  width: 190px;
+  background: #999999;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+  padding: 10px;
 }
 
-/* line 184, ../../../app/stylesheets/default.sass */
+/* line 144, ../../../app/stylesheets/default.sass */
 div#yield {
-  width: 800px;
+  width: 964px;
 }
-/* line 186, ../../../app/stylesheets/default.sass */
+/* line 146, ../../../app/stylesheets/default.sass */
 div#yield div#image {
   float: left;
-  padding: 1em;
+  padding: 10px;
   background: grey;
 }
-/* line 190, ../../../app/stylesheets/default.sass */
+/* line 150, ../../../app/stylesheets/default.sass */
 div#yield div#image img {
   width: 400px;
   height: 645px;
 }
 
-/* line 195, ../../../app/stylesheets/default.sass */
+/* line 155, ../../../app/stylesheets/default.sass */
 table#pages td#no, table#pages td#title, table#mangas td#no, table#mangas td#title {
   font-size: 120%;
   text-align: right;
   padding-right: 5px;
 }
 
-/* line 200, ../../../app/stylesheets/default.sass */
+/* line 160, ../../../app/stylesheets/default.sass */
 div#translations {
   float: left;
   width: 320px;
   background: grey;
 }
-/* line 204, ../../../app/stylesheets/default.sass */
+/* line 164, ../../../app/stylesheets/default.sass */
 div#translations div#top_empty_translation_fillout {
   width: 320px;
   height: 10px;
   float: left;
   background: #dddddd;
 }
-/* line 209, ../../../app/stylesheets/default.sass */
+/* line 169, ../../../app/stylesheets/default.sass */
 div#translations div#bottom_empty_translation_fillout {
   width: 320px;
   height: 10px;
   float: left;
   background: #dddddd;
 }
-/* line 214, ../../../app/stylesheets/default.sass */
+/* line 174, ../../../app/stylesheets/default.sass */
 div#translations div.inactive {
   background: silver;
 }
-/* line 216, ../../../app/stylesheets/default.sass */
+/* line 176, ../../../app/stylesheets/default.sass */
 div#translations div.below-active {
   -moz-border-radius-topleft: 15px;
   border-top-left-radius: 15px;
 }
-/* line 219, ../../../app/stylesheets/default.sass */
+/* line 179, ../../../app/stylesheets/default.sass */
 div#translations div.above-active {
   -moz-border-radius-bottomleft: 15px;
   border-bottom-left-radius: 15px;
 }
-/* line 222, ../../../app/stylesheets/default.sass */
+/* line 182, ../../../app/stylesheets/default.sass */
 div#translations div.translation {
   float: left;
   padding: 10px;
   width: 280px;
 }
-/* line 225, ../../../app/stylesheets/default.sass */
+/* line 185, ../../../app/stylesheets/default.sass */
 div#translations div.translation div.text_container {
   float: left;
   width: 15em;
 }
-/* line 228, ../../../app/stylesheets/default.sass */
+/* line 188, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container {
   float: left;
   width: 3.5em;
@@ -315,7 +268,7 @@ div#translations div.translation div#arrow_container {
   text-align: center;
   text-weight: bold;
 }
-/* line 234, ../../../app/stylesheets/default.sass */
+/* line 194, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#up_arrow {
   height: 20px;
   widht: 20px;
@@ -335,15 +288,15 @@ div#translations div.translation div#arrow_container span#up_arrow {
   background-image: -moz-linear-gradient(top, #808080 0%, #000000 100%);
   background-image: linear-gradient(top, #808080 0%, #000000 100%);
 }
-/* line 241, ../../../app/stylesheets/default.sass */
+/* line 201, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#up_arrow a {
   color: white;
 }
-/* line 243, ../../../app/stylesheets/default.sass */
+/* line 203, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#up_arrow a:hover {
   background: none;
 }
-/* line 245, ../../../app/stylesheets/default.sass */
+/* line 205, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#down_arrow {
   height: 20px;
   widht: 20px;
@@ -363,53 +316,53 @@ div#translations div.translation div#arrow_container span#down_arrow {
   background-image: -moz-linear-gradient(top, #808080 0%, #000000 100%);
   background-image: linear-gradient(top, #808080 0%, #000000 100%);
 }
-/* line 252, ../../../app/stylesheets/default.sass */
+/* line 212, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#down_arrow a {
   color: white;
 }
-/* line 254, ../../../app/stylesheets/default.sass */
+/* line 214, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#arrow_container span#down_arrow a:hover {
   background: none;
 }
-/* line 256, ../../../app/stylesheets/default.sass */
+/* line 216, ../../../app/stylesheets/default.sass */
 div#translations div.translation div#links {
   float: right;
 }
-/* line 258, ../../../app/stylesheets/default.sass */
+/* line 218, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form {
   float: left;
   padding: 10px;
   width: 280px;
 }
-/* line 262, ../../../app/stylesheets/default.sass */
+/* line 222, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form div label {
   float: left;
   width: 60px;
   text-align: right;
   margin-right: 5px;
 }
-/* line 267, ../../../app/stylesheets/default.sass */
+/* line 227, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form div input {
   float: left;
   width: 200px;
 }
-/* line 270, ../../../app/stylesheets/default.sass */
+/* line 230, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form input.change {
   margin: 10px 0 0 65px;
 }
-/* line 272, ../../../app/stylesheets/default.sass */
+/* line 232, ../../../app/stylesheets/default.sass */
 div#translations div#translation_form input.cancel {
   margin: 0;
 }
 
-/* line 277, ../../../app/stylesheets/default.sass */
+/* line 237, ../../../app/stylesheets/default.sass */
 form.simple_form div label {
   float: left;
   width: 100px;
   text-align: right;
   margin-right: 10px;
 }
-/* line 282, ../../../app/stylesheets/default.sass */
+/* line 242, ../../../app/stylesheets/default.sass */
 form.simple_form input.submit {
   margin: 10px 0 0 110px;
 }

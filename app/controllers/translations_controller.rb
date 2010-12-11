@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class TranslationsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :load_manga_and_page
@@ -6,11 +7,13 @@ class TranslationsController < ApplicationController
     pos = @page.translations.count+1
     @translation = @page.translations.build(params[:translation].merge(:pos=>pos))
     if @translation.save
-      @page.notices.create!(:translation_id => @translation.id)
+      message = "#{@translation.japanese}♦#{@translation.english}"
+      @translation.histories.create!(:message => message)
+      @page.notices.create!(:translation_id => @translation.id,
+                            :message => message)
       redirect_to manga_page_path(@manga,@page,:active=>pos)
     else
-      @first_page = first_page?
-      @last_page = last_page?
+      init_page
       @translations = []
       @translations = @page.translations.reject{|e|e==@translation}.sort_by(&:pos)
       @active = Translation.new(:pos=>0,
@@ -23,6 +26,7 @@ class TranslationsController < ApplicationController
   end
   
   def edit
+    init_page
     @translations = @page.translations.sort_by(&:pos)
     @translation = @page.translations.where(:slug => params[:id]).first
     @active = @translation
@@ -36,6 +40,7 @@ class TranslationsController < ApplicationController
     if @translation.update_attributes(params[:translation])
       redirect_to manga_page_path(@manga,@page, :active => @translation.pos)
     else
+      init_page
       @translations = @page.translations.sort_by(&:pos)
       @active = @translation
       render :edit
@@ -58,6 +63,12 @@ class TranslationsController < ApplicationController
   
   private
 
+    def init_page
+      @first_page = first_page?
+      @last_page = last_page?
+      @histories = @page.translations.map(&:histories).flatten    
+    end
+  
     def load_manga_and_page
       @manga = Manga.where(:slug => params[:manga_id]).first
       @page = @manga.pages.where(:slug => params[:page_id]).first

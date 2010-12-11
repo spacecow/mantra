@@ -6,7 +6,7 @@ And a user exists with email: "jsveholm@gmail.com"
 Scenario: Show article view for admin
 Given I am logged in as "jsveholm@gmail.com"
 When I go to that article page
-Then I should see /Yeah!/ as title
+Then I should see /Yeah!/ within "h1"
 And I should see /Oh, yeah!/ as article
 And I should see links /Edit\s*Del/ at the top of the page
 But I should see no link "List articles" at the top of the page
@@ -15,7 +15,7 @@ But I should see no link "List articles" at the bottom of the page
 
 Scenario: Show article view for regular users
 When I go to that article page
-Then I should see /Yeah!/ as title
+Then I should see /Yeah!/ within "h1"
 And I should see /Oh, yeah!/ as article
 And I should see no links at the top of the page
 And I should see no links at the bottom of the page
