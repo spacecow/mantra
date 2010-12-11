@@ -13,9 +13,10 @@ When I go to that manga's page's page with "x1=99"
 When I fill in "Japanese" with "明日"
 And I fill in "English" with "tomorrow"
 And I press "Create"
-Then the page should have a translation "2" with pos: 2, japanese: "明日", english: "tomorrow"
+Then I should be redirected to that manga's page's page
+And the page should have a translation "2" with pos: 2, japanese: "明日", english: "tomorrow"
 And the page should have 2 translations
-And the page should have a translation "2" should have a history with message: "明日♦tomorrow"
+And the page should have a translation "2" should have a history with message: "明日♦tomorrow", category_mask: 1
 And I should see translation "2" as active
 And I should see no flash message
 And that page should have a notice with message: "明日♦tomorrow"

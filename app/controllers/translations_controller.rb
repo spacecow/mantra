@@ -7,15 +7,11 @@ class TranslationsController < ApplicationController
     pos = @page.translations.count+1
     @translation = @page.translations.build(params[:translation].merge(:pos=>pos))
     if @translation.save
-      message = "#{@translation.japanese}♦#{@translation.english}"
-      @translation.histories.create!(:message => message)
-      @page.notices.create!(:translation_id => @translation.id,
-                            :message => message)
+      create_history_and_notice("New")
       redirect_to manga_page_path(@manga,@page,:active=>pos)
     else
       init_page
-      @translations = []
-      @translations = @page.translations.reject{|e|e==@translation}.sort_by(&:pos)
+      @translations = @page.translations.reject{|e|e==@translation}.sort_by(&:pos)      
       @active = Translation.new(:pos=>0,
                                 :x1=>params[:translation][:x1],
                                 :y1=>params[:translation][:y1],
@@ -27,7 +23,7 @@ class TranslationsController < ApplicationController
   
   def edit
     init_page
-    @translations = @page.translations.sort_by(&:pos)
+    @translations = @page.translations.sort_by(&:pos)    
     @translation = @page.translations.where(:slug => params[:id]).first
     @active = @translation
   end
@@ -38,6 +34,7 @@ class TranslationsController < ApplicationController
       redirect_to manga_page_path(@manga,@page, :active => @translation.pos) and return
     end
     if @translation.update_attributes(params[:translation])
+      create_history_and_notice("Edit")
       redirect_to manga_page_path(@manga,@page, :active => @translation.pos)
     else
       init_page
@@ -48,7 +45,9 @@ class TranslationsController < ApplicationController
   end
   
   def destroy
-    @page.translations.where(:slug => params[:id]).first.destroy
+    @translation = @page.translations.where(:slug => params[:id]).first
+    @page.notices.where(:translation_id => @translation.id).destroy_all
+    @translation.destroy
     redirect_to [@manga,@page]
   end
 
@@ -63,6 +62,11 @@ class TranslationsController < ApplicationController
   
   private
 
+    def create_history_and_notice(category)
+      @translation.histories.create!(:message => message, :category => category)
+      @page.notices.create!(:translation_id => @translation.id, :message => message)
+    end
+  
     def init_page
       @first_page = first_page?
       @last_page = last_page?
@@ -73,6 +77,9 @@ class TranslationsController < ApplicationController
       @manga = Manga.where(:slug => params[:manga_id]).first
       @page = @manga.pages.where(:slug => params[:page_id]).first
     end
+
+    def message; "#{@translation.japanese}♦#{@translation.english}"end
+
 
     def swap_positions(upper_translation,lower_translation)
       upper_translation.update_attributes(:pos=>0)

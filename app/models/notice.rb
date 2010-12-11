@@ -8,6 +8,7 @@ class Notice
 
   validates :message, :presence => true
   validates :page, :presence => true
+  validates :translation_id, :presence => true
   
   def english; message.split('♦')[1] end  
   def format_message_one; japanese end

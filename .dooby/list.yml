@@ -41,3 +41,7 @@ fa7c9c: !ruby/object:Dooby::Task
   todo: "#notices for comments with #live update"
 33a038: !ruby/object:Dooby::Task 
   todo: "add an extra #history to #translations that #notice relies on :done"
+a9c454: !ruby/object:Dooby::Task 
+  todo: "change deprecated rails #root"
+5a34fb: !ruby/object:Dooby::Task 
+  todo: check that when deleting a manga, its pages and notices should also die

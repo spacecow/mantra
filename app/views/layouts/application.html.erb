@@ -43,7 +43,7 @@
           <% end %>
           <div class="clear"></div>
         </div>
-        <% if false && user_signed_in? && @sidebar.nil? && @notices.nil? %>
+        <% if user_signed_in? && @sidebar.nil? && @notices.nil? && @histories.empty? %>
         <% else %>
         <div id="user_nav">
           <% unless user_signed_in? %>

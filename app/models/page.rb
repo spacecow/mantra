@@ -7,7 +7,7 @@ class Page
   slug :no
   referenced_in :manga
   embeds_many :translations
-  references_many :notices
+  references_many :notices, :dependent => :destroy
   #  references_many :translations
 
   validates :manga, :presence => true

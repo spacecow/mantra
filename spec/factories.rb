@@ -1,3 +1,6 @@
+Factory.define :history do |f|
+end
+
 Factory.define :manga do |f|
   f.sequence(:title) { |n| "Default factory title #{n}" }  
 end
@@ -6,7 +9,7 @@ Factory.define :notice do |f|
 end
 
 Factory.define :page do |f|
-  f.no 1
+    f.sequence(:no) { |n| n }  
 end
 
 Factory.define :translation do |f|

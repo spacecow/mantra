@@ -16,7 +16,10 @@ Then I should be redirected to that manga's page's page
 And I should see no flash message
 And the page should have a translation with japanese: "今日", english: "today"
 And the page should have 2 translations
+And the page should have a translation should have a history with message: "今日♦today", category_mask: 2
 And I should see translation "2" as active
+And that page should have a notice with message: "今日♦today"
+And that page should have 1 notices
 
 Scenario: Cancel a translation edit
 When I go to that manga's page's translation "2"'s edit page

@@ -7,8 +7,7 @@ class Manga
 
   validates :title, :presence => true, :uniqueness => true
 
-  #embeds_many :pages
-  references_many :pages
+  references_many :pages, :dependent => :destroy
 
   def self.search(search)
     if search
