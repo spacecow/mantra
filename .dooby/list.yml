@@ -40,4 +40,4 @@ fa7c9c: !ruby/object:Dooby::Task
 "495386": !ruby/object:Dooby::Task 
   todo: "#notices for comments with #live update"
 33a038: !ruby/object:Dooby::Task 
-  todo: "add an extra #history to #translations that #notice relies on :doing"
+  todo: "add an extra #history to #translations that #notice relies on :done"
