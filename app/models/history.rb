@@ -8,7 +8,9 @@ class History
 
   CATEGORIES = %w(New Edit Comment)
 
-  def category; CATEGORIES[Math.log2(category_mask)] end
+  def category
+    CATEGORIES.reject{|r| ((category_mask || 0) & 2**CATEGORIES.index(r)).zero? }.first
+  end
   def category=(s); self.category_mask = 2**CATEGORIES.index(s) end
   def english; message.split('♦')[1] end
   def format_message; "#{japanese} #{english}" end

@@ -114,41 +114,45 @@ div#user_nav div#sidebar h5 a {
   color: #4b7399;
 }
 /* line 70, ../../../app/stylesheets/user_nav.sass */
+div#user_nav div#sidebar h5 a:hover {
+  color: white;
+}
+/* line 72, ../../../app/stylesheets/user_nav.sass */
 div#user_nav div#sidebar p#date, div#user_nav div#sidebar p#ago {
   text-transform: uppercase;
   font: 12px Georgia, serif;
   margin: 5px 0;
   color: white;
 }
-/* line 75, ../../../app/stylesheets/user_nav.sass */
+/* line 77, ../../../app/stylesheets/user_nav.sass */
 div#user_nav div#sidebar p.translation {
   margin: 5px 0;
   font: 14px Georgia, serif;
 }
-/* line 78, ../../../app/stylesheets/user_nav.sass */
+/* line 80, ../../../app/stylesheets/user_nav.sass */
 div#user_nav div#sidebar p#content {
   font: 14px Georgia, serif;
 }
-/* line 80, ../../../app/stylesheets/user_nav.sass */
+/* line 82, ../../../app/stylesheets/user_nav.sass */
 div#user_nav div#sidebar p#english {
   margin-bottom: 25px;
 }
-/* line 83, ../../../app/stylesheets/user_nav.sass */
+/* line 85, ../../../app/stylesheets/user_nav.sass */
 div#user_nav div#notifier div#notice {
   padding: 2px 0;
 }
-/* line 85, ../../../app/stylesheets/user_nav.sass */
+/* line 87, ../../../app/stylesheets/user_nav.sass */
 div#user_nav div#notifier div#notice a {
   font-size: 100%;
   margin: 0;
   padding: 0;
   color: black;
 }
-/* line 90, ../../../app/stylesheets/user_nav.sass */
+/* line 92, ../../../app/stylesheets/user_nav.sass */
 div#user_nav div#notifier div#notice a:hover {
   color: white;
 }
-/* line 92, ../../../app/stylesheets/user_nav.sass */
+/* line 94, ../../../app/stylesheets/user_nav.sass */
 div#user_nav div#notifier div#notice a p {
   text-align: right;
   padding-bottom: 2px;
