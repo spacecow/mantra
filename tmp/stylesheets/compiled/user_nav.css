@@ -157,3 +157,19 @@ div#user_nav div#notifier div#notice a p {
   text-align: right;
   padding-bottom: 2px;
 }
+/* line 99, ../../../app/stylesheets/user_nav.sass */
+div#user_nav div#histories div#general a {
+  float: left;
+  width: 190px;
+  color: black;
+  font-size: 100%;
+}
+/* line 104, ../../../app/stylesheets/user_nav.sass */
+div#user_nav div#histories div#general a:hover {
+  color: white;
+  background: none;
+}
+/* line 107, ../../../app/stylesheets/user_nav.sass */
+div#user_nav div#histories div#general a.active {
+  background: gray;
+}

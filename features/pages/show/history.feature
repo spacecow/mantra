@@ -29,8 +29,17 @@ When I go to that manga's page's page
 Then I should see no "user_nav" section
 
 Scenario: If you delete a translation, its history and notices should die
-Given a history exists with translation: translation "1", message: "明日♦tomorrow", category_mask: 1
-And a notice is created with page: page "1", translation: translation "1", message: "明日♦tomorrow"
+Given a history&notice is created with page: page "1", translation: translation "1", message: "明日♦tomorrow", category_mask: 1
 When I go to that manga's page "1"'s page
 And I follow "Del"
 Then 0 notices should exist
+
+Scenario: History elements belong to the active translation should be marked
+Given a translation "3" exists with page: page "1", pos: 2
+And a history "3" exists with translation: translation "3", message: "Wow!", category_mask: 4
+And a history "1" exists with translation: translation "1", message: "明日♦tomorrow", category_mask: 1
+And a history "2" exists with translation: translation "1", message: "今日♦today", category_mask: 2
+When I go to that manga's page "1"'s page
+Then I should see the first general history as active
+And I should see the second general history as active
+And I should see the third general history as active

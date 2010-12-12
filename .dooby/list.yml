@@ -45,3 +45,5 @@ a9c454: !ruby/object:Dooby::Task
   todo: "change deprecated rails #root"
 5a34fb: !ruby/object:Dooby::Task 
   todo: check that when deleting a manga, its pages and notices should also die
+0e98d6: !ruby/object:Dooby::Task 
+  todo: "truncate #notice #history message"
